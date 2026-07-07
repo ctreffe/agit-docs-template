@@ -30,6 +30,16 @@ Use this template for documentation projects such as:
 - Troubleshooting, migration, setup, and release documentation.
 - Documentation systems that combine prose, screenshots, diagrams, links, and generated output.
 
+## AGIT Templateverse
+
+The public AGIT templates form a small templateverse: a family of related templates that share a repository-first, maintainer-led Human-AI collaboration model while specializing it for different project types.
+
+- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) is the generic starting point for structured project work, research, planning, concept work, process design and mixed projects.
+- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) is for development-oriented projects where code, scripts, automation, validation, architecture or release workflows are central.
+- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) is for technical documentation projects such as user guides, admin guides, operating procedures, tutorials, migration guides and documentation sites.
+
+Start from the Documentation Template when audience, structure, screenshots, links, visual QA and publication format are central from the beginning. Start from the generic Project Template when documentation is only one part of a broader project.
+
 ## Repository workflow
 
 1. Start from [INITIAL_PROMPT.md](INITIAL_PROMPT.md).
