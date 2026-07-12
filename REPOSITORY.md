@@ -17,7 +17,7 @@ This repository follows a repository-first documentation workflow. Durable conte
 - `SCREENSHOTS.md`: Screenshot policy.
 - `LINKS.md`: Link and reference rules.
 - `VISUAL_QA.md`: Visual QA checklist.
-- `DDR/`: Documentation Decision Records.
+- `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
 - `CHANGELOG.md`: Version history.
 - `VERSION`: Current template or project version.
 - `_quarto.yml`: Quarto project configuration.

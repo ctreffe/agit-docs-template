@@ -62,9 +62,11 @@ Visual artifacts should be current, readable, consistently named, and connected 
 
 ## 9. Decisions
 
-Substantive documentation decisions should be recorded as Documentation Decision Records (DDRs). A DDR is appropriate when a decision affects documentation structure, audience assumptions, terminology, screenshot policy, link model, visual standards, publication workflow, or milestone scope.
+Substantive decisions should be recorded in `decisions/` using the record type that matches the decision. A DDR is appropriate when a decision affects documentation structure, audience assumptions, terminology, screenshot policy, link model, visual standards, publication workflow, or milestone scope.
 
-DDRs are not a substitute for concise documentation. They preserve why important choices were made.
+Documentation projects may also use PDRs for project scope, roadmap, collaboration, privacy or repository-structure decisions, and ADRs for Quarto structure, build pipeline, tooling, output model or automation decisions.
+
+Decision records are not a substitute for concise documentation. They preserve why important choices were made.
 
 ## 10. Git history
 

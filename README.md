@@ -47,7 +47,7 @@ Start from the Documentation Template when audience, structure, screenshots, lin
 3. Define project-specific context in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
 4. Establish documentation type, audience, bilingual needs, Quarto structure, link, screenshot, and visual QA rules.
 5. Draft documentation in small, reviewable increments.
-6. Record substantial documentation decisions as DDRs.
+6. Record substantial decisions in `decisions/`, usually as DDRs.
 7. Close meaningful milestones with changelog, version, and consistency review.
 
 ## Maintainer setup
@@ -80,7 +80,7 @@ R and RStudio are useful when the documentation includes R code, data analysis, 
 - [SCREENSHOTS.md](SCREENSHOTS.md): Screenshot and visual evidence rules.
 - [LINKS.md](LINKS.md): Link and reference discipline.
 - [VISUAL_QA.md](VISUAL_QA.md): Visual QA checklist.
-- [DDR/](DDR/): Documentation Decision Records.
+- [decisions/](decisions/): Decision Records, including DDRs, PDRs and ADRs.
 
 ## License
 

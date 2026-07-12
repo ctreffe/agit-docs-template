@@ -25,11 +25,11 @@ Template files describe how a documentation project should be initialized, maint
 - `LINKS.md`: Internal and external link discipline.
 - `VISUAL_QA.md`: Visual documentation QA checklist.
 - `REPOSITORY.md`: Repository organization and lifecycle rules.
-- `DDR/`: Documentation Decision Records.
+- `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
 
 ## Current state and history
 
-Derived projects should distinguish between current documentation state and project history. The main documentation should describe what is true now. Historical rationale belongs in DDRs, changelog entries, or dedicated notes when needed.
+Derived projects should distinguish between current documentation state and project history. The main documentation should describe what is true now. Historical rationale belongs in decision records, changelog entries, or dedicated notes when needed.
 
 ## Documentation artifacts
 
