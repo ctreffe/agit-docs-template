@@ -78,3 +78,6 @@ Some setup files in this template may remain in derived projects as documentatio
    - Normally use a regular `chore:` commit for initialization.
    - Use an unprefixed milestone commit only when initialization also completes
      a genuinely defined and reviewed versioned milestone.
+
+After initialization, retain `CONTINUATION_PROMPT.md` and use it whenever work
+continues in a new context window or assistant session.

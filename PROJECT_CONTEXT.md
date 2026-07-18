@@ -86,6 +86,17 @@ Reviewed derivatives:
 - Review and validation objective: TBD
 - Intentional non-goals: TBD
 
+## Current work
+
+- Current version or latest completed state: TBD
+- Active milestone: TBD
+- Current focus: TBD
+- Latest completed documentation step: TBD
+- Active maintained source files: TBD
+- Latest validated render: TBD
+- Latest link, screenshot and visual-QA status: TBD
+- Active feedback artifact or review: TBD
+
 ## Quarto model
 
 - Quarto project type: TBD
@@ -135,6 +146,16 @@ Link check expectations:
 
 - TBD
 
+## Relevant documents
+
+- `CONTINUATION_PROMPT.md` - re-entry prompt for a new context window or assistant session
+- `DOCS_SETUP.md` - documentation setup and current model
+- `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
+- `AUDIENCE.md` - audience assumptions
+- `STYLE_GUIDE.md` - documentation style
+- `QUARTO.md` - source and render workflow
+- `decisions/` - durable documentation, project or architecture decisions
+
 ## Collaboration notes
 
 - The maintainer owns structure, technical correctness, and publication.
@@ -142,3 +163,11 @@ Link check expectations:
 - Maintainer decisions and clarification questions should be presented as
   concise numbered lists when practical.
 - Git history actions require a maintainer instruction containing a recognized control word: `explicit` or `explicitly` in English, or `explizit` and inflected forms such as `explizite`, `expliziten`, `expliziter` and `explizites` in German.
+
+## Next session
+
+- Recommended next step: TBD
+- Source files to continue from: TBD
+- Validation or review to perform next: TBD
+- Materials not approved for assistant inspection: TBD
+- Blocking maintainer decisions: TBD

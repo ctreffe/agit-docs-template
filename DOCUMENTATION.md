@@ -14,6 +14,9 @@ Template files describe how a documentation project should be initialized, maint
 - `ChatGPT.md`: Versioned AI collaboration model.
 - `CODEX.md`: Local operating rules for the assistant.
 - `PROJECT_SETUP.md`: Initial repository setup workflow.
+- `INITIAL_PROMPT.md`: Reproducible first prompt for project initialization.
+- `CONTINUATION_PROMPT.md`: Reproducible re-entry prompt for a new context
+  window or assistant session.
 - `DOCS_SETUP.md`: Documentation-specific setup checklist.
 - `PROJECT_CONTEXT.md`: Project memory template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing documentation workflow.

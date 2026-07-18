@@ -49,6 +49,7 @@ Das Documentation Template passt, wenn Zielgruppe, Struktur, Screenshots, Links,
 5. Dokumentation in kleinen, prüfbaren Schritten erarbeiten.
 6. Wichtige Entscheidungen in `decisions/` festhalten, normalerweise als DDRs.
 7. Sinnvolle Meilensteine mit Changelog, Version und Konsistenzprüfung abschließen.
+8. Spätere Kontextfenster oder Assistant-Sessions mit [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) beginnen.
 
 ## Kontrollwörter für Git-History-Aktionen
 
@@ -77,6 +78,8 @@ R und RStudio sind sinnvoll, wenn die Dokumentation R-Code, Datenanalysen, Plots
 - [CODEX.md](CODEX.md): Lokale Arbeitsregeln für den Assistant.
 - [DOCUMENTATION.md](DOCUMENTATION.md): Dokumentationsarchitektur und Rollen der Dateien.
 - [PROJECT_SETUP.md](PROJECT_SETUP.md): Initialisierung abgeleiteter Projekte.
+- [INITIAL_PROMPT.md](INITIAL_PROMPT.md): Erster Prompt für die Projektinitialisierung.
+- [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md): Wiedereinstiegsprompt für ein neues Kontextfenster oder eine neue Assistant-Session.
 - [DOCS_SETUP.md](DOCS_SETUP.md): Dokumentationsspezifische Setup-Checkliste.
 - [DOCUMENTATION_PROCESS.md](DOCUMENTATION_PROCESS.md): Laufender Dokumentationsprozess.
 - [DOCUMENTATION_TYPE_PROFILES.md](DOCUMENTATION_TYPE_PROFILES.md): Dokumentationstyp-Profile, einschließlich Tutorial-Profil.

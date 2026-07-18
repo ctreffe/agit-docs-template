@@ -6,6 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- `CONTINUATION_PROMPT.md` for reproducible documentation-project re-entry in a
+  new context window or assistant session.
 - Documentation Collaboration Model v0.3.0 with formal working-commit rhythm,
   structured initialization completion and numbered maintainer collaboration.
 - Git history control-word guidance for English and German maintainer instructions.
@@ -17,6 +19,8 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Expand `PROJECT_CONTEXT.md` with current-work, relevant-document and
+  next-session fields needed for reliable continuation.
 - Separate assistant access, Git versioning and publication approval for raw
   sources, reviewed derivatives and generated documentation.
 - Extend disclosure review to rendered and embedded output surfaces and define

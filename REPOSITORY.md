@@ -2,6 +2,10 @@
 
 This repository follows a repository-first documentation workflow. Durable context, decisions, and documentation artifacts should be versioned whenever they are part of the project record.
 
+Use `CONTINUATION_PROMPT.md` at the start of a new context window or assistant
+session to reconcile `PROJECT_CONTEXT.md`, maintained documentation and current
+read-only Git evidence.
+
 ## Expected structure
 
 - `README.md`: Repository overview.

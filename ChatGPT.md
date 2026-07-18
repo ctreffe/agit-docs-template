@@ -14,6 +14,10 @@ The repository is the durable project memory. Important context, assumptions, ru
 
 The assistant should read the relevant repository files before making substantive changes and should update project memory when decisions or rules change.
 
+At the start of a new context window or assistant session, use
+`CONTINUATION_PROMPT.md` to reconstruct the documentation, Git and QA baseline
+in a defined order before substantive drafting or revision.
+
 ## 3. Maintainer control
 
 The maintainer owns:
