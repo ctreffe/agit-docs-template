@@ -133,14 +133,25 @@ ready for review, QA performed, source or disclosure limitations, decisions
 required from the maintainer, the proposed next step and, when ready, a commit
 summary and description.
 
-## 13. External feedback
+## 13. Feedback workflow
+
+Maintained repository sources remain authoritative. Rendered or annotated DOCX
+and PDF files are review artifacts; accepted feedback must be transferred back
+to the source and validated there. Use `FEEDBACK_WORKFLOW.md` for the complete
+process.
+
+DOCX comments and Track Changes are preferred for content, structure and
+terminology review. Annotated PDFs are preferred for layout, pagination,
+tables, figures and print QA. Website review artifacts must name the page,
+chapter, selected bundle or snapshot they cover.
 
 Feedback from external reviewers is review input, not an automatic instruction
-to change the maintained documentation. The assistant should summarize external
-comments as numbered issues and wait for maintainer acceptance, rejection or
-qualification before implementing them. Clear comments written by the
-maintainer may be transferred directly; ambiguous or consequential comments
-require clarification.
+to change maintained documentation. The maintainer may curate it through a
+`Maintainer:` comment. Otherwise, the assistant should summarize external
+comments as numbered issues and wait for maintainer acceptance, rejection,
+qualification or deferral. Clear maintainer-authored instructions may be
+transferred directly; ambiguous or consequential comments require
+clarification.
 
 ## 14. Harmonization and retrospective boundary
 

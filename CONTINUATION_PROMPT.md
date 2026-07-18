@@ -22,8 +22,8 @@ Read the repository in this order:
    Git rules.
 2. Read PROJECT_CONTEXT.md as the current-state and handoff document.
 3. Read README.md, VERSION and the current sections of CHANGELOG.md.
-4. Read DOCS_SETUP.md, DOCUMENTATION_PROCESS.md, AUDIENCE.md and STYLE_GUIDE.md
-   for the current documentation model.
+4. Read DOCS_SETUP.md, DOCUMENTATION_PROCESS.md, FEEDBACK_WORKFLOW.md,
+   AUDIENCE.md and STYLE_GUIDE.md for the current documentation model.
 5. Read the relevant documentation type profile, Quarto rules, screenshot,
    link and visual-QA guidance for the active milestone.
 6. Subject to the sensitivity rules below, read the active maintained files in
@@ -49,7 +49,7 @@ substantive edits, provide a concise numbered re-entry report containing:
 1. documentation identity, type, audience and authoritative language
 2. current version, branch and working-tree status
 3. active milestone, active maintained source and latest completed step
-4. latest Quarto render, link, screenshot and visual-QA state
+4. latest Quarto render, link, screenshot, visual-QA and feedback-review state
 5. source, sensitivity, versioning and publication boundaries
 6. open DDRs or other decisions, feedback, risks and inconsistencies
 7. the smallest useful next documentation step and its QA path

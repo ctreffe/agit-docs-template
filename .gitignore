@@ -26,6 +26,8 @@ renders/
 previews/
 artifacts/
 deliverables/
+review/rendered/
+review/annotated/
 
 # Potentially sensitive local captures
 captures/raw/

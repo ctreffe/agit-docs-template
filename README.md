@@ -45,7 +45,8 @@ Start from the Documentation Template when audience, structure, screenshots, lin
 1. Start from [INITIAL_PROMPT.md](INITIAL_PROMPT.md).
 2. Complete [PROJECT_SETUP.md](PROJECT_SETUP.md) and [DOCS_SETUP.md](DOCS_SETUP.md).
 3. Define project-specific context and record the source-template baseline and initialization status in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
-4. Establish documentation type, audience, bilingual needs, Quarto structure, link, screenshot, and visual QA rules.
+4. Establish documentation type, audience, bilingual needs, Quarto structure,
+   feedback channels, link, screenshot, and visual QA rules.
 5. Draft documentation in small, reviewable increments.
 6. Record substantial decisions in `decisions/`, usually as DDRs.
 7. Close meaningful milestones with changelog, version, and consistency review.
@@ -86,6 +87,8 @@ R and RStudio are useful when the documentation includes R code, data analysis, 
 - [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md): Maintainer-initiated documentation-collaboration review.
 - [DOCS_SETUP.md](DOCS_SETUP.md): Documentation-specific setup checklist.
 - [DOCUMENTATION_PROCESS.md](DOCUMENTATION_PROCESS.md): Ongoing documentation workflow.
+- [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md): Direct-source, annotated DOCX
+  and annotated PDF feedback workflow.
 - [DOCUMENTATION_TYPE_PROFILES.md](DOCUMENTATION_TYPE_PROFILES.md): Documentation type profiles, including the tutorial profile.
 - [QUARTO.md](QUARTO.md): Quarto as the preferred internal documentation format.
 - [AUDIENCE.md](AUDIENCE.md): Audience model template.

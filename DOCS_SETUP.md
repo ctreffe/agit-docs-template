@@ -98,6 +98,23 @@ Define:
 - Required R, Python, LaTeX, TinyTeX, or Quarto extensions. If PDF output is required, confirm TeX/TinyTeX during setup.
 - Whether `quarto render` should be part of milestone QA.
 
+## Feedback model
+
+Define the review model according to `FEEDBACK_WORKFLOW.md`:
+
+- Expected feedback channels: direct source review, annotated DOCX, annotated
+  PDF, or a project-specific alternative.
+- Which pages, chapters, selected bundles or named snapshots may be exported
+  for review. Do not leave the scope of a website DOCX review implicit.
+- Whether DOCX comments and Track Changes are expected for content review.
+- Whether annotated PDFs are expected for layout, table, figure or print QA.
+- How external feedback will be curated by the maintainer, including whether
+  `Maintainer:` comments will be used.
+- Where rendered and annotated review artifacts will be stored locally.
+- Which review artifacts the assistant may inspect, which may be versioned and
+  which may be published or shared.
+- How review decisions and closed feedback will be traced.
+
 ## Initial output
 
 Before the first substantive documentation milestone, the repository should contain:
@@ -105,6 +122,7 @@ Before the first substantive documentation milestone, the repository should cont
 - Completed `PROJECT_CONTEXT.md`.
 - Selected documentation type profile and language model.
 - Confirmed Quarto model and output formats.
+- Confirmed feedback channels, artifact scope and review-handling rules.
 - Adapted audience, style, screenshot, link, and visual QA rules.
 - Initial documentation structure.
 - Any required DDRs.

@@ -18,6 +18,12 @@ This repository is a reusable template for AI-assisted technical documentation p
   proof that an artifact is safe.
 - Keep technical documentation task-oriented, precise, and reviewable.
 - Treat links, screenshots, diagrams, and generated outputs as documentation artifacts that need provenance and QA.
+- Treat maintained Quarto or other repository sources as authoritative over
+  rendered or annotated DOCX and PDF review artifacts.
+- Inspect supplied annotated DOCX or PDF files only after assistant access has
+  been approved. Transfer clear maintainer comments and Track Changes to the
+  maintained source; present unresolved external or ambiguous feedback as
+  concise numbered issues according to `FEEDBACK_WORKFLOW.md`.
 - Review rendered content, interactive elements, embedded resources and file
   metadata for disclosure risks before versioning or publication.
 - Record substantial documentation decisions as DDRs.

@@ -45,7 +45,8 @@ Das Documentation Template passt, wenn Zielgruppe, Struktur, Screenshots, Links,
 1. Mit [INITIAL_PROMPT.md](INITIAL_PROMPT.md) starten.
 2. [PROJECT_SETUP.md](PROJECT_SETUP.md) und [DOCS_SETUP.md](DOCS_SETUP.md) ausfüllen.
 3. Projektspezifischen Kontext, Ausgangsstand des Templates und Initialisierungsstatus in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) festhalten.
-4. Dokumentationstyp, Zielgruppe, Zweisprachigkeit, Quarto-Struktur, Links, Screenshots und Visual-QA festlegen.
+4. Dokumentationstyp, Zielgruppe, Zweisprachigkeit, Quarto-Struktur,
+   Feedback-Kanäle, Links, Screenshots und Visual-QA festlegen.
 5. Dokumentation in kleinen, prüfbaren Schritten erarbeiten.
 6. Wichtige Entscheidungen in `decisions/` festhalten, normalerweise als DDRs.
 7. Sinnvolle Meilensteine mit Changelog, Version und Konsistenzprüfung abschließen.
@@ -86,6 +87,8 @@ R und RStudio sind sinnvoll, wenn die Dokumentation R-Code, Datenanalysen, Plots
 - [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md): Maintainer-initiierter Review der Dokumentationszusammenarbeit.
 - [DOCS_SETUP.md](DOCS_SETUP.md): Dokumentationsspezifische Setup-Checkliste.
 - [DOCUMENTATION_PROCESS.md](DOCUMENTATION_PROCESS.md): Laufender Dokumentationsprozess.
+- [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md): Workflow für direktes
+  Quellenfeedback sowie annotierte DOCX- und PDF-Dateien.
 - [DOCUMENTATION_TYPE_PROFILES.md](DOCUMENTATION_TYPE_PROFILES.md): Dokumentationstyp-Profile, einschließlich Tutorial-Profil.
 - [QUARTO.md](QUARTO.md): Quarto als bevorzugtes internes Dokumentationsformat.
 - [AUDIENCE.md](AUDIENCE.md): Vorlage für das Zielgruppenmodell.

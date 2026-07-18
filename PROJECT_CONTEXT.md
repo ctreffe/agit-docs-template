@@ -111,6 +111,8 @@ Reviewed derivatives:
 - Latest validated render: TBD
 - Latest link, screenshot and visual-QA status: TBD
 - Active feedback artifact or review: TBD
+- Active review scope and source state: TBD
+- Feedback decision state and next action: TBD
 
 ## Quarto model
 
@@ -118,6 +120,16 @@ Reviewed derivatives:
 - Required output formats: TBD
 - Render command: `quarto render`
 - Required toolchain notes: TBD
+
+## Feedback model
+
+- Expected feedback channels: TBD
+- DOCX review scope and render method: TBD
+- PDF review purpose and render method: TBD
+- External-feedback curation convention: TBD
+- Local review-artifact location: `review/rendered/` and `review/annotated/`
+- Assistant access, Git versioning and publication rules for review artifacts:
+  TBD
 
 ## Documentation structure
 
@@ -170,6 +182,7 @@ Link check expectations:
 - `RETROSPECTIVE_PROMPT.md` - structured Maintainer-Agent documentation-collaboration review
 - `DOCS_SETUP.md` - documentation setup and current model
 - `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
+- `FEEDBACK_WORKFLOW.md` - direct-source, DOCX and PDF review workflow
 - `AUDIENCE.md` - audience assumptions
 - `STYLE_GUIDE.md` - documentation style
 - `QUARTO.md` - source and render workflow

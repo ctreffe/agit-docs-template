@@ -22,9 +22,9 @@ template changes blindly.
 2. Read PROJECT_CONTEXT.md, including repository role, source template,
    baselines, intentional deviations and roadmap.
 3. Read README.md, current CHANGELOG.md sections, DOCUMENTATION.md,
-   DOCUMENTATION_PROCESS.md, DOCS_SETUP.md, AUDIENCE.md, STYLE_GUIDE.md,
-   QUARTO.md, SCREENSHOTS.md, LINKS.md, VISUAL_QA.md and relevant Decision
-   Records and documentation sources.
+   DOCUMENTATION_PROCESS.md, DOCS_SETUP.md, FEEDBACK_WORKFLOW.md, AUDIENCE.md,
+   STYLE_GUIDE.md, QUARTO.md, SCREENSHOTS.md, LINKS.md, VISUAL_QA.md and
+   relevant Decision Records and documentation sources.
 4. Inspect branch, working tree, recent commits, relevant tags and staged or
    unstaged changes with read-only Git commands. Preserve uncommitted work.
 5. Apply source-sensitivity, screenshot, internal-link, embedded-resource and
@@ -56,6 +56,7 @@ Check internal consistency across:
 - navigation, structure, terminology, links and cross-references
 - screenshots, diagrams, captions, alt text and visual QA
 - Quarto configuration, source files, rendered outputs and publication state
+- feedback scope, review artifacts, maintainer decisions and source transfer
 - source provenance, sensitivity, derivatives and disclosure boundaries
 - Decision Records and intentional deviations
 - actual validation evidence versus documented claims

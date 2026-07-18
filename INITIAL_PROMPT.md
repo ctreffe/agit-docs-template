@@ -5,7 +5,7 @@ Use this as the first prompt after creating a concrete documentation project fro
 ```text
 We are initializing a new technical documentation project from the AGIT Documentation Template.
 
-Please first read the complete repository and all relevant project rules, especially README.md, ChatGPT.md, CODEX.md, DOCUMENTATION.md, REPOSITORY.md, PROJECT_SETUP.md, DOCS_SETUP.md, PROJECT_CONTEXT.md, DOCUMENTATION_TYPE_PROFILES.md, QUARTO.md, AUDIENCE.md, STYLE_GUIDE.md, SCREENSHOTS.md, LINKS.md, VISUAL_QA.md, and the DDR guidance.
+Please first read the complete repository and all relevant project rules, especially README.md, ChatGPT.md, CODEX.md, DOCUMENTATION.md, REPOSITORY.md, PROJECT_SETUP.md, DOCS_SETUP.md, PROJECT_CONTEXT.md, DOCUMENTATION_TYPE_PROFILES.md, QUARTO.md, FEEDBACK_WORKFLOW.md, AUDIENCE.md, STYLE_GUIDE.md, SCREENSHOTS.md, LINKS.md, VISUAL_QA.md, and the DDR guidance.
 
 Then perform a structured initialization following PROJECT_SETUP.md and DOCS_SETUP.md.
 
@@ -24,6 +24,9 @@ Ask me for all missing maintainer decisions, including:
 - Which raw sources, reviewed derivatives and generated outputs may be tracked
   in Git, and which ignore rules must exist first.
 - Screenshot, diagram, visual QA, and link expectations.
+- Expected feedback channels, the explicit scope of DOCX or PDF review
+  artifacts, external-feedback curation, and separate assistant-access, Git
+  versioning and publication rules for those artifacts.
 - The first roadmap milestone, its validation objective and the first small
   reviewable steps below it.
 - Initialization provenance: keep PROJECT_SETUP.md and INITIAL_PROMPT.md under

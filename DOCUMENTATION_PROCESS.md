@@ -34,12 +34,18 @@ Use active voice where appropriate. State prerequisites, steps, outcomes, limita
 
 Use screenshots and diagrams when they clarify real interfaces, states, workflows, or decisions. Review visuals for currency, readability, relevance, and sensitive information.
 
-External reviewer comments are review input rather than automatic change
-instructions. Present them to the maintainer as concise numbered issues before
-incorporation unless the maintainer has already provided an unambiguous
-decision.
+## 6. Feedback and revision
 
-## 6. Quality assurance
+Use `FEEDBACK_WORKFLOW.md` for direct source review, DOCX comments and Track
+Changes, external feedback curation and annotated PDF review. Maintained source
+files remain authoritative.
+
+For website documentation, define the reviewed page, chapter, bundle or
+snapshot explicitly. Present unresolved external feedback as concise numbered
+issues before incorporation. Transfer accepted changes to the source, then
+re-render and validate the affected output.
+
+## 7. Quality assurance
 
 Before milestone closure, check:
 
@@ -52,20 +58,20 @@ Before milestone closure, check:
 - Terminology consistency.
 - Open decisions and follow-up work.
 
-## 7. Harmonization
+## 8. Harmonization
 
 The maintainer decides when to use `HARMONIZATION_PROMPT.md` to compare the
 project with its recorded source template, reconcile internal documentation and
 output state, and review roadmap and coverage fit.
 
-## 8. Collaboration retrospective
+## 9. Collaboration retrospective
 
 The maintainer decides when to use `RETROSPECTIVE_PROMPT.md` to evaluate
 Maintainer-Agent collaboration, including rules, feedback, decisions, handoffs
 and work rhythm. Project-content implications are handed to a later
 harmonization; reusable collaboration lessons may become template candidates.
 
-## 9. Milestone closure
+## 10. Milestone closure
 
 Build the milestone through small `docs:`, `fix:` or other appropriate regular
 commits as reviewable steps become complete. Update `CHANGELOG.md`, `VERSION`,

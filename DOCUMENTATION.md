@@ -24,6 +24,8 @@ Template files describe how a documentation project should be initialized, maint
 - `DOCS_SETUP.md`: Documentation-specific setup checklist.
 - `PROJECT_CONTEXT.md`: Project memory template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing documentation workflow.
+- `FEEDBACK_WORKFLOW.md`: Direct-source, annotated DOCX and annotated PDF
+  review workflow.
 - `DOCUMENTATION_TYPE_PROFILES.md`: Documentation type profiles and profile-specific QA guidance.
 - `QUARTO.md`: Quarto source format, rendering, bilingual structure, and output QA.
 - `AUDIENCE.md`: Audience model template.
@@ -40,7 +42,15 @@ Derived projects should distinguish between current documentation state and proj
 
 ## Documentation artifacts
 
-Technical documentation may contain Quarto Markdown sources, text, diagrams, screenshots, exported PDFs, generated pages, recordings, and structured reference data. The repository should make clear which artifacts are source material, which are maintained documentation, and which are generated output.
+Technical documentation may contain Quarto Markdown sources, text, diagrams,
+screenshots, exported DOCX or PDF files, generated pages, review annotations,
+recordings, and structured reference data. The repository should make clear
+which artifacts are source material, which are maintained documentation, which
+are review artifacts, and which are generated output.
+
+Rendered or annotated DOCX and PDF files do not replace their maintained
+sources. Accepted feedback is complete only after it has been transferred to
+the authoritative source and validated there.
 
 ## Sensitive material
 

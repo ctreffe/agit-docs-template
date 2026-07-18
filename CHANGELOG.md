@@ -6,6 +6,9 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Dedicated feedback workflow for direct source review, DOCX comments and
+  Track Changes, external feedback curation and annotated PDF review.
+- Ignored local locations for rendered and annotated review artifacts.
 - `RETROSPECTIVE_PROMPT.md` for evidence-based documentation-collaboration
   review and controlled template-learning candidates.
 - `HARMONIZATION_PROMPT.md` for source-template comparison, documentation
@@ -23,6 +26,10 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Define maintained repository sources as authoritative over DOCX and PDF
+  review artifacts and require explicit review scope for website exports.
+- Make feedback-channel and review-artifact decisions part of structured
+  project initialization and continuation.
 - Retain initialization artifacts as project provenance and record template
   lineage, lifecycle status and harmonization baselines in `PROJECT_CONTEXT.md`.
 - Expand `PROJECT_CONTEXT.md` with current-work, relevant-document and

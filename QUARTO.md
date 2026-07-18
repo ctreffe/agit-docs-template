@@ -71,6 +71,23 @@ PDF is supported when a printable or archival output is needed, but it requires 
 
 Other Quarto outputs may be used if the project requires them, but they should be documented in `DOCS_SETUP.md` and tested before milestone closure.
 
+## DOCX and PDF review outputs
+
+DOCX may be generated as a bounded review format for wording, structure,
+terminology, comments and Track Changes. It is not the default website output
+and must not silently broaden the reviewed scope. A derived project should
+define and validate a project-specific render command or profile for the named
+page, chapter, selected bundle or snapshot before relying on DOCX review.
+
+PDF is preferred when review depends on layout, pagination, tables, figures,
+captions or print behavior. PDF annotations are less reliably mapped back to
+editable source structure, so uncertain findings require explicit source
+mapping and maintainer confirmation.
+
+In both cases, Quarto files and other maintained repository sources remain
+authoritative. Follow `FEEDBACK_WORKFLOW.md` when rendering, receiving,
+interpreting and closing feedback artifacts.
+
 ## Bilingual documentation
 
 The template starts with parallel English and German entry points:
