@@ -87,3 +87,6 @@ only as a deliberate, documented maintainer exception.
 
 After initialization, retain `CONTINUATION_PROMPT.md` and use it whenever work
 continues in a new context window or assistant session.
+
+Retain `HARMONIZATION_PROMPT.md` for periodic source-template, documentation,
+output and roadmap alignment.

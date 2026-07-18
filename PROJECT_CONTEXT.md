@@ -165,6 +165,7 @@ Link check expectations:
 - `PROJECT_SETUP.md` - retained initialization method and provenance
 - `INITIAL_PROMPT.md` - retained first-session initialization prompt
 - `CONTINUATION_PROMPT.md` - re-entry prompt for a new context window or assistant session
+- `HARMONIZATION_PROMPT.md` - source-template, documentation-consistency and roadmap harmonization
 - `DOCS_SETUP.md` - documentation setup and current model
 - `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
 - `AUDIENCE.md` - audience assumptions

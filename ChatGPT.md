@@ -141,3 +141,15 @@ comments as numbered issues and wait for maintainer acceptance, rejection or
 qualification before implementing them. Clear comments written by the
 maintainer may be transferred directly; ambiguous or consequential comments
 require clarification.
+
+## 14. Harmonization and retrospective boundary
+
+Use `HARMONIZATION_PROMPT.md` for documentation-project content alignment. It
+compares a derived project with its recorded source template, reconciles
+documentation sources, outputs and repository state, and reviews roadmap and
+coverage fit. The concrete project, audience decisions and Decision Records
+remain authoritative.
+
+Harmonization does not evaluate Maintainer-Agent collaboration or derive
+changes for the source template. Those questions belong to a less frequent
+collaboration retrospective, normally after a suitable milestone.

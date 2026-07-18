@@ -6,6 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- `HARMONIZATION_PROMPT.md` for source-template comparison, documentation
+  consistency review and roadmap alignment.
 - `CONTINUATION_PROMPT.md` for reproducible documentation-project re-entry in a
   new context window or assistant session.
 - Documentation Collaboration Model v0.3.0 with formal working-commit rhythm,

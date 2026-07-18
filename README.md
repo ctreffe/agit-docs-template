@@ -49,7 +49,8 @@ Start from the Documentation Template when audience, structure, screenshots, lin
 5. Draft documentation in small, reviewable increments.
 6. Record substantial decisions in `decisions/`, usually as DDRs.
 7. Close meaningful milestones with changelog, version, and consistency review.
-8. Begin later context windows or assistant sessions with [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md).
+8. Use [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) for source-template, internal-consistency and roadmap alignment.
+9. Begin later context windows or assistant sessions with [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md).
 
 ## Git History Control Words
 
@@ -80,6 +81,7 @@ R and RStudio are useful when the documentation includes R code, data analysis, 
 - [PROJECT_SETUP.md](PROJECT_SETUP.md): Initialization workflow for derived projects.
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md): First prompt for project initialization.
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md): Re-entry prompt for a new context window or assistant session.
+- [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md): Source-template, documentation-consistency and roadmap harmonization.
 - [DOCS_SETUP.md](DOCS_SETUP.md): Documentation-specific setup checklist.
 - [DOCUMENTATION_PROCESS.md](DOCUMENTATION_PROCESS.md): Ongoing documentation workflow.
 - [DOCUMENTATION_TYPE_PROFILES.md](DOCUMENTATION_TYPE_PROFILES.md): Documentation type profiles, including the tutorial profile.

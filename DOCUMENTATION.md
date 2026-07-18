@@ -17,6 +17,8 @@ Template files describe how a documentation project should be initialized, maint
 - `INITIAL_PROMPT.md`: Reproducible first prompt for project initialization.
 - `CONTINUATION_PROMPT.md`: Reproducible re-entry prompt for a new context
   window or assistant session.
+- `HARMONIZATION_PROMPT.md`: Reproducible source-template, documentation-state
+  and roadmap harmonization prompt.
 - `DOCS_SETUP.md`: Documentation-specific setup checklist.
 - `PROJECT_CONTEXT.md`: Project memory template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing documentation workflow.
