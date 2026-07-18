@@ -4,6 +4,8 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.3.0] - 2026-07-19
+
 ### Added
 
 - Dedicated feedback workflow for direct source review, DOCX comments and
