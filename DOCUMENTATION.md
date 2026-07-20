@@ -36,6 +36,10 @@ Template files describe how a documentation project should be initialized, maint
 - `REPOSITORY.md`: Repository organization and lifecycle rules.
 - `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
 
+## README language policy
+
+In this template repository, `README.md` is authoritative and `README.de.md` is maintained as a close structural and semantic translation. Derived projects may choose a different authority model, but they must document it and keep parallel README files aligned.
+
 ## README badges
 
 Place the badge block directly below the README title and before the AI

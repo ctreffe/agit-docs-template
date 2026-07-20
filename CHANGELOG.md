@@ -6,6 +6,10 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Clarify `INITIAL_PROMPT.md` as the sole maintainer entry point for agent-led
+  initialization, separate language navigation from the collaboration note,
+  move README authority guidance into documentation rules and link maintainer
+  tools to their official sources.
 - Standardize template README badges as status, version and license links and
   document how derived documentation projects adapt badges without inheriting
   template state or advertising nonexistent automation.

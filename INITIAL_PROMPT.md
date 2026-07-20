@@ -2,6 +2,8 @@
 
 Use this as the first prompt after creating a concrete documentation project from this template.
 
+For normal initialization, the maintainer only needs to give the prompt below to the assistant. The assistant reads and applies `PROJECT_SETUP.md`, `DOCS_SETUP.md` and the other setup files, presents every required maintainer decision and performs the repository updates; the maintainer does not execute those files separately.
+
 ```text
 We are initializing a new technical documentation project from the AGIT Documentation Template.
 

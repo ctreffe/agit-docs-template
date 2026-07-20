@@ -15,7 +15,11 @@
 >
 > Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
-[English documentation](README.md) · Die englische README ist maßgeblich; die deutsche README wird als enge Übersetzung gepflegt.
+---
+
+**Sprache:** [English documentation](README.md)
+
+---
 
 ## Inhalt
 
@@ -62,20 +66,20 @@ Verwende das generische Project Template, wenn Dokumentation nur ein Teil eines 
 
 ## Projektinitialisierung
 
-Die Initialisierung richtet das Dokumentationssystem ein, bevor umfangreiches Schreiben beginnt.
+Nach dem Erzeugen des Repositorys muss der Maintainer nur [INITIAL_PROMPT.md](INITIAL_PROMPT.md) aufrufen. Der Agent liest das Repository und alle Setup-Leitlinien und führt anschließend durch die vollständige Dokumentationsinitialisierung. Der Maintainer muss `PROJECT_SETUP.md` oder `DOCS_SETUP.md` nicht selbst öffnen oder ausführen.
 
-1. Erzeuge ein Repository aus diesem Template und lege die maßgebliche lokale Baseline fest.
-2. Beginne mit [INITIAL_PROMPT.md](INITIAL_PROMPT.md) und folge [PROJECT_SETUP.md](PROJECT_SETUP.md).
-3. Vervollständige [DOCS_SETUP.md](DOCS_SETUP.md) mit Dokumentationsidentität, Zweck, Umfang und Publikationsmodell.
-4. Wähle das dominante Dokumentationstyp-Profil und mögliche sekundäre Profile.
-5. Definiere primäre und sekundäre Zielgruppen, Vorwissen, Leseraufgaben und zu verhindernde Risiken in [AUDIENCE.md](AUDIENCE.md).
-6. Entscheide, welche Sprachen veröffentlicht werden, ob eine maßgeblich ist und wie parallele Dokumente synchron bleiben.
-7. Lege Regeln für Quellensensitivität, Screenshots, Links, Feedback und visuelle QA fest, bevor Rohmaterialien importiert werden.
-8. Passe `_quarto.yml`, `docs/` und das projektspezifische Navigationsmodell an.
-9. Vervollständige [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) mit Roadmap, aktueller Arbeit, Quellenmodell, Review-Modell und Template-Provenienz.
-10. Rendere und prüfe die initiale Dokumentations-Baseline vor dem Initialisierungs-Commit.
+Der Agent:
 
-Die Initialisierung ist unvollständig, solange erforderliche Entscheidungen zu Zweck, Zielgruppe, Struktur, Quellen, Veröffentlichung oder QA `TBD` bleiben.
+1. liest die Kollaborations-, Dokumentations-, Setup-, Repository- und Entscheidungsregeln;
+2. prüft die Baseline, ohne die Git-Historie zu verändern;
+3. legt kompakte Fragen zu Zweck, Umfang, Dokumentationstyp, Zielgruppen, Sprachen, Publikation und QA vor;
+4. fragt Entscheidungen zu Quellensensitivität, Screenshots, Feedback und visueller Prüfung ab, bevor Rohmaterial importiert wird;
+5. passt nach den Antworten `DOCS_SETUP.md`, `AUDIENCE.md`, README-Dateien, `_quarto.yml`, `docs/` und Navigation an;
+6. dokumentiert Roadmap, Quellenmodell, Review-Modell und Template-Provenienz in `PROJECT_CONTEXT.md`;
+7. rendert und prüft die initiale Dokumentations-Baseline; und
+8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
+
+`PROJECT_SETUP.md` und `DOCS_SETUP.md` bleiben Checklisten des Agenten und Provenienzartefakte der Initialisierung. `INITIAL_PROMPT.md` ist der einzige benutzerorientierte Einstiegspunkt, der sie aktiviert.
 
 ## Empfohlene Workflows
 
@@ -125,7 +129,7 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 
 ### Einstiegspunkte und Projektgedächtnis
 
-- **`README.md` und `README.de.md`** erklären Template, initiales Setup und laufende Nutzung. Englisch ist maßgeblich, während Deutsch als enge Übersetzung gepflegt wird.
+- **`README.md` und `README.de.md`** erklären Template, initiales Setup und laufende Nutzung auf Englisch und Deutsch.
 - **`PROJECT_CONTEXT.md`** hält Dokumentationszweck, Zielgruppe, Quellen- und Sensitivitätsmodell, aktuelle Arbeit, Roadmap, Review-Zustand und nächste Sitzung fest. Sie ist der primäre Wiedereinstiegspunkt und kein Ersatz für die Dokumentation selbst.
 - **`CHANGELOG.md` und `VERSION`** dokumentieren abgeschlossene Template- oder Dokumentations-Milestones. Sie sollen einen geprüften Zustand abbilden und nicht Arbeit, die lediglich begonnen wurde.
 
@@ -171,15 +175,15 @@ Halte initiale Template-Version und -Commit, letzte Harmonisierungs-Baseline, Le
 
 ## Verwendung dieses Templates
 
-1. Initialisiere das Repository mit `INITIAL_PROMPT.md`, `PROJECT_SETUP.md` und `DOCS_SETUP.md`.
-2. Wähle das Dokumentationstyp-Profil und definiere Zielgruppen-, Sprach- und Publikationsanforderungen.
-3. Lege Quelleninventar und Sensitivitätsgrenzen fest, bevor Screenshots, Logs, Exporte, Tickets oder Betriebsdaten geöffnet werden.
-4. Definiere die Informationsarchitektur vor umfangreichem Entwurf.
-5. Pflege Dokumentation in `docs/` und verbinde jede Visualisierung und jeden Link mit einer realen Leseraufgabe oder einem Nachweisbedarf.
-6. Entwirf, rendere und prüfe in kleinen Schritten.
-7. Übertrage akzeptiertes DOCX-, PDF- oder Website-Feedback zurück in die gepflegte Quelle und validiere es dort erneut.
-8. Dokumentiere folgenreiche DDRs, PDRs oder ADRs in `decisions/`.
-9. Halte `PROJECT_CONTEXT.md` aktuell und verwende `CONTINUATION_PROMPT.md` für spätere Sitzungen.
+1. Erzeuge ein Repository aus dem Template und gib dem Agenten die Anweisung aus `INITIAL_PROMPT.md`.
+2. Beantworte die nummerierten Fragen des Agenten; er liest und verarbeitet `PROJECT_SETUP.md`, `DOCS_SETUP.md` und die übrigen Setup-Leitlinien automatisch.
+3. Prüfe den initialisierten Dokumentationsstand, die Render-Prüfungen und den vorgeschlagenen ersten Commit.
+4. Wähle das Dokumentationstyp-Profil und bestätige mit dem Agenten Zielgruppen-, Sprach- und Publikationsanforderungen.
+5. Lege Quelleninventar und Sensitivitätsgrenzen fest, bevor Screenshots, Logs, Exporte, Tickets oder Betriebsdaten geöffnet werden.
+6. Definiere die Informationsarchitektur vor umfangreichem Entwurf und entwirf, rendere und prüfe anschließend in kleinen Schritten.
+7. Verbinde jede Visualisierung und jeden Link mit einer realen Leseraufgabe oder einem Nachweisbedarf.
+8. Übertrage akzeptiertes Feedback zurück in die gepflegte Quelle und validiere es dort erneut.
+9. Dokumentiere folgenreiche Entscheidungen, halte `PROJECT_CONTEXT.md` aktuell und verwende `CONTINUATION_PROMPT.md` für spätere Sitzungen.
 10. Schließe Milestones erst nach technischer, Zielgruppen-, Link-, visueller, Render- und Offenlegungs-QA ab.
 
 ## Tool-Setup für Maintainer
@@ -188,9 +192,9 @@ Für den Standard-Quarto-Workflow:
 
 1. Installiere die [Quarto CLI](https://quarto.org/docs/get-started/) und prüfe sie mit `quarto --version`.
 2. Öffne das Repository als aktiven lokalen Workspace und führe `quarto render` aus, um die HTML-Baseline zu validieren.
-3. Installiere eine TeX-Toolchain wie TinyTeX nur, wenn direkter PDF-Output erforderlich ist.
-4. Installiere LibreOffice, wenn DOCX-Outputs für visuelle QA in PDF oder Seitenbilder gerendert werden müssen.
-5. Verwende R und RStudio nur, wenn die Dokumentation R-Code, Datenanalysen, Plots oder R-basierte Quarto-Erweiterungen enthält; für gewöhnliche Markdown-Dokumentation sind sie nicht erforderlich.
+3. Folge Quartos [Hinweisen zu TinyTeX und PDF-Engines](https://quarto.org/docs/output-formats/pdf-engine) nur, wenn direkter PDF-Output erforderlich ist.
+4. Installiere [LibreOffice](https://www.libreoffice.org/download/instructions/), wenn DOCX-Outputs für visuelle QA in PDF oder Seitenbilder gerendert werden müssen.
+5. Verwende [R](https://cran.r-project.org/) und [RStudio](https://posit.co/downloads/) nur, wenn die Dokumentation R-Code, Datenanalysen, Plots oder R-basierte Quarto-Erweiterungen enthält; für gewöhnliche Markdown-Dokumentation sind sie nicht erforderlich.
 
 Halte erzeugte Websites, Previews, Rohcaptures und Review-Artefakte in den durch `.gitignore` definierten ignorierten Orten, sofern das Projekt nicht bewusst ein versioniertes Artefakt freigibt.
 

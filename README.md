@@ -15,7 +15,11 @@
 >
 > Its collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
 
-[Deutsche Dokumentation](README.de.md) · The English README is authoritative; the German README is maintained as a close translation.
+---
+
+**Language:** [Deutsche Dokumentation](README.de.md)
+
+---
 
 ## Contents
 
@@ -62,20 +66,20 @@ Use the generic Project Template when documentation is one part of a broader pro
 
 ## Project Initialization
 
-Initialization establishes the documentation system before large-scale drafting begins.
+After creating the repository, the maintainer needs to invoke only [INITIAL_PROMPT.md](INITIAL_PROMPT.md). The agent reads the repository and all setup guidance, then leads the complete documentation initialization. The maintainer does not need to open or execute `PROJECT_SETUP.md` or `DOCS_SETUP.md` separately.
 
-1. Create a repository from this template and establish the authoritative local baseline.
-2. Start with [INITIAL_PROMPT.md](INITIAL_PROMPT.md) and follow [PROJECT_SETUP.md](PROJECT_SETUP.md).
-3. Complete [DOCS_SETUP.md](DOCS_SETUP.md) with documentation identity, purpose, scope and publication model.
-4. Select the dominant documentation type profile and any secondary profiles.
-5. Define the primary and secondary audiences, prior knowledge, reader tasks and preventable risks in [AUDIENCE.md](AUDIENCE.md).
-6. Decide which languages are published, whether one is authoritative and how parallel documents remain aligned.
-7. Establish source sensitivity, screenshot, link, feedback and visual-QA rules before importing raw materials.
-8. Adapt `_quarto.yml`, `docs/` and the project-specific navigation model.
-9. Complete [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) with the roadmap, current work, source model, review model and template provenance.
-10. Render and inspect the initial documentation baseline before the initialization commit.
+The agent then:
 
-Initialization is incomplete while required purpose, audience, structure, source, publication or QA choices remain `TBD`.
+1. reads the collaboration, documentation, setup, repository and decision rules;
+2. inspects the baseline without altering Git history;
+3. presents concise questions about purpose, scope, documentation type, audiences, languages, publication and QA;
+4. asks for source-sensitivity, screenshot, feedback and visual-review decisions before importing raw material;
+5. adapts `DOCS_SETUP.md`, `AUDIENCE.md`, the README files, `_quarto.yml`, `docs/` and navigation after the maintainer answers;
+6. records the roadmap, source model, review model and template provenance in `PROJECT_CONTEXT.md`;
+7. renders and inspects the initial documentation baseline; and
+8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
+
+`PROJECT_SETUP.md` and `DOCS_SETUP.md` remain agent checklists and initialization provenance. `INITIAL_PROMPT.md` is the single user-facing entry point that activates them.
 
 ## Recommended Workflows
 
@@ -125,7 +129,7 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 
 ### Entry Points and Project Memory
 
-- **`README.md` and `README.de.md`** explain the template, initial setup and ongoing use. English is authoritative, while German is maintained as a close translation.
+- **`README.md` and `README.de.md`** explain the template, initial setup and ongoing use in English and German.
 - **`PROJECT_CONTEXT.md`** records documentation purpose, audience, source and sensitivity model, current work, roadmap, review state and next session. It is the primary re-entry point rather than a substitute for the documentation itself.
 - **`CHANGELOG.md` and `VERSION`** record completed template or documentation milestones. They should reflect a reviewed state rather than work that has merely begun.
 
@@ -171,15 +175,15 @@ Record the initial template version and commit, last harmonization baseline, lif
 
 ## How to Use This Template
 
-1. Initialize the repository through `INITIAL_PROMPT.md`, `PROJECT_SETUP.md` and `DOCS_SETUP.md`.
-2. Select the documentation type profile and define audience, language and publication requirements.
-3. Establish the source inventory and sensitivity boundaries before opening screenshots, logs, exports, tickets or operational data.
-4. Define the information architecture before large-scale drafting.
-5. Maintain documentation in `docs/` and connect every visual and link to a real reader task or evidence need.
-6. Draft, render and review in small increments.
-7. Transfer accepted DOCX, PDF or website feedback back to the maintained source and revalidate it there.
-8. Record consequential DDRs, PDRs or ADRs in `decisions/`.
-9. Keep `PROJECT_CONTEXT.md` current and use `CONTINUATION_PROMPT.md` for later sessions.
+1. Create a repository from the template and give the agent the instruction in `INITIAL_PROMPT.md`.
+2. Answer the numbered questions the agent presents; it reads and applies `PROJECT_SETUP.md`, `DOCS_SETUP.md` and the remaining setup guidance automatically.
+3. Review the initialized documentation state, render checks and proposed first commit.
+4. Select the documentation type profile and confirm audience, language and publication requirements with the agent.
+5. Establish the source inventory and sensitivity boundaries before opening screenshots, logs, exports, tickets or operational data.
+6. Define the information architecture before large-scale drafting, then draft, render and review in small increments.
+7. Connect every visual and link to a real reader task or evidence need.
+8. Transfer accepted feedback back to the maintained source and revalidate it there.
+9. Record consequential decisions, keep `PROJECT_CONTEXT.md` current and use `CONTINUATION_PROMPT.md` for later sessions.
 10. Close milestones only after technical, audience, link, visual, render and disclosure QA.
 
 ## Maintainer Tool Setup
@@ -188,9 +192,9 @@ For the standard Quarto workflow:
 
 1. Install the [Quarto CLI](https://quarto.org/docs/get-started/) and verify it with `quarto --version`.
 2. Open the repository as the active local workspace and run `quarto render` to validate the HTML baseline.
-3. Install a TeX toolchain such as TinyTeX only when direct PDF output is required.
-4. Install LibreOffice when DOCX outputs must be rendered to PDF or page images for visual QA.
-5. Use R and RStudio only when the documentation includes R code, data analysis, plots or R-based Quarto extensions; they are not required for ordinary Markdown documentation.
+3. Follow Quarto's [TinyTeX and PDF-engine guidance](https://quarto.org/docs/output-formats/pdf-engine) only when direct PDF output is required.
+4. Install [LibreOffice](https://www.libreoffice.org/download/instructions/) when DOCX outputs must be rendered to PDF or page images for visual QA.
+5. Use [R](https://cran.r-project.org/) and [RStudio](https://posit.co/downloads/) only when the documentation includes R code, data analysis, plots or R-based Quarto extensions; they are not required for ordinary Markdown documentation.
 
 Keep generated sites, previews, raw captures and review artifacts in the ignored locations defined by `.gitignore` unless the project deliberately approves a versioned artifact.
 
