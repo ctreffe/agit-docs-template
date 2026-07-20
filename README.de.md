@@ -1,5 +1,9 @@
 # AGIT Documentation Template
 
+[![Status](https://img.shields.io/badge/status-stable-green)](VERSION)
+[![Version](https://img.shields.io/github/v/tag/ctreffe/agit-docs-template?label=version)](CHANGELOG.md)
+[![License](https://img.shields.io/github/license/ctreffe/agit-docs-template)](LICENSE)
+
 > [!NOTE]
 > **KI-Zusammenarbeit**
 >

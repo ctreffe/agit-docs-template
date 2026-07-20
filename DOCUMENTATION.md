@@ -36,6 +36,21 @@ Template files describe how a documentation project should be initialized, maint
 - `REPOSITORY.md`: Repository organization and lifecycle rules.
 - `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
 
+## README badges
+
+Place the badge block directly below the README title and before the AI
+Collaboration Note. Use status, version and license in that order, followed
+only by badges for real documentation automation such as a site build, render
+or link check. Link the standard badges to `VERSION`, `CHANGELOG.md` and
+`LICENSE`.
+
+Badges must reflect maintained documentation state rather than decorate the
+README. Derived projects replace template values with their own status,
+completed version, actual license and available workflows. Avoid a last-commit
+badge because activity is not documentation quality or publication readiness.
+Keep English and German badge blocks identical and update static badges with
+the metadata they represent.
+
 ## Current state and history
 
 Derived projects should distinguish between current documentation state and project history. The main documentation should describe what is true now. Historical rationale belongs in decision records, changelog entries, or dedicated notes when needed.

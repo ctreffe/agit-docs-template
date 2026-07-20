@@ -6,6 +6,9 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Standardize template README badges as status, version and license links and
+  document how derived documentation projects adapt badges without inheriting
+  template state or advertising nonexistent automation.
 - Upgrade the Documentation Collaboration Model to v0.4.0 and classify staging
   and unstaging as specifically requested index operations outside the
   control-word rule.

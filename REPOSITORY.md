@@ -28,6 +28,24 @@ read-only Git evidence.
 - `docs/`: Maintained Quarto source files.
 - `assets/`: Maintained screenshots, figures, and diagrams.
 
+## README badge policy
+
+Use a compact badge block directly below the README title and before the AI
+Collaboration Note. The standard order is status, version and license, followed
+only by badges for real documentation automation such as a site build or link
+check.
+
+Status links to `VERSION`, version links to `CHANGELOG.md` and license links to
+`LICENSE`. Public templates may use dynamic GitHub metadata. Avoid a
+last-commit badge because activity does not establish documentation quality or
+publication readiness.
+
+Derived documentation projects adapt the badges to their own documented
+status, completed version, actual license and available workflows. They must
+not retain the Documentation Template version as their project version or show
+automation that does not exist. English and German badge blocks remain
+identical when both READMEs are maintained.
+
 ## Inputs, maintained files, and outputs
 
 Separate these categories clearly:

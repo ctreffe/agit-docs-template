@@ -97,6 +97,23 @@ only as a deliberate, documented maintainer exception.
    - Use an unprefixed milestone commit only when initialization also completes
      a genuinely defined and reviewed versioned milestone.
 
+## README badge policy
+
+Place the badge block directly below the README title and before the AI
+Collaboration Note. Use status, version and license in that order, followed
+only by badges for real build, test or documentation automation.
+
+Derived documentation projects must adapt the template badges to the concrete
+project. Status must have a documented meaning, version must represent the
+latest completed documentation state and license must match the repository.
+Use release, site-build or link-check badges only when the corresponding
+workflow exists. Avoid a last-commit badge because repository activity is not
+documentation quality or publication readiness.
+
+Keep English and German badge blocks identical when both READMEs are present.
+Record the Documentation Template version and commit in `PROJECT_CONTEXT.md`,
+not as the derived project's version badge.
+
 After initialization, retain `CONTINUATION_PROMPT.md` and use it whenever work
 continues in a new context window or assistant session.
 
