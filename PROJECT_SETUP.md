@@ -45,7 +45,9 @@ only as a deliberate, documented maintainer exception.
    - Screenshot policy.
    - Diagram policy.
    - Naming and storage rules.
-   - Visual QA expectations.
+   - Visual QA expectations. By default, routine renders receive technical
+     output validation without the Browser skill; agent visual QA occurs only
+     before milestone closure or when explicitly requested by the maintainer.
 
 7. Confirm the external-file and project-material model.
    - Keep external content in `input/` unchanged.

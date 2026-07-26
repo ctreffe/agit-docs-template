@@ -47,9 +47,18 @@ maintainer decision when it could materially affect the result.
 ## Validation and Handoff
 
 Run checks proportionate to the affected formats: local-link validation, Quarto
-rendering, technical review, visual QA and disclosure review where applicable.
+rendering, technical output review and disclosure review, plus visual QA only
+at the defined triggers below.
 At minimum, review the diff and run `git diff --check`. Compare English and
 German structure when bilingual documentation is affected.
+
+Routine rendering and inspection of generated HTML are technical output
+validation, not visual QA. Perform visual QA only before milestone closure or
+when the maintainer explicitly requests it. For HTML, visual QA requires actual
+inspection through the Browser skill; for PDF or DOCX, it requires inspection
+of rendered page images with the appropriate visual tool. Visual changes alone
+do not trigger agent-performed visual QA, because the maintainer owns ongoing
+visual inspection.
 
 Report the outcome, changed files, checks performed, limitations or skipped
 checks and suitable commit metadata. A successful render alone does not prove

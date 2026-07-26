@@ -149,6 +149,23 @@ Auslieferung bestimmt ist. Wegwerfbare Erzeugungszwischenstände bleiben in
 `temp/`; gepflegte `docs/`-Quellen und Publikations-`assets/` behalten ihre
 maßgeblichen Orte.
 
+## Render-Validierung und visuelle QA
+
+Die routinemäßige Render- und Output-Validierung darf Quarto ausführen und das
+erzeugte HTML technisch prüfen, ohne den Browser-Skill zu öffnen. Sie prüft je
+nach Relevanz Build-Erfolg, Warnungen, erforderliche Dateien, HTML-Struktur,
+Links, referenzierte Assets und offensichtlich nicht gerenderte Quellinhalte.
+Das zählt nicht als visuelle QA.
+
+Visuelle QA bedeutet, dass der Agent gerendertes HTML tatsächlich mit dem
+Browser-Skill oder gerenderte PDF-/DOCX-Seitenbilder mit dem passenden visuellen
+Werkzeug inspiziert. Der Agent führt sie ausschließlich vor einem
+Milestone-Abschluss oder auf ausdrückliche Anforderung des Maintainers durch.
+Visuelle oder Layoutänderungen allein lösen keine visuelle QA durch den Agenten
+aus; der Maintainer übernimmt die visuelle Prüfung während der normalen Arbeit.
+Wenn das benötigte Werkzeug oder der Output nicht verfügbar ist, meldet der
+Agent, dass keine visuelle QA durchgeführt wurde.
+
 ## Empfohlene Workflows
 
 ### Dokumentationsworkflow
@@ -168,7 +185,7 @@ Das Projekt unterstützt komplementäre Review-Kanäle:
 1. **Direktes Quellenreview:** Maintainer bearbeiten oder kommentieren Quarto- oder Markdown-Quellen direkt.
 2. **Maintainer-DOCX-Review:** Kommentare und Änderungsverfolgung werden in die gepflegte Quelle zurückübertragen, wenn ihre Intention eindeutig ist.
 3. **Externes DOCX-Review:** Nicht kuratiertes externes Feedback wird als nummerierte Punkte dargestellt, bis der Maintainer es akzeptiert, ablehnt, qualifiziert oder zurückstellt.
-4. **Annotiertes PDF-Review:** Layout-, Paginierungs-, Tabellen-, Abbildungs- und Druckprobleme werden auf ihre Quellstellen abgebildet und im gerenderten Format erneut validiert.
+4. **Annotiertes PDF-Review:** Layout-, Paginierungs-, Tabellen-, Abbildungs- und Druckprobleme werden auf ihre Quellstellen abgebildet; die geänderte Quelle wird gerendert und technisch validiert, während der Agent visuelle QA nur vor einem Milestone-Abschluss oder auf ausdrückliche Anforderung durchführt.
 5. **Website-Review:** Jede Review-Datei benennt die abgedeckte Seite, das Kapitel, Bundle oder den Snapshot; ein mehrdeutiger Export gilt nicht als Review der gesamten Website.
 
 Assistant-Zugriff, Git-Versionierung und Veröffentlichung von Review-Dateien sind getrennte Entscheidungen. [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md) beschreibt den vollständigen nachvollziehbaren Review-Zyklus.

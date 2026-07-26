@@ -64,8 +64,10 @@ locations and present uncertain or external findings as numbered issues before
 editing.
 
 Clear maintainer-authored PDF annotations may be implemented directly when the
-requested source change is unambiguous. Layout observations must be checked in
-the relevant rendered format after the source is changed.
+requested source change is unambiguous. After changing the source, re-render
+and technically validate the relevant format. The maintainer performs routine
+visual inspection; the assistant performs visual QA only before milestone
+closure or when the maintainer explicitly requests it.
 
 ## Review cycle
 
@@ -83,7 +85,9 @@ the relevant rendered format after the source is changed.
 6. Present unresolved decisions as a concise numbered list and record the
    maintainer's accept, reject, qualify or defer decision.
 7. Apply accepted changes to the maintained source in small reviewable steps.
-8. Re-render and perform the relevant content, link, visual and disclosure QA.
+8. Re-render and perform the relevant content, link and disclosure checks.
+   Perform agent visual QA only at milestone closure or when explicitly
+   requested by the maintainer.
 9. Update `PROJECT_CONTEXT.md` with the active review state and next action.
    Record durable documentation or workflow decisions in a DDR when needed.
 

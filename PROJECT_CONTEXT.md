@@ -169,7 +169,7 @@ Diagram policy:
 
 Visual QA requirements:
 
-- TBD
+- `<default: Browser or page-image visual QA before milestone closure or when explicitly requested; project-specific deviations>`
 
 ## Links and references
 

@@ -34,6 +34,11 @@ Use active voice where appropriate. State prerequisites, steps, outcomes, limita
 
 Use screenshots and diagrams when they clarify real interfaces, states, workflows, or decisions. Review visuals for currency, readability, relevance, and sensitive information.
 
+The maintainer owns visual inspection during ordinary work. A visual change
+does not automatically trigger agent-performed visual QA. The assistant uses
+the Browser skill or rendered page images for actual visual inspection only
+before milestone closure or when the maintainer explicitly requests it.
+
 ## 6. Feedback and revision
 
 Use `FEEDBACK_WORKFLOW.md` for direct source review, DOCX comments and Track
@@ -43,7 +48,8 @@ files remain authoritative.
 For website documentation, define the reviewed page, chapter, bundle or
 snapshot explicitly. Present unresolved external feedback as concise numbered
 issues before incorporation. Transfer accepted changes to the source, then
-re-render and validate the affected output.
+re-render and technically validate the affected output. Do not treat that
+routine validation as visual QA.
 
 ## 7. Quality assurance
 

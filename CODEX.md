@@ -17,7 +17,16 @@ This repository is a reusable template for AI-assisted technical documentation p
 - Treat automated privacy, secret or content checks as warnings rather than
   proof that a file is safe.
 - Keep technical documentation task-oriented, precise, and reviewable.
-- Treat links, screenshots, diagrams, and generated outputs as documentation files that need provenance and QA.
+- Treat links, screenshots, diagrams, and generated outputs as documentation
+  files that need provenance and proportionate technical or milestone QA.
+- Distinguish routine technical output validation from visual QA. Rendering,
+  reading generated HTML, checking links or inspecting output structure does
+  not count as visual QA and does not require the Browser skill.
+- Perform agent visual QA only before milestone closure or when the maintainer
+  explicitly requests it. Use the Browser skill for rendered HTML and inspect
+  rendered page images for PDF or DOCX. Do not infer a visual-QA request merely
+  from a visual-file or layout change; the maintainer owns ongoing visual
+  inspection.
 - Treat maintained Quarto or other repository sources as authoritative over
   rendered or annotated DOCX and PDF review files.
 - Inspect supplied annotated DOCX or PDF files only after assistant access has

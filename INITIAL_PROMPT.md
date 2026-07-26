@@ -30,7 +30,9 @@ Ask me for all missing maintainer decisions, including:
 - Existing source material and sensitivity constraints.
 - Which raw sources, reviewed derivatives and generated outputs may be tracked
   in Git, and which ignore rules must exist first.
-- Screenshot, diagram, visual QA, and link expectations.
+- Screenshot, diagram, link and output-validation expectations, including any
+  deliberate deviation from the default that Browser- or page-image-based
+  visual QA occurs only before milestone closure or when I explicitly request it.
 - Expected feedback channels, the explicit scope of DOCX or PDF review
   files, external-feedback curation, and separate assistant-access, Git
   versioning and publication rules for those files.

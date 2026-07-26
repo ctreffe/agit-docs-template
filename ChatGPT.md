@@ -44,6 +44,14 @@ AGIT documentation projects use Quarto Markdown (`.qmd`) as the preferred intern
 
 Before milestones, the assistant should attempt Quarto rendering when the local toolchain is available and report clearly if rendering was not possible.
 
+Routine render and output validation may inspect generated HTML, warnings,
+links, assets and output structure without opening the Browser skill. This does
+not count as visual QA. Agent-performed visual QA means actual inspection of
+rendered HTML through the Browser skill or of PDF/DOCX page images through the
+appropriate visual tool. It is performed only before milestone closure or when
+the maintainer explicitly requests it. The maintainer owns visual inspection
+during ordinary documentation work.
+
 ## 6. Sensitive information and screenshots
 
 Technical documentation often contains screenshots, URLs, system names, logs, user data, configuration values, tickets, and internal process details. These materials must be treated as potentially sensitive until the maintainer confirms otherwise.

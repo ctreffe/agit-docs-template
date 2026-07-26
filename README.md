@@ -147,6 +147,21 @@ publication or delivery. Disposable generation intermediates remain in
 `temp/`; maintained `docs/` sources and publication `assets/` keep their
 authoritative locations.
 
+## Render Validation and Visual QA
+
+Routine render and output validation may run Quarto and inspect the generated
+HTML technically without opening the Browser skill. It checks build success,
+warnings, required files, HTML structure, links, referenced assets and obvious
+unrendered source content as relevant. This does not count as visual QA.
+
+Visual QA means that the agent actually inspects rendered HTML with the Browser
+skill or rendered PDF/DOCX page images with the appropriate visual tool. The
+agent performs it only before milestone closure or when the maintainer
+explicitly requests it. Visual or layout changes alone do not trigger agent
+visual QA; the maintainer owns visual inspection during ordinary work. If the
+required tool or output is unavailable, the agent reports that visual QA was
+not performed.
+
 ## Recommended Workflows
 
 ### Documentation Workflow
@@ -166,7 +181,7 @@ The project supports complementary review channels:
 1. **Direct source review:** maintainers edit or comment directly in Quarto or Markdown source.
 2. **Maintainer DOCX review:** comments and Track Changes are transferred back to the maintained source when their intent is clear.
 3. **External DOCX review:** uncurated external feedback is presented as numbered issues until the maintainer accepts, rejects, qualifies or defers it.
-4. **Annotated PDF review:** layout, pagination, tables, figures and print issues are mapped back to their source locations and revalidated in the rendered format.
+4. **Annotated PDF review:** layout, pagination, tables, figures and print issues are mapped back to their source locations; the changed source is rendered and technically validated, while agent visual QA follows the milestone-or-explicit-request rule.
 5. **Website review:** every review file names the page, chapter, bundle or snapshot it covers; an ambiguous export is not treated as review of the whole site.
 
 Assistant access, Git versioning and publication of review files are separate decisions. See [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md) for the complete traceable review cycle.

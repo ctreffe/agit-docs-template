@@ -6,6 +6,9 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Separate routine technical render and HTML validation from true visual QA.
+  Require Browser- or page-image-based agent inspection only before milestone
+  closure or when explicitly requested by the maintainer.
 - Clarify that a generated file's documentation role, rather than its
   generation method, distinguishes retained materials from publication output.
 
