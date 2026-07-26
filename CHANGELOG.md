@@ -6,6 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its
+  template-only references after successful initialization.
 - Separate routine technical render and HTML validation from true visual QA.
   Require Browser- or page-image-based agent inspection only before milestone
   closure or when explicitly requested by the maintainer.
