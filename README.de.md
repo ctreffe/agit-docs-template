@@ -140,6 +140,15 @@ Prüfe Dateien und überführe sie nur dann nach `docs/` oder `assets/`, wenn si
 zu gepflegtem Dokumentationsinhalt werden; Review-Pakete, Caches und finale
 Publikationsoutputs bleiben an ihren etablierten Orten.
 
+Nicht die Erzeugungsweise, sondern die aktuelle Projektrolle bestimmt den
+Ablageort. Bewahre eine erzeugte Datei in `materials/` auf, wenn sie als
+dauerhafte Arbeits- oder Quelldatei in weitere Dokumentationsschritte eingeht.
+Lege sie in `output/` oder am dokumentierten Publikationsort ab, wenn sie als
+Projektergebnis zur Nutzung, Prüfung, Übergabe, Veröffentlichung oder
+Auslieferung bestimmt ist. Wegwerfbare Erzeugungszwischenstände bleiben in
+`temp/`; gepflegte `docs/`-Quellen und Publikations-`assets/` behalten ihre
+maßgeblichen Orte.
+
 ## Empfohlene Workflows
 
 ### Dokumentationsworkflow

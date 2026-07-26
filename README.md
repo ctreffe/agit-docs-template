@@ -139,6 +139,14 @@ promote files to `docs/` or `assets/` only when they become maintained
 documentation content; keep review packages, caches and final publication
 outputs in their established locations.
 
+Generation method does not determine location. Keep a generated file in
+`materials/` when it is a durable working or source file consumed by later
+documentation steps. Place it in `output/` or the documented publication
+location when it is a project result intended for use, review, handoff,
+publication or delivery. Disposable generation intermediates remain in
+`temp/`; maintained `docs/` sources and publication `assets/` keep their
+authoritative locations.
+
 ## Recommended Workflows
 
 ### Documentation Workflow

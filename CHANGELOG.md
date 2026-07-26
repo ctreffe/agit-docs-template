@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Clarify that a generated file's documentation role, rather than its
+  generation method, distinguishes retained materials from publication output.
+
 ## [v0.5.0] - 2026-07-26
 
 ### Added
