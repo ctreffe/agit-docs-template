@@ -88,6 +88,11 @@ Der Agent:
 
 `PROJECT_SETUP.md` und `DOCS_SETUP.md` bleiben Checklisten des Agenten und dokumentieren die Methode der Initialisierung. `INITIAL_PROMPT.md` ist der einzige benutzerorientierte Einstiegspunkt, der sie aktiviert.
 
+Soll ein Projekt lokal bleiben und keinen Remote erhalten, beginne in diesem
+ausgecheckten Template mit [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
+Der Prompt prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote
+und ruft anschließend `INITIAL_PROMPT.md` auf; er ist keine zweite Initialisierung.
+
 ## Externe Dateien und Quellen
 
 Lege neu erhaltene Screenshots, Exporte, Logs, Tickets, Referenzdokumente und andere externe Dateien zunächst in `input/intake/` ab. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/INVENTORY.md`; verwende die ignorierte Datei `input/INVENTORY.local.md`, wenn Dateinamen, Pfade oder Details selbst sensibel sind.

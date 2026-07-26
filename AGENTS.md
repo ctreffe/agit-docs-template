@@ -17,6 +17,8 @@ the repository's authoritative guidance and does not replace that guidance.
    `VISUAL_QA.md` where applicable.
 5. For initialization, continuation, harmonization or retrospective work,
    follow the corresponding prompt file instead of reconstructing its workflow.
+6. To create a locally versioned project without a remote, use
+   `CREATE_LOCAL_PROJECT_PROMPT.md` from this checked-out template.
 
 If repository guidance appears inconsistent, report the conflict and ask for a
 maintainer decision when it could materially affect the result.

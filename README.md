@@ -88,6 +88,11 @@ The agent then:
 
 `PROJECT_SETUP.md` and `DOCS_SETUP.md` remain agent checklists and initialization provenance. `INITIAL_PROMPT.md` is the single user-facing entry point that activates them.
 
+For a project that should remain local and have no remote, begin in this
+checked-out template with [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
+It verifies the destination, creates an independent local clone without a
+remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
+
 ## External Files and Sources
 
 Place newly received screenshots, exports, logs, tickets, reference documents and other external files in `input/intake/` before deciding how they may be used. Record safe metadata, provenance and classification in `input/INVENTORY.md`; use the ignored `input/INVENTORY.local.md` when filenames, paths or details are themselves sensitive.
