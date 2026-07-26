@@ -29,6 +29,8 @@
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
 - [Externe Dateien und Quellen](#externe-dateien-und-quellen)
+- [Temporäre Arbeitsdateien](#temporäre-arbeitsdateien)
+- [Projektmaterialien](#projektmaterialien)
 - [Empfohlene Workflows](#empfohlene-workflows)
 - [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
 - [Decision Records](#decision-records)
@@ -95,14 +97,48 @@ und ruft anschließend `INITIAL_PROMPT.md` auf; er ist keine zweite Initialisier
 
 ## Externe Dateien und Quellen
 
-Lege neu erhaltene Screenshots, Exporte, Logs, Tickets, Referenzdokumente und andere externe Dateien zunächst in `input/intake/` ab. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/INVENTORY.md`; verwende die ignorierte Datei `input/INVENTORY.local.md`, wenn Dateinamen, Pfade oder Details selbst sensibel sind.
+Lege neu erhaltene Screenshots, Exporte, Logs, Tickets, Referenzdokumente und andere externe Dateien zunächst in `input/intake/` ab. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/CATALOG.md`; verwende die ignorierte Datei `input/CATALOG.local.md`, wenn Dateinamen, Pfade oder Details selbst sensibel sind.
+
+Katalogisiere unveränderte externe Dienste, Datensätze und URLs auch dann, wenn
+ihre Inhalte außerhalb des Repositorys bleiben. Nutze stabile öffentliche URLs
+direkt und löse logische private oder gerätespezifische Orte über die ignorierte
+`input/PATHS.local.md` auf.
 
 - **`input/intake/`** ist der ignorierte Eingangsbereich für noch nicht klassifizierte Dateien. Ihre bloße Anwesenheit erlaubt keinen Zugriff durch den Assistant.
 - **`input/restricted/`** ist ignoriert und für Dateien bestimmt, die nur der Maintainer oder ausdrücklich freigegebene lokale Prüfungen lesen dürfen.
 - **`input/local/`** ist ignoriert und enthält Dateien, die der Assistant lokal verarbeiten darf, die aber nicht in Git gelangen dürfen.
 - **`input/versioned/`** enthält geprüfte externe Dateien, die versioniert werden dürfen.
 
-Assistant-Zugriff, Git-Versionierung und Veröffentlichung sind getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Wenn eine freigegebene Datei zu gepflegter Dokumentation, einem Publikationsasset oder einem Review-Input wird, verschiebe sie nach `docs/`, `assets/` oder `review/`, sofern dieser Ort ihre Rolle klarer ausdrückt, und bewahre die Provenienz im Inventar.
+Assistant-Zugriff, Git-Versionierung und Veröffentlichung sind getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Wenn eine freigegebene Datei zu gepflegter Dokumentation, einem Publikationsasset oder einem Review-Input wird, verschiebe sie nach `docs/`, `assets/` oder `review/`, sofern dieser Ort ihre Rolle klarer ausdrückt, und bewahre die Provenienz im Katalog.
+
+## Temporäre Arbeitsdateien
+
+Verwende `temp/` für wegwerfbare Dokumentations-Zwischendateien. Alle Inhalte
+außerhalb von `temp/restricted/` sind für den Assistant lesbar; dieses
+Restricted-Verzeichnis darf weder aufgelistet noch gelesen werden. Sämtliche temporären Inhalte werden
+ignoriert, dürfen niemals versioniert werden und werden nicht katalogisiert.
+Überführe dauerhafte Dateien nach `materials/`, bevor sie später zu gepflegter
+Dokumentation werden.
+
+## Projektmaterialien
+
+Dateien in `input/` bleiben inhaltlich unverändert. OCR-Text, zugeschnittene
+oder annotierte Screenshots, konvertierte Referenzen und andere bearbeitete
+Kopien sind neue Projektmaterialien. `materials/` bewahrt diese für den
+Assistant lesbaren Arbeitsgrundlagen auf, bis sie verworfen oder bewusst in
+gepflegte Dokumentation oder Publikations-Assets überführt werden.
+
+Registriere jede dauerhafte Datei in `materials/CATALOG.md` mit Zweck,
+Transformation und `Based on`-Provenienz. Nutze das ignorierte
+`materials/local/` für **`local`**, `materials/versioned/` für **`versioned`**
+und einen stabilen logischen Ort im Katalog für **`external`**. Löse externe
+Orte je Rechner in der ignorierten `materials/PATHS.local.md` auf, ausgehend
+von `materials/PATHS.local.example.md`.
+
+Assistant-Zugriff autorisiert weder Git-Versionierung noch Veröffentlichung.
+Prüfe Dateien und überführe sie nur dann nach `docs/` oder `assets/`, wenn sie
+zu gepflegtem Dokumentationsinhalt werden; Review-Pakete, Caches und finale
+Publikationsoutputs bleiben an ihren etablierten Orten.
 
 ## Empfohlene Workflows
 
@@ -180,6 +216,12 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`_quarto.yml`** definiert Dokumentationswebsite, Navigation, Output-Verzeichnis und Renderumfang. Abgeleitete Projekte passen Titel, Seiten, Sprachen und erforderliche Formate an.
 - **`docs/`** enthält die gepflegten Quarto-Dokumentationsquellen einschließlich englischer und deutscher Einstiegsseiten in der Baseline. Diese Quellen sind gegenüber gerenderten Outputs maßgeblich.
 - **`input/`** klassifiziert eingehende externe Dateien und dokumentiert ihre Provenienz, bevor sie in gepflegte Dokumentationsworkflows gelangen.
+- **`materials/`** katalogisiert dauerhafte, für den Assistant lesbare
+  Dokumentations-Arbeitsdateien in lokaler, versionierter oder externer
+  Speicherung.
+- **`temp/`** enthält ignorierte, niemals versionierte
+  Dokumentations-Zwischenstände; `temp/restricted/` bildet die nicht
+  zugängliche Ausnahme.
 - **`assets/`** enthält bewusst gepflegte Bilder, Diagramme und andere Publikationsdateien. Jede Datei soll einen klaren Zweck, Provenienz und Sensitivitätsstatus besitzen.
 - **`review/`** dokumentiert lokale Review-Orte. Gerenderte und annotierte Review-Dateien werden standardmäßig ignoriert, weil Review-Zugriff, Git-Versionierung und Veröffentlichung getrennte Entscheidungen benötigen.
 

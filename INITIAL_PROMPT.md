@@ -56,9 +56,18 @@ boundaries.
 Establish the external-file workflow during initialization. Place unclassified
 arrivals in `input/intake/`, classify them into `input/restricted/`,
 `input/local/` or `input/versioned/`, and maintain safe metadata in
-`input/INVENTORY.md`. Treat assistant access, Git versioning and publication as
+`input/CATALOG.md`. Treat assistant access, Git versioning and publication as
 separate decisions. Move approved material to `docs/`, `assets/` or `review/`
 only when its durable documentation role is clear.
+
+Keep `input/` content unchanged. Establish `materials/` and its catalog for
+retained created or transformed documentation working files. Registered
+materials are assistant-readable; decide local, versioned or external storage
+separately and preserve provenance during promotion to `docs/` or `assets/`.
+
+Establish ignored `temp/` for disposable documentation intermediates. All
+contents outside `temp/restricted/` are assistant-readable and never
+versionable; that directory is unavailable to assistants.
 
 Staging and unstaging do not require a control word, but perform them only when
 I specifically request the index action or authorize the corresponding commit.

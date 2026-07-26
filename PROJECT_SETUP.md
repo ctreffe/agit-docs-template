@@ -47,13 +47,22 @@ only as a deliberate, documented maintainer exception.
    - Naming and storage rules.
    - Visual QA expectations.
 
-7. Confirm link model.
+7. Confirm the external-file and project-material model.
+   - Keep external content in `input/` unchanged.
+   - Catalog retained created or transformed working files in `materials/`.
+   - Treat registered materials as assistant-readable and decide local,
+     versioned or external storage separately from publication.
+   - Preserve provenance when promoting material to `docs/` or `assets/`.
+   - Use ignored `temp/` for disposable, never-versioned intermediates and
+     `temp/restricted/` when assistants must not inspect them.
+
+8. Confirm link model.
    - Internal navigation.
    - External references.
    - Link checking expectations.
    - Stable source references.
 
-8. Confirm feedback model.
+9. Confirm feedback model.
    - Direct source comments, DOCX comments and Track Changes, annotated PDF or
      project-specific alternatives.
    - Explicit page, chapter, bundle or snapshot scope for generated review
@@ -64,7 +73,7 @@ only as a deliberate, documented maintainer exception.
      review files.
    - Transfer of accepted feedback back to authoritative source files.
 
-9. Adapt template files.
+10. Adapt template files.
    - Retain and adapt `AGENTS.md` as the automatic agent entry point.
    - Preserve an AI Collaboration Note directly below the README title and badges, if badges are present.
    - Keep the note visible, factually correct for the derived project, and linked to `ChatGPT.md`.
@@ -78,20 +87,20 @@ only as a deliberate, documented maintainer exception.
      later harmonization baseline and intentional deviations in
      `PROJECT_CONTEXT.md`.
 
-10. Establish the initial roadmap and review rhythm.
+11. Establish the initial roadmap and review rhythm.
    - Define the first meaningful documentation milestone and its validation or
      publication objective.
    - Identify the next small structure, drafting, review and QA steps.
    - Plan regular Conventional Commits below the milestone and a separate
      milestone closure commit.
 
-11. Confirm initialization completion.
+12. Confirm initialization completion.
    - Verify that identity, purpose, scope, audience, roadmap, source handling,
      Quarto, feedback and publication model, QA expectations, decision-record
      needs and retained template files are documented consistently.
    - Resolve required `TBD` placeholders before substantive drafting begins.
 
-12. Prepare initialization commit.
+13. Prepare initialization commit.
    - Review git status.
    - Review generated changes.
    - Normally use a regular `chore:` commit for initialization.

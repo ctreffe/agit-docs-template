@@ -6,17 +6,24 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Replace the input inventory files with an external-file and source catalog,
+  portable local path mapping and support for unchanged external sources.
+- Add a shared, never-versioned `temp/` area with a restricted access boundary.
+- Add a cataloged project-material workflow for retained documentation working
+  files in local, versioned or external storage.
 - Add `CREATE_LOCAL_PROJECT_PROMPT.md` for independent local-only projects.
 
 ### Added
 
-- Add an inventory-based workflow for external files and sources with
+- Add a catalog-based workflow for external files and sources with
   `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
   AI agents to documentation, source-safety and validation guidance.
 
 ### Changed
 
+- Keep external input unchanged and clarify deliberate promotion from project
+  materials into maintained documentation or publication assets.
 - Clarify the transition from incoming files to maintained documentation,
   publication assets and review files, and simplify user-facing terminology.
 - Align the initialization and continuation prompts with `AGENTS.md`: setup is

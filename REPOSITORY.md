@@ -26,7 +26,7 @@ read-only Git evidence.
 - `CHANGELOG.md`: Version history.
 - `VERSION`: Current template or project version.
 - `_quarto.yml`: Quarto project configuration.
-- `input/`: Intake, classification and inventory for external files and sources.
+- `input/`: Intake and catalog for unchanged external files and sources.
 - `docs/`: Maintained Quarto source files.
 - `assets/`: Maintained screenshots, figures, and diagrams.
 
@@ -53,7 +53,7 @@ identical when both READMEs are maintained.
 Use `input/intake/`, `input/restricted/`, `input/local/` and
 `input/versioned/` to classify external screenshots, logs, exports, tickets,
 source documents and operational data. Record safe provenance and handling
-status in `input/INVENTORY.md`; use the ignored `input/INVENTORY.local.md` for
+status in `input/CATALOG.md`; use the ignored `input/CATALOG.local.md` for
 sensitive names, paths or details.
 
 Maintained Quarto and Markdown sources belong in `docs/`, publication images
@@ -71,6 +71,21 @@ archives and file metadata may disclose sensitive information even when raw
 sources are absent. Review them before versioning or publication. Automated
 checks may identify risks, but a clean result does not authorize access,
 versioning or publication.
+
+## Temporary working files
+
+`temp/` is fully ignored and never versioned. All contents outside
+`temp/restricted/` are assistant-readable disposable documentation intermediates; assistants must not
+enumerate or read `temp/restricted/`. Promote retained files to `materials/`.
+
+## Project materials
+
+Keep `input/` content unchanged. Store retained OCR text, transformed
+screenshots, converted references and other working foundations in
+`materials/`, with provenance and `local`, `versioned` or `external` storage
+recorded in `materials/CATALOG.md`. Every registered material is
+assistant-readable, but versioning and publication remain separate decisions.
+Promote it to `docs/` or `assets/` only when it becomes maintained content.
 
 ## Git workflow
 

@@ -29,6 +29,8 @@
 - [When to Use This Template](#when-to-use-this-template)
 - [Project Initialization](#project-initialization)
 - [External Files and Sources](#external-files-and-sources)
+- [Temporary Working Files](#temporary-working-files)
+- [Project Materials](#project-materials)
 - [Recommended Workflows](#recommended-workflows)
 - [Git Index and Protected Git Actions](#git-index-and-protected-git-actions)
 - [Decision Records](#decision-records)
@@ -95,14 +97,47 @@ remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
 
 ## External Files and Sources
 
-Place newly received screenshots, exports, logs, tickets, reference documents and other external files in `input/intake/` before deciding how they may be used. Record safe metadata, provenance and classification in `input/INVENTORY.md`; use the ignored `input/INVENTORY.local.md` when filenames, paths or details are themselves sensitive.
+Place newly received screenshots, exports, logs, tickets, reference documents and other external files in `input/intake/` before deciding how they may be used. Record safe metadata, provenance and classification in `input/CATALOG.md`; use the ignored `input/CATALOG.local.md` when filenames, paths or details are themselves sensitive.
+
+Catalog unchanged external services, datasets and URLs even when their content
+remains outside the repository. Use stable public URLs directly and resolve
+logical private or device-specific locations through ignored
+`input/PATHS.local.md`.
 
 - **`input/intake/`** is the ignored arrival area for unclassified files. Presence never authorizes assistant access.
 - **`input/restricted/`** is ignored and reserved for files that only the maintainer, or explicitly approved local checks, may inspect.
 - **`input/local/`** is ignored and holds files the assistant may process locally but that must not enter Git.
 - **`input/versioned/`** contains reviewed external files that may be committed.
 
-Assistant access, Git versioning and publication are separate decisions. Moving a file records classification but grants no additional permission. Once an approved file becomes maintained documentation, a publication asset or a review input, move it to `docs/`, `assets/` or `review/` when that location better communicates its role, and preserve its provenance in the inventory.
+Assistant access, Git versioning and publication are separate decisions. Moving a file records classification but grants no additional permission. Once an approved file becomes maintained documentation, a publication asset or a review input, move it to `docs/`, `assets/` or `review/` when that location better communicates its role, and preserve its provenance in the catalog.
+
+## Temporary Working Files
+
+Use `temp/` for disposable documentation intermediates. All contents outside
+`temp/restricted/` are assistant-readable; that restricted directory must not
+be enumerated or read. All temporary content is ignored, must never be versioned
+and is not cataloged. Promote retained files to `materials/` before any later
+promotion to maintained documentation.
+
+## Project Materials
+
+Keep files in `input/` unchanged. OCR text, cropped or annotated screenshots,
+converted references and other edited copies are new project materials.
+`materials/` retains these assistant-readable working foundations until they
+are discarded or deliberately promoted into maintained documentation or
+publication assets.
+
+Register each retained file in `materials/CATALOG.md` with its purpose,
+transformation and `Based on` provenance. Use ignored `materials/local/` for
+**`local`** files, `materials/versioned/` for **`versioned`** files, and a
+stable logical catalog location for **`external`** files. Resolve external
+locations per machine in ignored `materials/PATHS.local.md`, copied from
+`materials/PATHS.local.example.md`.
+
+Assistant access does not authorize Git versioning or publication. Review and
+promote files to `docs/` or `assets/` only when they become maintained
+documentation content; keep review packages, caches and final publication
+outputs in their established locations.
 
 ## Recommended Workflows
 
@@ -180,6 +215,10 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`_quarto.yml`** defines the documentation website, navigation, output directory and render scope. Derived projects adapt its title, pages, languages and required formats.
 - **`docs/`** contains the maintained Quarto documentation sources, including English and German entry pages in the baseline. These sources are authoritative over rendered output.
 - **`input/`** classifies incoming external files and records their provenance before they enter maintained documentation workflows.
+- **`materials/`** catalogs retained assistant-readable documentation working
+  files in local, versioned or external storage.
+- **`temp/`** holds ignored, never-versioned documentation intermediates, with
+  `temp/restricted/` as the inaccessible exception.
 - **`assets/`** contains deliberately maintained images, diagrams and other publication files. Each file should have a clear purpose, provenance and sensitivity status.
 - **`review/`** documents local review locations. Rendered and annotated review files are ignored by default because review access, Git versioning and publication require separate decisions.
 
