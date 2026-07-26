@@ -4,6 +4,8 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.5.0] - 2026-07-26
+
 ### Added
 
 - Replace the input inventory files with an external-file and source catalog,
@@ -12,9 +14,6 @@ All notable changes to this template will be documented in this file.
 - Add a cataloged project-material workflow for retained documentation working
   files in local, versioned or external storage.
 - Add `CREATE_LOCAL_PROJECT_PROMPT.md` for independent local-only projects.
-
-### Added
-
 - Add a catalog-based workflow for external files and sources with
   `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
@@ -22,6 +21,9 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Upgrade the Documentation Collaboration Model to v0.5.0.
+- Align the project-context template with input catalogs, temporary files,
+  retained documentation materials and promotion into maintained sources.
 - Keep external input unchanged and clarify deliberate promotion from project
   materials into maintained documentation or publication assets.
 - Clarify the transition from incoming files to maintained documentation,

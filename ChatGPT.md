@@ -1,4 +1,4 @@
-# AGIT Documentation Collaboration Model v0.4.0
+# AGIT Documentation Collaboration Model v0.5.0
 
 This file defines the collaboration model for AI-assisted technical documentation projects derived from this template.
 

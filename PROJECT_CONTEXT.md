@@ -64,9 +64,13 @@ Risks or misunderstandings to prevent:
 
 - TBD
 
-## Source and sensitivity model
+## External sources, project materials and sensitivity
 
-Known source materials:
+Known unchanged external files and sources:
+
+- TBD
+
+Input catalog and local location mapping:
 
 - TBD
 
@@ -91,6 +95,18 @@ Publication or external-sharing approval:
 - TBD
 
 Reviewed derivatives:
+
+- TBD
+
+Retained documentation materials and storage states:
+
+- TBD
+
+Promotion into maintained documentation or publication assets:
+
+- TBD
+
+Relevant never-versioned temporary work outside `temp/restricted/`:
 
 - TBD
 
@@ -187,6 +203,10 @@ Link check expectations:
 - `STYLE_GUIDE.md` - documentation style
 - `QUARTO.md` - source and render workflow
 - `decisions/` - durable documentation, project or architecture decisions
+- `input/` - unchanged external files and sources plus their catalog
+- `temp/` - never-versioned intermediate files
+- `materials/` - retained assistant-readable documentation files and catalog
+- `output/` - rendered or packaged documentation outputs
 
 ## Collaboration notes
 
