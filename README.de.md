@@ -112,7 +112,12 @@ direkt und löse logische private oder gerätespezifische Orte über die ignorie
 - **`input/local/`** ist ignoriert und enthält Dateien, die der Assistant lokal verarbeiten darf, die aber nicht in Git gelangen dürfen.
 - **`input/versioned/`** enthält geprüfte externe Dateien, die versioniert werden dürfen.
 
-Assistant-Zugriff, Git-Versionierung und Veröffentlichung sind getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Wenn eine freigegebene Datei zu gepflegter Dokumentation, einem Publikationsasset oder einem Review-Input wird, verschiebe sie nach `docs/`, `assets/` oder `review/`, sofern dieser Ort ihre Rolle klarer ausdrückt, und bewahre die Provenienz im Katalog.
+Assistant-Zugriff, Git-Versionierung und Veröffentlichung sind getrennte
+Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert
+aber keine Berechtigung. Verschiebe akzeptierte Textinhalte nach `docs/`, für
+Git freigegebenes binäres Dokumentationsmaterial nach `materials/versioned/`
+und zurückgegebene annotierte Review-Dateien nach `review/`; bewahre die
+Provenienz im jeweiligen Katalog.
 
 Für große, nicht in Git versionierte Dateien, die auf mehreren Rechnern
 verfügbar bleiben müssen, gilt der anbieterneutrale Workflow in
@@ -134,8 +139,9 @@ Dokumentation werden.
 Dateien in `input/` bleiben inhaltlich unverändert. OCR-Text, zugeschnittene
 oder annotierte Screenshots, konvertierte Referenzen und andere bearbeitete
 Kopien sind neue Projektmaterialien. `materials/` bewahrt diese für den
-Assistant lesbaren Arbeitsgrundlagen auf, bis sie verworfen oder bewusst in
-gepflegte Dokumentation oder Publikations-Assets überführt werden.
+Assistant lesbaren Arbeitsgrundlagen auf, bis sie verworfen, in textuelle
+Dokumentation überführt oder als gepflegtes binäres Dokumentationsmaterial für
+Git freigegeben werden.
 
 Registriere jede dauerhafte Datei in `materials/CATALOG.md` mit Zweck,
 Transformation und `Based on`-Provenienz. Nutze das ignorierte
@@ -145,18 +151,18 @@ Orte je Rechner in der ignorierten `materials/PATHS.local.md` auf, ausgehend
 von `materials/PATHS.local.example.md`.
 
 Assistant-Zugriff autorisiert weder Git-Versionierung noch Veröffentlichung.
-Prüfe Dateien und überführe sie nur dann nach `docs/` oder `assets/`, wenn sie
-zu gepflegtem Dokumentationsinhalt werden; Review-Pakete, Caches und finale
-Publikationsoutputs bleiben an ihren etablierten Orten.
+Verschiebe akzeptierte Textinhalte nach `docs/` und geprüftes binäres
+Dokumentationsmaterial erst nach Git-Freigabe nach `materials/versioned/`.
+Darstellungsquellen bleiben in `styles/`, zurückgegebene annotierte
+Review-Dateien in `review/` und erzeugte Outputs unter `output/`.
 
 Nicht die Erzeugungsweise, sondern die aktuelle Projektrolle bestimmt den
 Ablageort. Bewahre eine erzeugte Datei in `materials/` auf, wenn sie als
 dauerhafte Arbeits- oder Quelldatei in weitere Dokumentationsschritte eingeht.
-Lege sie in `output/` oder am dokumentierten Publikationsort ab, wenn sie als
-Projektergebnis zur Nutzung, Prüfung, Übergabe, Veröffentlichung oder
-Auslieferung bestimmt ist. Wegwerfbare Erzeugungszwischenstände bleiben in
-`temp/`; gepflegte `docs/`-Quellen und Publikations-`assets/` behalten ihre
-maßgeblichen Orte.
+Lege sie in `output/<format>/` ab, wenn sie als erzeugtes Projektergebnis zur
+Nutzung, Prüfung, Übergabe, Veröffentlichung oder Auslieferung bestimmt ist.
+Wegwerfbare Erzeugungszwischenstände bleiben in `temp/`; gepflegte Quellen in
+`docs/`, `materials/versioned/` und `styles/` behalten ihre maßgeblichen Orte.
 
 ## Render-Validierung und visuelle QA
 
@@ -246,7 +252,7 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`FEEDBACK_WORKFLOW.md`** definiert quellenmaßgebliche DOCX-, PDF- und Website-Review-Zyklen sowie den Umgang mit Maintainer- und externem Feedback.
 - **`decisions/`** enthält DDR-, PDR- und ADR-Vorlagen sowie akzeptierte dauerhafte Entscheidungen in abgeleiteten Projekten.
 
-### Quarto-Quellen, Assets und Review-Dateien
+### Quarto-Quellen, Materialien, Outputs und Review-Dateien
 
 - **`_quarto.yml`** definiert Dokumentationswebsite, Navigation, Output-Verzeichnis und Renderumfang. Abgeleitete Projekte passen Titel, Seiten, Sprachen und erforderliche Formate an.
 - **`docs/`** enthält die gepflegten Quarto-Dokumentationsquellen einschließlich englischer und deutscher Einstiegsseiten in der Baseline. Diese Quellen sind gegenüber gerenderten Outputs maßgeblich.
@@ -257,8 +263,14 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`temp/`** enthält ignorierte, niemals versionierte
   Dokumentations-Zwischenstände; `temp/restricted/` bildet die nicht
   zugängliche Ausnahme.
-- **`assets/`** enthält bewusst gepflegte Bilder, Diagramme und andere Publikationsdateien. Jede Datei soll einen klaren Zweck, Provenienz und Sensitivitätsstatus besitzen.
-- **`review/`** dokumentiert lokale Review-Orte. Gerenderte und annotierte Review-Dateien werden standardmäßig ignoriert, weil Review-Zugriff, Git-Versionierung und Veröffentlichung getrennte Entscheidungen benötigen.
+- **`materials/versioned/`** enthält geprüftes binäres Dokumentationsmaterial
+  mit Git-Freigabe. Jede Datei benötigt Zweck, Provenienz und
+  Sensitivitätsstatus; die Veröffentlichung bleibt getrennt.
+- **`styles/`** enthält bei Bedarf gepflegte Darstellungsquellen.
+- **`output/`** enthält ignorierte, nach Format getrennte erzeugte Ergebnisse,
+  etwa `output/html/`, `output/pdf/` oder `output/docx/`.
+- **`review/`** enthält direkt die ignorierten zurückgegebenen annotierten
+  Review-Dateien; erzeugte Review-Outputs bleiben unter `output/<format>/`.
 
 ## Template- und abgeleitete Projektdateien
 
@@ -271,7 +283,8 @@ In einem abgeleiteten Dokumentationsprojekt:
 - behalte `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` als Initialisierungsprovenienz;
 - behalte die Prompts für Fortsetzung, Harmonisierung und Retrospektive zur späteren Nutzung;
 - pflege `DOCUMENTATION.md`, `REPOSITORY.md` und `FEEDBACK_WORKFLOW.md` als aktive Projektregeln;
-- halte gerenderte und annotierte Review-Dateien standardmäßig lokal und versioniere sie erst nach bewusster Prüfung;
+- halte erzeugte Outputs und zurückgegebene annotierte Review-Dateien
+  standardmäßig lokal und versioniere sie erst nach bewusster Prüfung;
 - erstelle echte Decision Records nur für dauerhafte Projekt-, Dokumentations- oder Architekturentscheidungen.
 
 Halte initiale Template-Version und -Commit, letzte Harmonisierungs-Baseline, Lebenszyklusstatus und beabsichtigte Abweichungen in `PROJECT_CONTEXT.md` fest. Konkrete Zielgruppenentscheidungen und akzeptierte Decision Records bleiben gegenüber späteren generischen Template-Änderungen maßgeblich.

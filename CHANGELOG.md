@@ -11,6 +11,13 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Store generated documentation below ignored, format-specific `output/`
+  directories and set the baseline website output to `output/html/`.
+- Consolidate maintained binary documentation material in
+  `materials/versioned/`, remove the redundant `assets/` tree and reserve
+  `styles/` for maintained presentation source.
+- Store generated review outputs below `output/<format>/` and returned
+  annotated files directly below ignored `review/`.
 - Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its
   template-only references after successful initialization.
 - Separate routine technical render and HTML validation from true visual QA.

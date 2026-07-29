@@ -106,7 +106,7 @@ Retained documentation materials and storage states:
 
 - TBD
 
-Promotion into maintained documentation or publication assets:
+Promotion into maintained documentation or versioned binary material:
 
 - TBD
 
@@ -138,6 +138,7 @@ Relevant never-versioned temporary work outside `temp/restricted/`:
 
 - Quarto project type: TBD
 - Required output formats: TBD
+- Generated output directories below `output/`: TBD
 - Render command: `quarto render`
 - Required toolchain notes: TBD
 
@@ -147,7 +148,9 @@ Relevant never-versioned temporary work outside `temp/restricted/`:
 - DOCX review scope and render method: TBD
 - PDF review purpose and render method: TBD
 - External-feedback curation convention: TBD
-- Local review-file location: `review/rendered/` and `review/annotated/`
+- Local generated review outputs: the applicable format directory below
+  `output/`
+- Local returned review files: directly below `review/`
 - Assistant access, Git versioning and publication rules for review files:
   TBD
 
@@ -211,7 +214,9 @@ Link check expectations:
 - `input/` - unchanged external files and sources plus their catalog
 - `temp/` - never-versioned intermediate files
 - `materials/` - retained assistant-readable documentation files and catalog
-- `output/` - rendered or packaged documentation outputs
+- `styles/` - maintained presentation source when needed
+- `output/` - ignored rendered or packaged outputs separated by format
+- `review/` - ignored returned annotated review files
 
 ## Collaboration notes
 

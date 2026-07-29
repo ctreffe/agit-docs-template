@@ -54,7 +54,8 @@ only as a deliberate, documented maintainer exception.
    - Catalog retained created or transformed working files in `materials/`.
    - Treat registered materials as assistant-readable and decide local,
      versioned or external storage separately from publication.
-   - Preserve provenance when promoting material to `docs/` or `assets/`.
+   - Preserve provenance when moving accepted text to `docs/` or approving
+     maintained binary documentation material for `materials/versioned/`.
    - Use ignored `temp/` for disposable, never-versioned intermediates and
      `temp/restricted/` when assistants must not inspect them.
 
@@ -73,6 +74,8 @@ only as a deliberate, documented maintainer exception.
      comments.
    - Local storage, assistant access, Git versioning and publication rules for
      review files.
+   - Generated review outputs below `output/<format>/` and returned annotated
+     files directly below ignored `review/`.
    - Transfer of accepted feedback back to authoritative source files.
 
 10. Adapt template files.
@@ -142,5 +145,5 @@ be available on several devices without entering Git, apply
 `SYNCHRONIZED_STORAGE.md`. Decide provider transmission, stable project ID,
 input and material scope, optional external outputs, availability checks,
 conflict handling and backup. Create ignored `sync:` mappings on every device,
-keep maintained `docs/` and publication `assets/` authoritative, and do not
-synchronize `temp/`.
+keep maintained `docs/`, approved `materials/versioned/` files and presentation
+source in `styles/` authoritative, and do not synchronize `temp/`.

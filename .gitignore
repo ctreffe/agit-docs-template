@@ -18,16 +18,12 @@ Desktop.ini
 tmp/
 
 # Generated documentation outputs
-_site/
+/output/
 .quarto/
-*_files/
-exports/
-renders/
-previews/
-/generated/
-deliverables/
-review/rendered/
-review/annotated/
+
+# Returned annotated review files
+/review/*
+!/review/README.md
 
 # External files and sources
 /input/intake/**
@@ -57,5 +53,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.quarto/
 **/*.quarto_ipynb

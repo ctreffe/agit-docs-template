@@ -24,6 +24,7 @@ Resolve logical external locations through ignored `PATHS.local.md`. Assistant a
 versioning and publication remain separate maintainer decisions.
 
 An approved external file may later become maintained documentation content.
-For example, a reviewed screenshot may move to `assets/screenshots/`, while an
-accepted source change belongs in `docs/`. Rendered or annotated review files
-remain under `review/`. Record the transition in the catalog.
+For example, a reviewed screenshot approved for Git may move to
+`materials/versioned/screenshots/`, while an accepted source change belongs in
+`docs/`. Generated review files belong below `output/`; returned annotated
+files remain under `review/`. Record the transition in the catalog.

@@ -75,9 +75,9 @@ closure or when the maintainer explicitly requests it.
    feedback channel.
 2. Render or export the named review scope and record the source state or commit
    from which it was produced.
-3. Store rendered and annotated review files in the project-defined local
-   review location. The template uses `review/rendered/` and
-   `review/annotated/`, which are ignored by default.
+3. Store newly generated review files in the applicable format directory below
+   `output/`. Store returned annotated files directly below `review/`; both
+   locations are ignored by default.
 4. Confirm separately whether the assistant may inspect the file, whether
    it may be versioned and whether it may be published or shared.
 5. Classify feedback as clear maintainer instruction, maintainer-curated

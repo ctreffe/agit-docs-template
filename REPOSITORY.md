@@ -28,7 +28,11 @@ read-only Git evidence.
 - `_quarto.yml`: Quarto project configuration.
 - `input/`: Intake and catalog for unchanged external files and sources.
 - `docs/`: Maintained Quarto source files.
-- `assets/`: Maintained screenshots, figures, and diagrams.
+- `materials/versioned/`: Maintained binary documentation material approved
+  for Git, including reviewed screenshots and figures.
+- `styles/`: Maintained presentation source when needed.
+- `output/`: Ignored generated outputs separated by format.
+- `review/`: Ignored returned annotated review files.
 
 ## README badge policy
 
@@ -56,10 +60,12 @@ source documents and operational data. Record safe provenance and handling
 status in `input/CATALOG.md`; use the ignored `input/CATALOG.local.md` for
 sensitive names, paths or details.
 
-Maintained Quarto and Markdown sources belong in `docs/`, publication images
-and diagrams in `assets/`, and local review files in `review/`. Generated HTML,
-PDFs and previews remain outputs. Moving an approved file into one of these
-locations communicates its durable role but does not grant publication rights.
+Maintained Quarto and Markdown sources belong in `docs/`, approved versioned
+binary documentation material in `materials/versioned/`, presentation source
+in `styles/`, and returned annotated review files in `review/`. Generated HTML,
+PDF, DOCX and other results belong below ignored `output/` in a directory named
+for their format. Moving an approved file into a maintained location records
+its Git and project role but does not grant publication rights.
 
 Assistant access, Git versioning and publication or other sharing are separate
 decisions. Before preparing a commit, review new and untracked files for
@@ -85,7 +91,9 @@ screenshots, converted references and other working foundations in
 `materials/`, with provenance and `local`, `versioned` or `external` storage
 recorded in `materials/CATALOG.md`. Every registered material is
 assistant-readable, but versioning and publication remain separate decisions.
-Promote it to `docs/` or `assets/` only when it becomes maintained content.
+Move accepted textual content to `docs/`. Move reviewed binary documentation
+material to `materials/versioned/` only after Git versioning is approved; keep
+presentation source in `styles/`. Publication remains a separate decision.
 
 ## Git workflow
 

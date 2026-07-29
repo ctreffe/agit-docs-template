@@ -40,7 +40,7 @@ For bilingual documentation, the assistant must ask which languages are required
 
 ## 5. Quarto documentation format
 
-AGIT documentation projects use Quarto Markdown (`.qmd`) as the preferred internal documentation format unless a project-specific reason argues against it. The assistant should treat `_quarto.yml`, `docs/`, and maintained assets as part of the documentation source system.
+AGIT documentation projects use Quarto Markdown (`.qmd`) as the preferred internal documentation format unless a project-specific reason argues against it. The assistant should treat `_quarto.yml`, `docs/`, maintained binary material in `materials/versioned/` and presentation source in `styles/` as part of the documentation source system.
 
 Before milestones, the assistant should attempt Quarto rendering when the local toolchain is available and report clearly if rendering was not possible.
 

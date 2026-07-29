@@ -24,7 +24,9 @@ device-specific paths. Never version credentials, private share tokens or
 absolute local paths.
 
 Examples include cropped screenshots, OCR extracts, converted reference
-documents and retained review preparations. When a reviewed material becomes a
-maintained publication file, move it to `assets/` or `docs/` as appropriate
-and preserve its provenance. Rendered review copies belong under `review/` and
-finished publication outputs remain separate.
+documents and retained review preparations. Move accepted textual content to
+`docs/`; keep reviewed binary documentation material in `materials/versioned/`
+after Git approval and preserve its provenance. Presentation source belongs in
+`styles/`. Generated review copies and finished publication outputs belong in
+the applicable format directory below `output/`; returned annotated review
+files remain separate under `review/`.

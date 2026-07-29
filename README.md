@@ -112,7 +112,11 @@ logical private or device-specific locations through ignored
 - **`input/local/`** is ignored and holds files the assistant may process locally but that must not enter Git.
 - **`input/versioned/`** contains reviewed external files that may be committed.
 
-Assistant access, Git versioning and publication are separate decisions. Moving a file records classification but grants no additional permission. Once an approved file becomes maintained documentation, a publication asset or a review input, move it to `docs/`, `assets/` or `review/` when that location better communicates its role, and preserve its provenance in the catalog.
+Assistant access, Git versioning and publication are separate decisions. Moving
+a file records classification but grants no additional permission. Move
+accepted textual content to `docs/`, reviewed binary documentation material
+approved for Git to `materials/versioned/`, and returned annotated review
+files to `review/`; preserve provenance in the applicable catalog.
 
 For large non-Git files that must remain available across devices, use the
 provider-neutral workflow in [SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md).
@@ -132,8 +136,8 @@ promotion to maintained documentation.
 Keep files in `input/` unchanged. OCR text, cropped or annotated screenshots,
 converted references and other edited copies are new project materials.
 `materials/` retains these assistant-readable working foundations until they
-are discarded or deliberately promoted into maintained documentation or
-publication assets.
+are discarded, transferred into textual documentation or approved for Git as
+maintained binary documentation material.
 
 Register each retained file in `materials/CATALOG.md` with its purpose,
 transformation and `Based on` provenance. Use ignored `materials/local/` for
@@ -142,18 +146,19 @@ stable logical catalog location for **`external`** files. Resolve external
 locations per machine in ignored `materials/PATHS.local.md`, copied from
 `materials/PATHS.local.example.md`.
 
-Assistant access does not authorize Git versioning or publication. Review and
-promote files to `docs/` or `assets/` only when they become maintained
-documentation content; keep review packages, caches and final publication
-outputs in their established locations.
+Assistant access does not authorize Git versioning or publication. Move
+accepted textual content to `docs/`; move reviewed binary documentation
+material to `materials/versioned/` only after Git approval. Keep presentation
+source in `styles/`, returned annotated review files in `review/` and generated
+outputs below `output/`.
 
 Generation method does not determine location. Keep a generated file in
 `materials/` when it is a durable working or source file consumed by later
-documentation steps. Place it in `output/` or the documented publication
-location when it is a project result intended for use, review, handoff,
-publication or delivery. Disposable generation intermediates remain in
-`temp/`; maintained `docs/` sources and publication `assets/` keep their
-authoritative locations.
+documentation steps. Place it in `output/<format>/` when it is a generated
+project result intended for use, review, handoff, publication or delivery.
+Disposable generation intermediates remain in `temp/`; maintained `docs/`,
+`materials/versioned/` and `styles/` sources keep their authoritative
+locations.
 
 ## Render Validation and Visual QA
 
@@ -241,7 +246,7 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`FEEDBACK_WORKFLOW.md`** defines source-authoritative DOCX, PDF and website review cycles and the handling of maintainer versus external feedback.
 - **`decisions/`** contains DDR, PDR and ADR templates and accepted durable decisions in derived projects.
 
-### Quarto Sources, Assets and Review Files
+### Quarto Sources, Materials, Outputs and Review Files
 
 - **`_quarto.yml`** defines the documentation website, navigation, output directory and render scope. Derived projects adapt its title, pages, languages and required formats.
 - **`docs/`** contains the maintained Quarto documentation sources, including English and German entry pages in the baseline. These sources are authoritative over rendered output.
@@ -250,8 +255,14 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
   files in local, versioned or external storage.
 - **`temp/`** holds ignored, never-versioned documentation intermediates, with
   `temp/restricted/` as the inaccessible exception.
-- **`assets/`** contains deliberately maintained images, diagrams and other publication files. Each file should have a clear purpose, provenance and sensitivity status.
-- **`review/`** documents local review locations. Rendered and annotated review files are ignored by default because review access, Git versioning and publication require separate decisions.
+- **`materials/versioned/`** contains reviewed binary documentation material
+  approved for Git. Every file needs a clear purpose, provenance and
+  sensitivity status; publication remains separate.
+- **`styles/`** contains maintained presentation source when needed.
+- **`output/`** contains ignored generated results separated by format, such as
+  `output/html/`, `output/pdf/` or `output/docx/`.
+- **`review/`** contains ignored returned annotated review files directly;
+  generated review outputs remain under `output/<format>/`.
 
 ## Template and Derived Project Files
 
@@ -264,7 +275,8 @@ In a derived documentation project:
 - retain `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance;
 - retain the continuation, harmonization and retrospective prompts for later use;
 - maintain `DOCUMENTATION.md`, `REPOSITORY.md` and `FEEDBACK_WORKFLOW.md` as active project rules;
-- keep rendered and annotated review files local by default and version them only after deliberate review;
+- keep generated outputs and returned annotated review files local by default
+  and version them only after deliberate review;
 - create real Decision Records only for durable project, documentation or architecture choices.
 
 Record the initial template version and commit, last harmonization baseline, lifecycle status and intentional deviations in `PROJECT_CONTEXT.md`. Concrete audience decisions and accepted Decision Records remain authoritative over later generic template changes.

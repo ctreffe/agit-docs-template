@@ -59,13 +59,16 @@ Establish the external-file workflow during initialization. Place unclassified
 arrivals in `input/intake/`, classify them into `input/restricted/`,
 `input/local/` or `input/versioned/`, and maintain safe metadata in
 `input/CATALOG.md`. Treat assistant access, Git versioning and publication as
-separate decisions. Move approved material to `docs/`, `assets/` or `review/`
-only when its durable documentation role is clear.
+separate decisions. Move accepted textual content to `docs/`, reviewed binary
+documentation material approved for Git to `materials/versioned/`, and
+returned annotated review files to `review/` only when their durable role is
+clear. Keep generated outputs below `output/` in format-specific directories.
 
 Keep `input/` content unchanged. Establish `materials/` and its catalog for
 retained created or transformed documentation working files. Registered
 materials are assistant-readable; decide local, versioned or external storage
-separately and preserve provenance during promotion to `docs/` or `assets/`.
+separately and preserve provenance when accepted text moves to `docs/` or
+reviewed binary material is approved for `materials/versioned/`.
 
 Establish ignored `temp/` for disposable documentation intermediates. All
 contents outside `temp/restricted/` are assistant-readable and never

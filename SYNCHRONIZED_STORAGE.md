@@ -75,6 +75,7 @@ may help recovery but does not replace an approved backup.
 
 The synchronized root is suitable for large original screenshots, recordings,
 video, audio, exports and reference documents. Edited media and other retained
-working foundations are external materials. Maintained `docs/` source and
-publication `assets/` remain authoritative repository content; rendered or
-packaged deliverables remain outputs.
+working foundations are external materials. Maintained `docs/` source,
+approved `materials/versioned/` files and presentation source in `styles/`
+remain authoritative repository content; rendered or packaged deliverables
+remain below `output/`.

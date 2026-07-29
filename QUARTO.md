@@ -37,12 +37,18 @@ _quarto.yml
 docs/
   index.qmd
   index.de.qmd
-assets/
-  screenshots/
-  figures/
+materials/
+  versioned/
+styles/
+output/
+  html/
 ```
 
-`_quarto.yml` defines project-level rendering and navigation. `docs/` contains maintained documentation sources. `assets/` contains maintained screenshots, figures, and diagrams that are safe to version.
+`_quarto.yml` defines project-level rendering and navigation. `docs/` contains
+maintained documentation sources. `materials/versioned/` contains maintained
+binary documentation material approved for Git, while `styles/` contains
+presentation source when needed. Generated formats remain below ignored
+`output/` in separate format directories.
 
 The default render scope is limited to Quarto source files in `docs/`:
 
@@ -71,6 +77,11 @@ PDF is supported when a printable or archival output is needed, but it requires 
 
 Other Quarto outputs may be used if the project requires them, but they should be documented in `DOCS_SETUP.md` and tested before milestone closure.
 
+Every generated format should use its own ignored directory below `output/`,
+for example `output/html/`, `output/pdf/` or `output/docx/`. A format directory
+must contain only that output family and may be cleaned independently before a
+new render. The template website baseline writes HTML to `output/html/`.
+
 ## DOCX and PDF review outputs
 
 DOCX may be generated as a bounded review format for wording, structure,
@@ -86,7 +97,9 @@ mapping and maintainer confirmation.
 
 In both cases, Quarto files and other maintained repository sources remain
 authoritative. Follow `FEEDBACK_WORKFLOW.md` when rendering, receiving,
-interpreting and closing feedback files.
+interpreting and closing feedback files. Store newly generated review outputs
+under `output/<format>/`; store returned annotated copies directly under
+ignored `review/`.
 
 ## Bilingual documentation
 
@@ -99,11 +112,16 @@ The default convention is to maintain German and English as parallel files. The 
 
 A concrete project must decide whether one language is authoritative and how terminology, screenshots, links, and structure are kept aligned. If the project uses a different bilingual structure, document that decision in `PROJECT_CONTEXT.md` and consider recording a DDR.
 
-## Screenshots and assets
+## Screenshots and binary material
 
-Maintained screenshots and figures belong in `assets/screenshots/` and `assets/figures/` unless the project defines a different structure.
+Maintained screenshots, figures and other binary documentation material
+approved for Git belong below `materials/versioned/`, using descriptive
+subdirectories such as `screenshots/` and `figures/` when useful. Publication
+remains a separate decision.
 
-Raw, unreviewed, or sensitive captures should not be stored there. Use a local ignored location such as `screenshots/raw/` or `captures/raw/` until the material is reviewed and sanitized.
+Raw, unreviewed or sensitive captures belong in the classified `input/`
+workflow. Retained derivatives remain registered `materials/` in local,
+external or versioned storage according to their approved state.
 
 ## Rendering
 
@@ -112,6 +130,10 @@ Before a documentation milestone, run Quarto rendering when the toolchain is ava
 ```powershell
 quarto render
 ```
+
+Verify that each generated format is written below its documented
+`output/<format>/` directory and that no files from another output family are
+mixed into it.
 
 To render a specific format:
 
