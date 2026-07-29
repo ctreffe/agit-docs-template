@@ -1,5 +1,8 @@
 # Project Materials
 
+Synchronized external materials use provider-neutral `sync:` roots and storage
+`external`; see [SYNCHRONIZED_STORAGE.md](../SYNCHRONIZED_STORAGE.md).
+
 `materials/` contains retained, assistant-readable working files created by the
 documentation project or derived by changing content from external files under
 `input/`. Git versioning and publication remain separate decisions.

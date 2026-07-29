@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Add provider-neutral synchronized external project storage for large non-Git
+  input and materials that must remain available across devices.
+
 ### Changed
 
 - Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its

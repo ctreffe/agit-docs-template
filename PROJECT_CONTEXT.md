@@ -74,6 +74,10 @@ Input catalog and local location mapping:
 
 - TBD
 
+Synchronized external storage, availability and backup state:
+
+- TBD
+
 Potentially sensitive materials:
 
 - TBD
@@ -194,6 +198,7 @@ Link check expectations:
 - `PROJECT_SETUP.md` - retained initialization method and provenance
 - `INITIAL_PROMPT.md` - retained first-session initialization prompt
 - `CONTINUATION_PROMPT.md` - re-entry prompt for a new context window or assistant session
+- `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage for large documentation files
 - `HARMONIZATION_PROMPT.md` - source-template, documentation-consistency and roadmap harmonization
 - `RETROSPECTIVE_PROMPT.md` - structured Maintainer-Agent documentation-collaboration review
 - `DOCS_SETUP.md` - documentation setup and current model

@@ -134,3 +134,13 @@ documentation, output and roadmap alignment.
 
 Retain `RETROSPECTIVE_PROMPT.md` for maintainer-initiated, structured reviews
 of Maintainer-Agent documentation collaboration.
+
+## Synchronized external storage
+
+If large screenshots, recordings, video, audio, exports or reference files must
+be available on several devices without entering Git, apply
+`SYNCHRONIZED_STORAGE.md`. Decide provider transmission, stable project ID,
+input and material scope, optional external outputs, availability checks,
+conflict handling and backup. Create ignored `sync:` mappings on every device,
+keep maintained `docs/` and publication `assets/` authoritative, and do not
+synchronize `temp/`.

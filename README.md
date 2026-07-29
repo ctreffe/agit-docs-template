@@ -114,6 +114,11 @@ logical private or device-specific locations through ignored
 
 Assistant access, Git versioning and publication are separate decisions. Moving a file records classification but grants no additional permission. Once an approved file becomes maintained documentation, a publication asset or a review input, move it to `docs/`, `assets/` or `review/` when that location better communicates its role, and preserve its provenance in the catalog.
 
+For large non-Git files that must remain available across devices, use the
+provider-neutral workflow in [SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md).
+Synchronized files remain external storage; synchronization is not Git
+versioning, backup, assistant access or publication approval.
+
 ## Temporary Working Files
 
 Use `temp/` for disposable documentation intermediates. All contents outside

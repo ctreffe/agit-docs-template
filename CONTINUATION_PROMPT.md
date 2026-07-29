@@ -63,6 +63,11 @@ substantive edits, provide a concise numbered re-entry report containing:
 If my continuation instruction also contains a concrete safe task, proceed
 after reconstruction; otherwise wait for confirmation of the next step.
 
+If `PROJECT_CONTEXT.md` records synchronized external storage, read
+`SYNCHRONIZED_STORAGE.md` and the exact ignored device mappings before file
+access. Verify the project marker, local availability and sync state without
+enumerating unrelated roots or weakening input access boundaries.
+
 Staging and unstaging do not require a control word, but perform them only when
 I specifically request the index action or authorize the corresponding commit.
 Preserve existing staged selections and unrelated changes.

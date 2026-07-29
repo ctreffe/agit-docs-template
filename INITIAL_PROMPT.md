@@ -71,6 +71,13 @@ Establish ignored `temp/` for disposable documentation intermediates. All
 contents outside `temp/restricted/` are assistant-readable and never
 versionable; that directory is unavailable to assistants.
 
+When large non-Git files must be available on several devices, apply
+`SYNCHRONIZED_STORAGE.md`. Decide provider transmission separately, establish
+the stable project ID and provider-neutral `sync:` roots, create only ignored
+per-device mappings, verify local availability and keep `temp/` device-local.
+Do not create or populate synchronized storage without the maintainer's
+project-specific approval.
+
 Staging and unstaging do not require a control word, but perform them only when
 I specifically request the index action or authorize the corresponding commit.
 Preserve existing staged selections and unrelated changes.

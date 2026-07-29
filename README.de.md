@@ -114,6 +114,12 @@ direkt und löse logische private oder gerätespezifische Orte über die ignorie
 
 Assistant-Zugriff, Git-Versionierung und Veröffentlichung sind getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Wenn eine freigegebene Datei zu gepflegter Dokumentation, einem Publikationsasset oder einem Review-Input wird, verschiebe sie nach `docs/`, `assets/` oder `review/`, sofern dieser Ort ihre Rolle klarer ausdrückt, und bewahre die Provenienz im Katalog.
 
+Für große, nicht in Git versionierte Dateien, die auf mehreren Rechnern
+verfügbar bleiben müssen, gilt der anbieterneutrale Workflow in
+[SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md). Synchronisierte Dateien
+bleiben externer Speicher; Synchronisierung ist weder Git-Versionierung,
+Backup, Assistant-Zugriff noch Publikationsfreigabe.
+
 ## Temporäre Arbeitsdateien
 
 Verwende `temp/` für wegwerfbare Dokumentations-Zwischendateien. Alle Inhalte
