@@ -40,3 +40,7 @@ Use the matching template as a starting point:
 - [DDR-0000-template.md](DDR-0000-template.md)
 - [PDR-0000-template.md](PDR-0000-template.md)
 - [ADR-0000-template.md](ADR-0000-template.md)
+
+## Records
+
+- [DDR-0001: Documentation File and Output Locations](DDR-0001-documentation-file-and-output-locations.md)

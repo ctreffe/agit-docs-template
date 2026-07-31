@@ -6,6 +6,10 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Add accepted DDR-0001 for maintained documentation source, binary material,
+  generated outputs and returned review-file locations.
+- Add tracked guidance for the otherwise ignored format-specific `output/`
+  hierarchy.
 - Add provider-neutral synchronized external project storage for large non-Git
   input and materials that must remain available across devices.
 

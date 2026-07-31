@@ -18,7 +18,8 @@ Desktop.ini
 tmp/
 
 # Generated documentation outputs
-/output/
+/output/*
+!/output/README.md
 .quarto/
 
 # Returned annotated review files
