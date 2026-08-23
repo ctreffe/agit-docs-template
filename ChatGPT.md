@@ -14,9 +14,9 @@ The repository is the durable project memory. Important context, assumptions, ru
 
 The assistant should read the relevant repository files before making substantive changes and should update project memory when decisions or rules change.
 
-At the start of a new context window or assistant session, use
-`CONTINUATION_PROMPT.md` to reconstruct the documentation, Git and QA baseline
-in a defined order before substantive drafting or revision.
+Begin an ordinary bounded task through `start-task` and use `TASK_HANDOFF.md`
+when present. Invoke `$review-project` explicitly for a comprehensive neutral
+inventory of documentation, Git and QA state.
 
 ## 3. Maintainer control
 
@@ -172,18 +172,17 @@ clarification.
 
 ## 14. Harmonization and retrospective boundary
 
-Use `HARMONIZATION_PROMPT.md` for documentation-project content alignment. It
-compares a derived project with its recorded source template, reconciles
-documentation sources, outputs and repository state, and reviews roadmap and
-coverage fit. The concrete project, audience decisions and Decision Records
-remain authoritative.
+Invoke `$sync-template` for source-template comparison and selected adoption.
+Invoke `$check-consistency` separately to diagnose contradictions among
+documentation sources, outputs, repository state, roadmap and audience
+decisions. The concrete project and its Decision Records remain authoritative.
 
 Harmonization does not evaluate Maintainer-Agent collaboration or derive
 changes for the source template. Those questions belong to a collaboration
 retrospective. The maintainer decides when to invoke either prompt and which
 scope it should cover.
 
-Use `RETROSPECTIVE_PROMPT.md` for that structured collaboration review.
+Use `$perform-retrospective` for that structured collaboration review.
 Retrospective template findings remain candidates. The assistant must not
 modify the source-template repository unless the maintainer authorizes the
 specific template change with `explicit`, `explicitly` or the German word

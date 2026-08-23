@@ -69,13 +69,13 @@ Use the generic Project Template when documentation is one part of a broader pro
 
 ## Project Initialization
 
-After creating the repository, the maintainer needs to invoke only [INITIAL_PROMPT.md](INITIAL_PROMPT.md). The agent reads the repository and all setup guidance, then leads the complete documentation initialization. The maintainer does not need to open or execute `PROJECT_SETUP.md` or `DOCS_SETUP.md` separately.
+After creating the repository, the maintainer invokes `$start-project`. The skill reads the repository and all setup guidance, then leads the complete documentation initialization. The maintainer does not need to open or execute `PROJECT_SETUP.md` or `DOCS_SETUP.md` separately.
 
 The simplest instruction to the agent is:
 
-> Read `INITIAL_PROMPT.md` in full and carry out the initialization prompt it contains.
+> `$start-project`
 
-There is no need to open the file and copy its prompt into the conversation.
+There is no initialization prompt to open or copy into the conversation.
 
 The agent then:
 
@@ -88,12 +88,11 @@ The agent then:
 7. renders and inspects the initial documentation baseline; and
 8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
 
-`PROJECT_SETUP.md` and `DOCS_SETUP.md` remain agent checklists and initialization provenance. `INITIAL_PROMPT.md` is the single user-facing entry point that activates them.
+`PROJECT_SETUP.md` and `DOCS_SETUP.md` remain agent checklists and initialization provenance. `$start-project` is the single executable entry point that activates them.
 
-For a project that should remain local and have no remote, begin in this
-checked-out template with [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
-It verifies the destination, creates an independent local clone without a
-remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
+For a project that should remain local and have no remote, invoke
+`$create-local-project` explicitly in this checked-out template. It creates an
+independent local clone without a remote and then invokes `$start-project`.
 After successful initialization, the project's copy of the creation prompt and
 its template-only references are removed, while the initialization files remain
 as provenance.
@@ -232,10 +231,12 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`AGENTS.md`** is the concise, automatically loaded entry point for AI agents. It routes them to the complete documentation, source-safety and validation guidance without duplicating it.
 - **`ChatGPT.md`** defines maintainer authority, repository-first documentation work, milestones, feedback and publication boundaries.
 - **`CODEX.md`** defines local assistant access, sensitive-source handling, rendering, Git and delivery rules.
-- **`PROJECT_SETUP.md`, `INITIAL_PROMPT.md` and `DOCS_SETUP.md`** establish repository identity, documentation type, audience, languages, source model, Quarto system and QA expectations. The first two normally remain as initialization provenance.
-- **`CONTINUATION_PROMPT.md`** reconstructs the source, review, QA and Git baseline in a later session.
-- **`HARMONIZATION_PROMPT.md`** aligns a derived documentation project with its recorded template baseline, internal sources, outputs and roadmap.
-- **`RETROSPECTIVE_PROMPT.md`** evaluates collaboration practices separately and controls how reusable lessons become template candidates.
+- **`PROJECT_SETUP.md` and `DOCS_SETUP.md`** establish repository identity, documentation type, audience, languages, source model, Quarto system and QA expectations. `PROJECT_SETUP.md` remains as initialization provenance.
+- **`.agents/skills/`** provides lean automatic task lifecycle and commit
+  workflows plus explicit initialization, neutral review, synchronization,
+  consistency, document revision and retrospective workflows.
+- **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
+  sessions and computers.
 
 ### Documentation Rules and Decisions
 
@@ -272,8 +273,8 @@ In a derived documentation project:
 - retain and adapt `AGENTS.md` as the automatic agent entry point;
 - complete `DOCS_SETUP.md`, `AUDIENCE.md` and `PROJECT_CONTEXT.md`;
 - adapt `_quarto.yml`, `docs/`, style, link, screenshot and visual-QA guidance;
-- retain `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance;
-- retain the continuation, harmonization and retrospective prompts for later use;
+- retain `PROJECT_SETUP.md` as initialization provenance;
+- retain the applicable repository skills for later workflows;
 - maintain `DOCUMENTATION.md`, `REPOSITORY.md` and `FEEDBACK_WORKFLOW.md` as active project rules;
 - keep generated outputs and returned annotated review files local by default
   and version them only after deliberate review;
@@ -283,7 +284,7 @@ Record the initial template version and commit, last harmonization baseline, lif
 
 ## How to Use This Template
 
-1. Create a repository from the template and give the agent the instruction in `INITIAL_PROMPT.md`.
+1. Create a repository from the template and invoke `$start-project`.
 2. Answer the numbered questions the agent presents; it reads and applies `PROJECT_SETUP.md`, `DOCS_SETUP.md` and the remaining setup guidance automatically.
 3. Review the initialized documentation state, render checks and proposed first commit.
 4. Select the documentation type profile and confirm audience, language and publication requirements with the agent.
@@ -291,7 +292,8 @@ Record the initial template version and commit, last harmonization baseline, lif
 6. Define the information architecture before large-scale drafting, then draft, render and review in small increments.
 7. Connect every visual and link to a real reader task or evidence need.
 8. Transfer accepted feedback back to the maintained source and revalidate it there.
-9. Record consequential decisions, keep `PROJECT_CONTEXT.md` current and use `CONTINUATION_PROMPT.md` for later sessions.
+9. Record consequential decisions, keep `PROJECT_CONTEXT.md` current and use
+   `start-task` with `TASK_HANDOFF.md` for later bounded tasks.
 10. Close milestones only after technical, audience, link, visual, render and disclosure QA.
 
 ## Maintainer Tool Setup

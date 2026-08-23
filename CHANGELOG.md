@@ -6,8 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
-- Add accepted DDR-0001 for maintained documentation source, binary material,
-  generated outputs and returned review-file locations.
+- Add repository-scoped collaboration skills, including automatic document
+  rendering and explicit annotated-document revision, plus `TASK_HANDOFF.md`.
 - Add tracked guidance for the otherwise ignored format-specific `output/`
   hierarchy.
 - Add provider-neutral synchronized external project storage for large non-Git
@@ -15,6 +15,12 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Move the maintained documentation file and output location decision to
+  Templateverse governance as TVDR-0019 and retain only `0000` Decision Record
+  templates in this source template.
+- Replace the root initialization, continuation, harmonization, retrospective
+  and local-project creation prompts with `$start-project` and scoped skills;
+  retain `PROJECT_SETUP.md` as initialization method and provenance.
 - Store generated documentation below ignored, format-specific `output/`
   directories and set the baseline website output to `output/html/`.
 - Consolidate maintained binary documentation material in

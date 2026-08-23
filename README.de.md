@@ -69,13 +69,13 @@ Verwende das generische Project Template, wenn Dokumentation nur ein Teil eines 
 
 ## Projektinitialisierung
 
-Nach dem Erzeugen des Repositorys muss der Maintainer nur [INITIAL_PROMPT.md](INITIAL_PROMPT.md) aufrufen. Der Agent liest das Repository und alle Setup-Leitlinien und führt anschließend durch die vollständige Dokumentationsinitialisierung. Der Maintainer muss `PROJECT_SETUP.md` oder `DOCS_SETUP.md` nicht selbst öffnen oder ausführen.
+Nach dem Erzeugen des Repositorys ruft der Maintainer `$start-project` auf. Der Skill liest das Repository und alle Setup-Leitlinien und führt anschließend durch die vollständige Dokumentationsinitialisierung. Der Maintainer muss `PROJECT_SETUP.md` oder `DOCS_SETUP.md` nicht selbst öffnen oder ausführen.
 
 Die einfachste Anweisung an den Agenten lautet:
 
-> Lies `INITIAL_PROMPT.md` vollständig und führe den darin enthaltenen Initialisierungs-Prompt aus.
+> `$start-project`
 
-Die Datei muss dafür nicht geöffnet und ihr Prompt nicht in die Unterhaltung kopiert werden.
+Es muss kein Initialisierungs-Prompt geöffnet oder in die Unterhaltung kopiert werden.
 
 Der Agent:
 
@@ -88,12 +88,12 @@ Der Agent:
 7. rendert und prüft die initiale Dokumentations-Baseline; und
 8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
-`PROJECT_SETUP.md` und `DOCS_SETUP.md` bleiben Checklisten des Agenten und dokumentieren die Methode der Initialisierung. `INITIAL_PROMPT.md` ist der einzige benutzerorientierte Einstiegspunkt, der sie aktiviert.
+`PROJECT_SETUP.md` und `DOCS_SETUP.md` bleiben Checklisten des Agenten und dokumentieren die Methode der Initialisierung. `$start-project` ist der einzige ausführbare Einstiegspunkt, der sie aktiviert.
 
-Soll ein Projekt lokal bleiben und keinen Remote erhalten, beginne in diesem
-ausgecheckten Template mit [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
-Der Prompt prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote
-und ruft anschließend `INITIAL_PROMPT.md` auf; er ist keine zweite Initialisierung.
+Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
+ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
+erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft anschließend
+`$start-project` auf.
 Nach erfolgreicher Initialisierung werden die Projektkopie des Erstellungs-
 Prompts und ihre reinen Template-Verweise entfernt; die Initialisierungsdateien
 bleiben dagegen als Provenienz erhalten.
@@ -238,10 +238,13 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`AGENTS.md`** ist der kompakte, automatisch geladene Einstiegspunkt für KI-Agenten. Die Datei führt zu den vollständigen Dokumentations-, Quellenschutz- und Validierungsleitlinien, ohne sie zu duplizieren.
 - **`ChatGPT.md`** definiert Maintainer-Autorität, Repository-zentrierte Dokumentationsarbeit, Milestones, Feedback und Publikationsgrenzen.
 - **`CODEX.md`** definiert lokalen Assistant-Zugriff, Behandlung sensibler Quellen, Rendering, Git und Übergaberegeln.
-- **`PROJECT_SETUP.md`, `INITIAL_PROMPT.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. Die ersten beiden bleiben normalerweise als Initialisierungsprovenienz erhalten.
-- **`CONTINUATION_PROMPT.md`** rekonstruiert Quellen-, Review-, QA- und Git-Baseline in einer späteren Sitzung.
-- **`HARMONIZATION_PROMPT.md`** gleicht ein abgeleitetes Dokumentationsprojekt mit seiner aufgezeichneten Template-Baseline, internen Quellen, Outputs und Roadmap ab.
-- **`RETROSPECTIVE_PROMPT.md`** bewertet Kollaborationspraktiken separat und kontrolliert, wie wiederverwendbare Erkenntnisse zu Template-Kandidaten werden.
+- **`PROJECT_SETUP.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. `PROJECT_SETUP.md` bleibt als Initialisierungsprovenienz erhalten.
+- **`.agents/skills/`** stellt schlanke automatische Aufgaben- und
+  Commit-Abläufe sowie ausdrückliche Initialisierungs-, Review-,
+  Synchronisierungs-, Konsistenz-, Dokumentrevisions- und Retrospektivabläufe
+  bereit.
+- **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
+  über Sitzungen und Rechner hinweg.
 
 ### Dokumentationsregeln und Entscheidungen
 
@@ -280,8 +283,8 @@ In einem abgeleiteten Dokumentationsprojekt:
 - behalte `AGENTS.md` als automatischen Agenten-Einstiegspunkt und passe die Datei an;
 - vervollständige `DOCS_SETUP.md`, `AUDIENCE.md` und `PROJECT_CONTEXT.md`;
 - passe `_quarto.yml`, `docs/`, Stil-, Link-, Screenshot- und visuelle QA-Leitlinien an;
-- behalte `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` als Initialisierungsprovenienz;
-- behalte die Prompts für Fortsetzung, Harmonisierung und Retrospektive zur späteren Nutzung;
+- behalte `PROJECT_SETUP.md` als Initialisierungsprovenienz;
+- behalte die anwendbaren Repository-Skills für spätere Abläufe;
 - pflege `DOCUMENTATION.md`, `REPOSITORY.md` und `FEEDBACK_WORKFLOW.md` als aktive Projektregeln;
 - halte erzeugte Outputs und zurückgegebene annotierte Review-Dateien
   standardmäßig lokal und versioniere sie erst nach bewusster Prüfung;
@@ -291,7 +294,7 @@ Halte initiale Template-Version und -Commit, letzte Harmonisierungs-Baseline, Le
 
 ## Verwendung dieses Templates
 
-1. Erzeuge ein Repository aus dem Template und gib dem Agenten die Anweisung aus `INITIAL_PROMPT.md`.
+1. Erzeuge ein Repository aus dem Template und rufe `$start-project` auf.
 2. Beantworte die nummerierten Fragen des Agenten; er liest und verarbeitet `PROJECT_SETUP.md`, `DOCS_SETUP.md` und die übrigen Setup-Leitlinien automatisch.
 3. Prüfe den initialisierten Dokumentationsstand, die Render-Prüfungen und den vorgeschlagenen ersten Commit.
 4. Wähle das Dokumentationstyp-Profil und bestätige mit dem Agenten Zielgruppen-, Sprach- und Publikationsanforderungen.
@@ -299,7 +302,8 @@ Halte initiale Template-Version und -Commit, letzte Harmonisierungs-Baseline, Le
 6. Definiere die Informationsarchitektur vor umfangreichem Entwurf und entwirf, rendere und prüfe anschließend in kleinen Schritten.
 7. Verbinde jede Visualisierung und jeden Link mit einer realen Leseraufgabe oder einem Nachweisbedarf.
 8. Übertrage akzeptiertes Feedback zurück in die gepflegte Quelle und validiere es dort erneut.
-9. Dokumentiere folgenreiche Entscheidungen, halte `PROJECT_CONTEXT.md` aktuell und verwende `CONTINUATION_PROMPT.md` für spätere Sitzungen.
+9. Dokumentiere folgenreiche Entscheidungen, halte `PROJECT_CONTEXT.md`
+   aktuell und verwende `start-task` mit `TASK_HANDOFF.md` für spätere Aufgaben.
 10. Schließe Milestones erst nach technischer, Zielgruppen-, Link-, visueller, Render- und Offenlegungs-QA ab.
 
 ## Tool-Setup für Maintainer

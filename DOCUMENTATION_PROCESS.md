@@ -66,13 +66,13 @@ Before milestone closure, check:
 
 ## 8. Harmonization
 
-The maintainer decides when to use `HARMONIZATION_PROMPT.md` to compare the
-project with its recorded source template, reconcile internal documentation and
-output state, and review roadmap and coverage fit.
+The maintainer decides when to invoke `$sync-template` for source-template
+comparison and selected adoption or `$check-consistency` for internal
+documentation, output, roadmap and coverage diagnosis.
 
 ## 9. Collaboration retrospective
 
-The maintainer decides when to use `RETROSPECTIVE_PROMPT.md` to evaluate
+The maintainer decides when to use `$perform-retrospective` to evaluate
 Maintainer-Agent collaboration, including rules, feedback, decisions, handoffs
 and work rhythm. Project-content implications are handed to a later
 harmonization; reusable collaboration lessons may become template candidates.

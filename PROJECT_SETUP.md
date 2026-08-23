@@ -2,9 +2,9 @@
 
 Use this file when creating a concrete documentation project from the template.
 
-Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` in derived projects as
-documentation of the initialization method. Record completion, source-template
-baseline and later harmonizations in `PROJECT_CONTEXT.md`; remove either file
+Keep `PROJECT_SETUP.md` in derived projects as documentation of the
+initialization method. Record completion, source-template baseline and later
+harmonizations in `PROJECT_CONTEXT.md`; remove it
 only as a deliberate, documented maintainer exception.
 
 ## Initialization checklist
@@ -87,7 +87,7 @@ only as a deliberate, documented maintainer exception.
    - Complete `DOCS_SETUP.md`.
    - Adapt `FEEDBACK_WORKFLOW.md`, `AUDIENCE.md`, `STYLE_GUIDE.md`,
      `SCREENSHOTS.md`, `LINKS.md`, and `VISUAL_QA.md`.
-   - Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance.
+   - Keep `PROJECT_SETUP.md` as initialization provenance.
    - Record the initial template version and commit, initialization status,
      later harmonization baseline and intentional deviations in
      `PROJECT_CONTEXT.md`.
@@ -129,14 +129,11 @@ Keep English and German badge blocks identical when both READMEs are present.
 Record the Documentation Template version and commit in `PROJECT_CONTEXT.md`,
 not as the derived project's version badge.
 
-After initialization, retain `CONTINUATION_PROMPT.md` and use it whenever work
-continues in a new context window or assistant session.
-
-Retain `HARMONIZATION_PROMPT.md` for maintainer-initiated source-template,
-documentation, output and roadmap alignment.
-
-Retain `RETROSPECTIVE_PROMPT.md` for maintainer-initiated, structured reviews
-of Maintainer-Agent documentation collaboration.
+After initialization, retain the repository skills and `TASK_HANDOFF.md`.
+Routine tasks use `start-task`; invoke `$review-project`, `$sync-template`,
+`$check-consistency`, `$revise-document` and `$perform-retrospective`
+explicitly only when their specialized outcome is needed. Remove the project
+copy of `$create-local-project` after successful initialization.
 
 ## Synchronized external storage
 

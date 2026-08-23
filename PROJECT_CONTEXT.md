@@ -13,8 +13,8 @@ This file is a template. In a derived documentation project, replace the placeho
 - Last collaboration retrospective: `<not yet performed | reviewed period or milestone, date and relevant record>`
 - Intentional template deviations and relevant Decision Records: `<none | concise list>`
 
-Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance.
-They describe the project's methodological roots; this section records their
+Keep `PROJECT_SETUP.md` as initialization provenance. It describes the
+project's methodological roots; this section records its
 lifecycle status and the baselines used over time.
 
 ## Project identity
@@ -199,11 +199,12 @@ Link check expectations:
 ## Relevant documents
 
 - `PROJECT_SETUP.md` - retained initialization method and provenance
-- `INITIAL_PROMPT.md` - retained first-session initialization prompt
-- `CONTINUATION_PROMPT.md` - re-entry prompt for a new context window or assistant session
+- `TASK_HANDOFF.md` - compact versioned task checkpoint
+- `.agents/skills/` - automatic lifecycle and explicit specialized workflows
 - `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage for large documentation files
-- `HARMONIZATION_PROMPT.md` - source-template, documentation-consistency and roadmap harmonization
-- `RETROSPECTIVE_PROMPT.md` - structured Maintainer-Agent documentation-collaboration review
+- `$sync-template` - source-template comparison and selected adoption
+- `$check-consistency` - internal documentation consistency diagnosis
+- `$perform-retrospective` - structured documentation-collaboration review
 - `DOCS_SETUP.md` - documentation setup and current model
 - `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
 - `FEEDBACK_WORKFLOW.md` - direct-source, DOCX and PDF review workflow

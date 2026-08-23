@@ -2,9 +2,9 @@
 
 This repository follows a repository-first documentation workflow. Durable context, decisions, and documentation files should be versioned whenever they are part of the project record.
 
-Use `CONTINUATION_PROMPT.md` at the start of a new context window or assistant
-session to reconcile `PROJECT_CONTEXT.md`, maintained documentation and current
-read-only Git evidence.
+Use `start-task` for lean bounded entry and `TASK_HANDOFF.md` for current task
+state. Invoke `$review-project` explicitly to reconcile comprehensive project,
+documentation and read-only Git evidence.
 
 ## Expected structure
 
