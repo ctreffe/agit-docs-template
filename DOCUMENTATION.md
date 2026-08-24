@@ -13,8 +13,7 @@ Template files describe how a documentation project should be initialized, maint
 - `README.md` and `README.de.md`: Public-facing overview of the template.
 - `AGENTS.md`: Automatically loaded entry point that routes AI agents to the
   complete documentation, source-safety and validation guidance.
-- `ChatGPT.md`: Versioned AI collaboration model.
-- `CODEX.md`: Local operating rules for the assistant.
+- `COLLABORATION.md`: Versioned AI collaboration model.
 - `PROJECT_SETUP.md`: Initial repository setup workflow.
 - `$start-project`: Explicit one-time project initialization skill.
 - `.agents/skills/`: Scoped automatic lifecycle and explicit specialized

@@ -81,7 +81,7 @@ only as a deliberate, documented maintainer exception.
 10. Adapt template files.
    - Retain and adapt `AGENTS.md` as the automatic agent entry point.
    - Preserve an AI Collaboration Note directly below the README title and badges, if badges are present.
-   - Keep the note visible, factually correct for the derived project, and linked to `ChatGPT.md`.
+   - Keep the note visible, factually correct for the derived project, and linked to `COLLABORATION.md`.
    - Include one concrete sentence describing what the collaboration model documents for the derived documentation project, such as documentation practices, collaboration workflows, link discipline, visual QA or repository conventions.
    - Update `PROJECT_CONTEXT.md`.
    - Complete `DOCS_SETUP.md`.

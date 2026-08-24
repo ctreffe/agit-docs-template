@@ -11,8 +11,7 @@ documentation and read-only Git evidence.
 - `README.md`: Repository overview.
 - `README.de.md`: German overview.
 - `AGENTS.md`: Automatic AI-agent entry point.
-- `ChatGPT.md`: AI collaboration model.
-- `CODEX.md`: Assistant rules.
+- `COLLABORATION.md`: AI collaboration model.
 - `PROJECT_SETUP.md`: Initialization workflow.
 - `DOCS_SETUP.md`: Documentation setup checklist.
 - `PROJECT_CONTEXT.md`: Project-specific context template.

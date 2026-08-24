@@ -13,7 +13,7 @@
 >
 > Das Kollaborationsmodell dokumentiert Dokumentationspraktiken, KI-gestützte Dokumentationsworkflows, Link- und visuelle QA-Disziplin sowie Repository-Konventionen für Dokumentationsprojekte.
 >
-> Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
+> Das Kollaborationsmodell wird in [COLLABORATION.md](COLLABORATION.md) gepflegt.
 
 <br>
 
@@ -235,9 +235,8 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 
 ### Zusammenarbeit, Setup und Prozess
 
-- **`AGENTS.md`** ist der kompakte, automatisch geladene Einstiegspunkt für KI-Agenten. Die Datei führt zu den vollständigen Dokumentations-, Quellenschutz- und Validierungsleitlinien, ohne sie zu duplizieren.
-- **`ChatGPT.md`** definiert Maintainer-Autorität, Repository-zentrierte Dokumentationsarbeit, Milestones, Feedback und Publikationsgrenzen.
-- **`CODEX.md`** definiert lokalen Assistant-Zugriff, Behandlung sensibler Quellen, Rendering, Git und Übergaberegeln.
+- **`AGENTS.md`** ist der kompakte residente Sicherheits- und Routingvertrag für KI-Agenten.
+- **`COLLABORATION.md`** definiert providerneutrale Dokumentationsautorität, Evidenz, Feedback und Publikationsgrenzen.
 - **`PROJECT_SETUP.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. `PROJECT_SETUP.md` bleibt als Initialisierungsprovenienz erhalten.
 - **`.agents/skills/`** stellt schlanke automatische Aufgaben- und
   Commit-Abläufe sowie ausdrückliche Initialisierungs-, Review-,

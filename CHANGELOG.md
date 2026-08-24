@@ -6,6 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Add the provider-neutral `COLLABORATION.md` contract with `AGENTS.md` as the
+  sole resident repository file.
 - Add repository-scoped collaboration skills, including automatic document
   rendering and explicit annotated-document revision, plus `TASK_HANDOFF.md`.
 - Add tracked guidance for the otherwise ignored format-specific `output/`
@@ -15,6 +17,9 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Remove active root `CODEX.md` and `ChatGPT.md`, route their current authority
+  to documentation guidance and skills, and make `commit-milestone`
+  explicit-only.
 - Move the maintained documentation file and output location decision to
   Templateverse governance as TVDR-0019 and retain only `0000` Decision Record
   templates in this source template.

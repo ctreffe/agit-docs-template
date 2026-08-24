@@ -58,7 +58,7 @@ project:
     - docs/**/*.qmd
 ```
 
-This prevents repository governance files such as `README.md`, `ChatGPT.md`, or `PROJECT_CONTEXT.md` from being rendered as website pages by default.
+This prevents repository governance files such as `README.md`, `COLLABORATION.md`, or `PROJECT_CONTEXT.md` from being rendered as website pages by default.
 
 ## Executable source readability
 

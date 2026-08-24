@@ -13,7 +13,7 @@
 >
 > The collaboration model documents documentation practices, AI-assisted documentation workflows, link and visual QA discipline and repository conventions for documentation projects.
 >
-> Its collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
+> Its collaboration model is maintained in [COLLABORATION.md](COLLABORATION.md).
 
 <br>
 
@@ -228,9 +228,8 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 
 ### Collaboration, Setup and Process
 
-- **`AGENTS.md`** is the concise, automatically loaded entry point for AI agents. It routes them to the complete documentation, source-safety and validation guidance without duplicating it.
-- **`ChatGPT.md`** defines maintainer authority, repository-first documentation work, milestones, feedback and publication boundaries.
-- **`CODEX.md`** defines local assistant access, sensitive-source handling, rendering, Git and delivery rules.
+- **`AGENTS.md`** is the compact resident safety and routing contract for AI agents.
+- **`COLLABORATION.md`** defines provider-neutral documentation authority, evidence, feedback and publication boundaries.
 - **`PROJECT_SETUP.md` and `DOCS_SETUP.md`** establish repository identity, documentation type, audience, languages, source model, Quarto system and QA expectations. `PROJECT_SETUP.md` remains as initialization provenance.
 - **`.agents/skills/`** provides lean automatic task lifecycle and commit
   workflows plus explicit initialization, neutral review, synchronization,

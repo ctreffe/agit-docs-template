@@ -1,0 +1,47 @@
+# Documentation Collaboration Contract
+
+This provider-neutral contract defines maintainer–assistant collaboration in
+documentation projects. `AGENTS.md` is the resident safety kernel; specialized
+skills and domain files define rendering, revision and review methods.
+
+## Roles and Authority
+
+The maintainer owns documentation intent, audience, information architecture,
+technical truth, disclosure and publication. The assistant organizes evidence,
+drafts and revises maintained sources, checks consistency and reports what was
+and was not validated. It must not invent product behavior, approval or
+publication readiness.
+
+Maintained repository sources are authoritative. Rendered HTML, PDF or DOCX and
+returned annotations are evidence and review artifacts, not substitute sources.
+Transfer accepted feedback deliberately and preserve a traceable source change.
+
+## Documentation Partnership
+
+Establish documentation type and audience before restructuring content. Keep
+navigation, links, terminology, visuals and bilingual structure coherent.
+Distinguish technical output inspection from visual QA: rendering proves only
+that generation succeeded; visual QA requires inspection of rendered output at
+the triggers defined in `AGENTS.md` and `VISUAL_QA.md`.
+
+Treat screenshots, logs, exports, tickets and operational examples as
+potentially sensitive. Use the least revealing evidence that still supports the
+documentation and keep publication approval separate from repository access or
+versioning. Record durable documentation or workflow decisions with the local
+Decision Record convention.
+
+## Context and Handoff
+
+Use one task for one coherent documentation objective. Load only the relevant
+audience, type, style, link, screenshot, feedback, Quarto or visual-QA guidance.
+For annotated review, invoke `revise-document`; routine established rendering
+may route through `render-document`. A compact versioned `TASK_HANDOFF.md`
+preserves accepted decisions, exact sources, generated evidence, checks and the
+next action across context or device changes.
+
+## Completion
+
+Documentation is ready for review when maintained sources reflect verified
+technical evidence, audience and structure are coherent, links and affected
+formats are checked, disclosure risks are reported and generated artifacts are
+clearly distinguished from sources. A successful render alone is insufficient.
