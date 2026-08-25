@@ -6,6 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Add a source-template `IDEAS.md` backlog for sanitized reusable
+  retrospective candidates.
 - Add the provider-neutral `COLLABORATION.md` contract with `AGENTS.md` as the
   sole resident repository file.
 - Add repository-scoped collaboration skills, including automatic document
@@ -17,6 +19,12 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Assign targeted documentation checks to implementation and the complete
+  applicable repository gate to commit preparation while retaining milestone
+  visual-QA and domain-specific render requirements.
+- Route retrospective findings explicitly to project, source-template or
+  governance destinations with a Pending Idea Transfer fallback, and remove
+  the template backlog during successful normal-project initialization.
 - Remove active root `CODEX.md` and `ChatGPT.md`, route their current authority
   to documentation guidance and skills, and make `commit-milestone`
   explicit-only.
