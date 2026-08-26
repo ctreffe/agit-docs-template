@@ -129,6 +129,14 @@ Keep English and German badge blocks identical when both READMEs are present.
 Record the Documentation Template version and commit in `PROJECT_CONTEXT.md`,
 not as the derived project's version badge.
 
+After successful initialization, replace the inherited source-template
+maintenance history in `CHANGELOG.md` with a project-owned changelog beginning
+at `Unreleased`. Replace `TASK_HANDOFF.md` with a project-owned initialization
+handoff containing only current documentation-project state, decisions, checks
+and the next step. Preserve template lineage in `PROJECT_CONTEXT.md`, not in
+either active project-history file. If initialization is incomplete, leave
+both resets pending and identify the inherited content as non-authoritative.
+
 After initialization, retain the repository skills and `TASK_HANDOFF.md`.
 Routine tasks use `start-task`; invoke `$review-project`, `$sync-template`,
 `$check-consistency`, `$revise-document` and `$perform-retrospective`

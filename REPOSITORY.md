@@ -99,8 +99,10 @@ presentation source in `styles/`. Publication remains a separate decision.
 Use small, reviewable changes. Keep unrelated work out of the same commit.
 
 Every commit should include a concise summary and a meaningful description that
-matches the actual diff. Regular commits should use Conventional Commits and
-represent one logical documentation step.
+matches the actual diff. Regular commits use an exact direct prefix such as
+`docs:`, `feat:`, `fix:`, `chore:`, `refactor:` or `test:` and represent one
+logical documentation step. Do not use scoped forms such as `docs(site):`.
+Use real line breaks in the description and never literal `\n` escape text.
 
 A milestone should normally be built through multiple regular commits when
 structure, drafting, review and correction can be separated meaningfully.

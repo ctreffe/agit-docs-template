@@ -19,6 +19,10 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Require successful documentation-project initialization to replace inherited
+  template maintenance history in `CHANGELOG.md` and `TASK_HANDOFF.md` with
+  project-owned state, and reinduce exact direct-prefix commit messages with
+  meaningful bodies.
 - Assign targeted documentation checks to implementation and the complete
   applicable repository gate to commit preparation while retaining milestone
   visual-QA and domain-specific render requirements.
