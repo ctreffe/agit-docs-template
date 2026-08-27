@@ -231,9 +231,12 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`AGENTS.md`** is the compact resident safety and routing contract for AI agents.
 - **`COLLABORATION.md`** defines provider-neutral documentation authority, evidence, feedback and publication boundaries.
 - **`PROJECT_SETUP.md` and `DOCS_SETUP.md`** establish repository identity, documentation type, audience, languages, source model, Quarto system and QA expectations. `PROJECT_SETUP.md` remains as initialization provenance.
-- **`.agents/skills/`** provides lean automatic task lifecycle and commit
-  workflows plus explicit initialization, neutral review, synchronization,
-  consistency, document revision and retrospective workflows.
+- **`.agents/skills/`** provides lean automatic task lifecycle, commit and
+  environment-troubleshooting workflows plus explicit initialization, neutral
+  review, synchronization, consistency, document revision and retrospective
+  workflows.
+- **`TROUBLESHOOTING.md`** stores portable verified environment failures;
+  ignored `TROUBLESHOOTING.local.md` stores host-specific facts after activation.
 - **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
   sessions and computers.
 

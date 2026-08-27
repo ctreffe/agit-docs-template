@@ -13,6 +13,7 @@ Desktop.ini
 .env
 .env.*
 *.local
+TROUBLESHOOTING.local.md
 .cache/
 .tmp/
 tmp/

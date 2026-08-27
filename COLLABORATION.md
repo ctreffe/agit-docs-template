@@ -41,6 +41,13 @@ next action across context or device changes.
 
 ## Completion
 
+On a recurring equivalent tool failure or immediate setup, policy, permission
+or rendering-toolchain failure, pause and use `troubleshoot-environment`. Load
+known issues only after activation, require signature and applicability
+matching, and verify the original documentation operation before resuming.
+Troubleshooting grants no source access, installation, external write,
+publication or disclosure authority.
+
 Documentation is ready for review when maintained sources reflect verified
 technical evidence, audience and structure are coherent, links and affected
 formats are checked, disclosure risks are reported and generated artifacts are

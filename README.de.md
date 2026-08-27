@@ -238,10 +238,12 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`AGENTS.md`** ist der kompakte residente Sicherheits- und Routingvertrag für KI-Agenten.
 - **`COLLABORATION.md`** definiert providerneutrale Dokumentationsautorität, Evidenz, Feedback und Publikationsgrenzen.
 - **`PROJECT_SETUP.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. `PROJECT_SETUP.md` bleibt als Initialisierungsprovenienz erhalten.
-- **`.agents/skills/`** stellt schlanke automatische Aufgaben- und
-  Commit-Abläufe sowie ausdrückliche Initialisierungs-, Review-,
-  Synchronisierungs-, Konsistenz-, Dokumentrevisions- und Retrospektivabläufe
-  bereit.
+- **`.agents/skills/`** stellt schlanke automatische Aufgaben-, Commit- und
+  Umgebungs-Troubleshooting-Abläufe sowie ausdrückliche Initialisierungs-,
+  Review-, Synchronisierungs-, Konsistenz-, Dokumentrevisions- und
+  Retrospektivabläufe bereit.
+- **`TROUBLESHOOTING.md`** enthält portable verifizierte Umgebungsfehler; die
+  ignorierte `TROUBLESHOOTING.local.md` enthält Hostfakten nach Aktivierung.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg.
 

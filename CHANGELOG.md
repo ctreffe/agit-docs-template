@@ -6,6 +6,8 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Add the TVDR-0026 environment-troubleshooting skill and conditional portable
+  plus ignored host-local known-issue records.
 - Add a source-template `IDEAS.md` backlog for sanitized reusable
   retrospective candidates.
 - Add the provider-neutral `COLLABORATION.md` contract with `AGENTS.md` as the
@@ -19,6 +21,8 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Route recurring, setup, policy, permission and rendering-toolchain failures
+  to signature-matched, authorized and verified documentation recovery.
 - Interrupt recurring tool or environment failures for durable authorized
   diagnosis and verified recovery before resuming documentation work.
 - Require successful documentation-project initialization to replace inherited
