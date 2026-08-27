@@ -26,15 +26,15 @@ Resident contract.
   `PROJECT_CONTEXT.md` only for project-wide state or unclear scope.
 - Read `COLLABORATION.md` for initialization, full review, authority conflicts
   or collaboration-model changes. Load setup, documentation-process, audience,
-  style, links, screenshots, Quarto, feedback and visual-QA guidance as needed.
+  style, links, screenshots, Quarto and feedback guidance as needed.
 - Task entry, handoff, ordinary commits, Decision Records and established
-  rendering route automatically. Invoke initialization, review, template sync,
-  consistency, retrospective, revision, local creation and `commit-milestone`
-  explicitly.
+  rendering route automatically. Invoke initialization, document addition,
+  visual inspection, review, sync, consistency, retrospective, revision, local
+  creation and `commit-milestone` explicitly.
 
 ## Validation
 
 Review diffs and run `git diff --check`; add link, bilingual, render and
-disclosure checks. Visual QA is required for milestone closure or an
-explicit request and inspects rendered output. Report limits; a successful
-render alone does not establish correctness or publication readiness.
+disclosure checks. Only explicit `$visual-inspection` performs agent inspection
+of selected current renders. Report limits; a successful render alone does not
+establish correctness or publication readiness.

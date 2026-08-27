@@ -6,11 +6,18 @@ The documentation process is iterative. Each iteration should leave the reposito
 
 Clarify documentation type profile, purpose, audience, language model, Quarto model, source material, sensitivity constraints, visuals, links, output formats, and review expectations.
 
+Project initialization records shared defaults in `PROJECT_CONTEXT.md` and the
+initial document contract in `DOCUMENTS.md`. In an initialized project, invoke
+`$add-document` explicitly for each additional maintained document or
+language-linked document set. Document-local choices may refine reviewed
+project defaults but must not silently contradict them.
+
 Setup is complete only when repository identity, maintainer-owned purpose,
 scope, audience, initial roadmap, source and versioning rules, publication
 model, QA expectations, decision-record needs and retained template files are
-recorded consistently. Do not begin large-scale drafting while required setup
-decisions remain `TBD`.
+recorded consistently. The initial document entry must also contain no required
+`TBD` fields. Do not begin large-scale drafting while required setup decisions
+remain `TBD`.
 
 ## 2. Structure
 
@@ -34,10 +41,10 @@ Use active voice where appropriate. State prerequisites, steps, outcomes, limita
 
 Use screenshots and diagrams when they clarify real interfaces, states, workflows, or decisions. Review visuals for currency, readability, relevance, and sensitive information.
 
-The maintainer owns visual inspection during ordinary work. A visual change
-does not automatically trigger agent-performed visual QA. The assistant uses
-the Browser skill or rendered page images for actual visual inspection only
-before milestone closure or when the maintainer explicitly requests it.
+The maintainer owns visual inspection unless they explicitly invoke
+`$visual-inspection`. A milestone, render or visual change does not trigger
+agent inspection. The skill uses the Browser skill or rendered page images only
+for the named current output and maintainer-selected formats.
 
 ## 6. Feedback and revision
 
@@ -49,7 +56,7 @@ For website documentation, define the reviewed page, chapter, bundle or
 snapshot explicitly. Present unresolved external feedback as concise numbered
 issues before incorporation. Transfer accepted changes to the source, then
 re-render and technically validate the affected output. Do not treat that
-routine validation as visual QA.
+routine validation as visual inspection.
 
 ## 7. Quality assurance
 
@@ -60,7 +67,8 @@ Before milestone closure, check:
 - Structure and navigation.
 - Link integrity.
 - Quarto render status for required output formats.
-- Screenshot and visual quality.
+- Screenshot and visual quality based on maintainer review or findings from an
+  explicitly invoked `$visual-inspection`.
 - Terminology consistency.
 - Open decisions and follow-up work.
 

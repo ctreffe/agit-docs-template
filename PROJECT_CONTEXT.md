@@ -129,7 +129,7 @@ Relevant never-versioned temporary work outside `temp/restricted/`:
 - Latest completed documentation step: TBD
 - Active maintained source files: TBD
 - Latest validated render: TBD
-- Latest link, screenshot and visual-QA status: TBD
+- Latest link, screenshot and explicit visual-inspection status: TBD
 - Active feedback file or review: TBD
 - Active review scope and source state: TBD
 - Feedback decision state and next action: TBD
@@ -156,6 +156,10 @@ Relevant never-versioned temporary work outside `temp/restricted/`:
 
 ## Documentation structure
 
+Document catalog:
+
+- `DOCUMENTS.md` - document-local contracts, lifecycle and next actions
+
 Planned structure:
 
 - TBD
@@ -174,9 +178,9 @@ Diagram policy:
 
 - TBD
 
-Visual QA requirements:
+Visual-inspection requirements:
 
-- `<default: Browser or page-image visual QA before milestone closure or when explicitly requested; project-specific deviations>`
+- `<default: only through explicitly invoked $visual-inspection for named current renders and maintainer-selected formats; project-specific criteria>`
 
 ## Links and references
 
@@ -207,6 +211,7 @@ Link check expectations:
 - `$check-consistency` - internal documentation consistency diagnosis
 - `$perform-retrospective` - structured documentation-collaboration review
 - `DOCS_SETUP.md` - documentation setup and current model
+- `DOCUMENTS.md` - maintained document catalog and document-local contracts
 - `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
 - `FEEDBACK_WORKFLOW.md` - direct-source, DOCX and PDF review workflow
 - `AUDIENCE.md` - audience assumptions

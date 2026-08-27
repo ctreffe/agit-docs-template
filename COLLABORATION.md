@@ -20,9 +20,9 @@ Transfer accepted feedback deliberately and preserve a traceable source change.
 
 Establish documentation type and audience before restructuring content. Keep
 navigation, links, terminology, visuals and bilingual structure coherent.
-Distinguish technical output inspection from visual QA: rendering proves only
-that generation succeeded; visual QA requires inspection of rendered output at
-the triggers defined in `AGENTS.md` and `VISUAL_QA.md`.
+Distinguish technical output inspection from visual inspection: rendering
+proves only that generation succeeded. Inspect a rendered surface only through
+an explicitly invoked `$visual-inspection` and within its selected scope.
 
 Treat screenshots, logs, exports, tickets and operational examples as
 potentially sensitive. Use the least revealing evidence that still supports the
@@ -33,7 +33,11 @@ Decision Record convention.
 ## Context and Handoff
 
 Use one task for one coherent documentation objective. Load only the relevant
-audience, type, style, link, screenshot, feedback, Quarto or visual-QA guidance.
+audience, type, style, link, screenshot, feedback or Quarto guidance. Load
+visual-inspection guidance only after explicit invocation.
+Use `DOCUMENTS.md` for document-local contracts. Invoke `$add-document`
+explicitly when an initialized project gains a maintained document; it must not
+reopen project initialization or silently replace project-wide decisions.
 For annotated review, invoke `revise-document`; routine established rendering
 may route through `render-document`. A compact versioned `TASK_HANDOFF.md`
 preserves accepted decisions, exact sources, generated evidence, checks and the

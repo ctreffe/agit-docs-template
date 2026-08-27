@@ -50,6 +50,11 @@ binary documentation material approved for Git, while `styles/` contains
 presentation source when needed. Generated formats remain below ignored
 `output/` in separate format directories.
 
+`DOCUMENTS.md` catalogs each maintained document or language-linked document
+set. Add later documents through the explicit `$add-document` workflow so
+source paths, language relationships, navigation and required formats remain
+consistent with the project configuration.
+
 The default render scope is limited to Quarto source files in `docs/`:
 
 ```yaml

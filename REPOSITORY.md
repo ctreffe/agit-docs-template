@@ -14,13 +14,13 @@ documentation and read-only Git evidence.
 - `COLLABORATION.md`: AI collaboration model.
 - `PROJECT_SETUP.md`: Initialization workflow.
 - `DOCS_SETUP.md`: Documentation setup checklist.
+- `DOCUMENTS.md`: Maintained document catalog and document-local contracts.
 - `PROJECT_CONTEXT.md`: Project-specific context template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing process.
 - `AUDIENCE.md`: Audience model.
 - `STYLE_GUIDE.md`: Documentation style guide.
 - `SCREENSHOTS.md`: Screenshot policy.
 - `LINKS.md`: Link and reference rules.
-- `VISUAL_QA.md`: Visual QA checklist.
 - `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
 - `CHANGELOG.md`: Version history.
 - `VERSION`: Current template or project version.

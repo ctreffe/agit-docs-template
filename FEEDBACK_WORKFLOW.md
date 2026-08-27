@@ -66,8 +66,8 @@ editing.
 Clear maintainer-authored PDF annotations may be implemented directly when the
 requested source change is unambiguous. After changing the source, re-render
 and technically validate the relevant format. The maintainer performs routine
-visual inspection; the assistant performs visual QA only before milestone
-closure or when the maintainer explicitly requests it.
+visual inspection. The assistant inspects the selected current render only
+when the maintainer explicitly invokes `$visual-inspection`.
 
 ## Review cycle
 
@@ -86,8 +86,8 @@ closure or when the maintainer explicitly requests it.
    maintainer's accept, reject, qualify or defer decision.
 7. Apply accepted changes to the maintained source in small reviewable steps.
 8. Re-render and perform the relevant content, link and disclosure checks.
-   Perform agent visual QA only at milestone closure or when explicitly
-   requested by the maintainer.
+   Do not treat this as agent visual inspection. That remains a separate,
+   explicitly invoked `$visual-inspection` workflow.
 9. Update `PROJECT_CONTEXT.md` with the active review state and next action.
    Record durable documentation or workflow decisions in a DDR when needed.
 

@@ -16,10 +16,10 @@ the Secure AI Template this may be a fresh local control-plane clone.
    the maintainer-owned identity, intent, scope, audience, non-goals, storage,
    validation, roadmap and collaboration decisions required by the local setup
    contract. Do not invent or accept those decisions.
-3. After the maintainer answers, update the project-specific context and
-   documentation named by `PROJECT_SETUP.md`. Record initialization status and
-   date, source-template version and commit, synchronization baseline and
-   intentional deviations.
+3. After the maintainer answers, update the project-specific context,
+   `DOCUMENTS.md` initial document contract and documentation named by
+   `PROJECT_SETUP.md`. Record initialization status and date, source-template
+   version and commit, synchronization baseline and intentional deviations.
 4. Establish local input, temporary, material and output handling only as the
    repository guidance authorizes. Do not inspect, move, transmit or version a
    file merely because it exists.

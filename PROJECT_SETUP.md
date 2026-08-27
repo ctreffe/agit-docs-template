@@ -45,9 +45,10 @@ only as a deliberate, documented maintainer exception.
    - Screenshot policy.
    - Diagram policy.
    - Naming and storage rules.
-   - Visual QA expectations. By default, routine renders receive technical
-     output validation without the Browser skill; agent visual QA occurs only
-     before milestone closure or when explicitly requested by the maintainer.
+   - Visual-inspection expectations. Routine renders receive technical output
+     validation without the Browser skill. Agent inspection occurs only
+     through an explicitly invoked `$visual-inspection` for named current
+     renders and maintainer-selected formats.
 
 7. Confirm the external-file and project-material model.
    - Keep external content in `input/` unchanged.
@@ -82,11 +83,12 @@ only as a deliberate, documented maintainer exception.
    - Retain and adapt `AGENTS.md` as the automatic agent entry point.
    - Preserve an AI Collaboration Note directly below the README title and badges, if badges are present.
    - Keep the note visible, factually correct for the derived project, and linked to `COLLABORATION.md`.
-   - Include one concrete sentence describing what the collaboration model documents for the derived documentation project, such as documentation practices, collaboration workflows, link discipline, visual QA or repository conventions.
+   - Include one concrete sentence describing what the collaboration model documents for the derived documentation project, such as documentation practices, collaboration workflows, link discipline, visual inspection or repository conventions.
    - Update `PROJECT_CONTEXT.md`.
    - Complete `DOCS_SETUP.md`.
+   - Complete the initial document contract in `DOCUMENTS.md`.
    - Adapt `FEEDBACK_WORKFLOW.md`, `AUDIENCE.md`, `STYLE_GUIDE.md`,
-     `SCREENSHOTS.md`, `LINKS.md`, and `VISUAL_QA.md`.
+     `SCREENSHOTS.md` and `LINKS.md`.
    - Keep `PROJECT_SETUP.md` as initialization provenance.
    - Record the initial template version and commit, initialization status,
      later harmonization baseline and intentional deviations in
@@ -101,8 +103,9 @@ only as a deliberate, documented maintainer exception.
 
 12. Confirm initialization completion.
    - Verify that identity, purpose, scope, audience, roadmap, source handling,
-     Quarto, feedback and publication model, QA expectations, decision-record
-     needs and retained template files are documented consistently.
+     initial document contract, Quarto, feedback and publication model, QA
+     expectations, decision-record needs and retained template files are
+     documented consistently.
    - Resolve required `TBD` placeholders before substantive drafting begins.
 
 13. Prepare initialization commit.
@@ -139,9 +142,10 @@ both resets pending and identify the inherited content as non-authoritative.
 
 After initialization, retain the repository skills and `TASK_HANDOFF.md`.
 Routine tasks use `start-task`; invoke `$review-project`, `$sync-template`,
-`$check-consistency`, `$revise-document` and `$perform-retrospective`
-explicitly only when their specialized outcome is needed. Remove the project
-copy of `$create-local-project` after successful initialization.
+`$check-consistency`, `$add-document`, `$revise-document` and
+`$perform-retrospective` explicitly only when their specialized outcome is
+needed. Remove the project copy of `$create-local-project` after successful
+initialization.
 
 ## Synchronized external storage
 

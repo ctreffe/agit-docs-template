@@ -64,7 +64,8 @@ Decide:
 - Whether screenshots need redaction.
 - Whether diagrams are needed.
 - Where maintained binary visual material and presentation source should live.
-- How visual QA will be performed.
+- Which current renders and formats may be selected for explicit
+  `$visual-inspection`, and which project-specific criteria apply.
 
 ## Link model
 
@@ -123,10 +124,11 @@ Define the review model according to `FEEDBACK_WORKFLOW.md`:
 Before the first substantive documentation milestone, the repository should contain:
 
 - Completed `PROJECT_CONTEXT.md`.
+- Completed initial document contract in `DOCUMENTS.md`.
 - Selected documentation type profile and language model.
 - Confirmed Quarto model and output formats.
 - Confirmed feedback channels, file scope and review-handling rules.
-- Adapted audience, style, screenshot, link, and visual QA rules.
+- Adapted audience, style, screenshot, link and visual-inspection rules.
 - Initial documentation structure.
 - Any required DDRs.
 - Updated changelog and version information if a milestone is reached.

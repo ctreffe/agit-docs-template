@@ -11,7 +11,7 @@
 >
 > Das AGIT Documentation Template ist die dokumentationsorientierte Spezialisierung der AGIT-Template-Familie.
 >
-> Das Kollaborationsmodell dokumentiert Dokumentationspraktiken, KI-gestützte Dokumentationsworkflows, Link- und visuelle QA-Disziplin sowie Repository-Konventionen für Dokumentationsprojekte.
+> Das Kollaborationsmodell dokumentiert Dokumentationspraktiken, KI-gestützte Dokumentationsworkflows, Link- und visuelle Inspektionsdisziplin sowie Repository-Konventionen für Dokumentationsprojekte.
 >
 > Das Kollaborationsmodell wird in [COLLABORATION.md](COLLABORATION.md) gepflegt.
 
@@ -63,7 +63,7 @@ Die öffentlichen AGIT-Templates bilden ein kleines Templateverse: eine Familie 
 
 ## Wann dieses Template geeignet ist
 
-Verwende dieses Template, wenn Zielgruppe, Struktur, Aufgabenführung, Links, Screenshots, visuelle QA und Publikationsformat von Beginn an zentral sind. Es ist besonders nützlich, wenn Dokumentation über Sprachen, Ausgabeformate oder Feedbackzyklen hinweg prüfbar bleiben muss.
+Verwende dieses Template, wenn Zielgruppe, Struktur, Aufgabenführung, Links, Screenshots, visuelle Inspektion und Publikationsformat von Beginn an zentral sind. Es ist besonders nützlich, wenn Dokumentation über Sprachen, Ausgabeformate oder Feedbackzyklen hinweg prüfbar bleiben muss.
 
 Verwende das generische Project Template, wenn Dokumentation nur ein Teil eines breiteren Projekts ist. Verwende das Dev Template, wenn der Implementierungslebenszyklus primär ist und Dokumentation hauptsächlich Softwareverhalten begleitet.
 
@@ -84,7 +84,7 @@ Der Agent:
 3. legt kompakte Fragen zu Zweck, Umfang, Dokumentationstyp, Zielgruppen, Sprachen, Publikation und QA vor;
 4. fragt Entscheidungen zu Quellensensitivität, Screenshots, Feedback und visueller Prüfung ab, bevor Rohmaterial importiert wird;
 5. passt nach den Antworten `DOCS_SETUP.md`, `AUDIENCE.md`, README-Dateien, `_quarto.yml`, `docs/` und Navigation an;
-6. dokumentiert Roadmap, Quellenmodell, Review-Modell und Template-Provenienz in `PROJECT_CONTEXT.md`;
+6. dokumentiert den initialen Dokumentvertrag in `DOCUMENTS.md` sowie Roadmap, Quellenmodell, Review-Modell und Template-Provenienz in `PROJECT_CONTEXT.md`;
 7. rendert und prüft die initiale Dokumentations-Baseline; und
 8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
@@ -97,6 +97,16 @@ erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft anschließend
 Nach erfolgreicher Initialisierung werden die Projektkopie des Erstellungs-
 Prompts und ihre reinen Template-Verweise entfernt; die Initialisierungsdateien
 bleiben dagegen als Provenienz erhalten.
+
+## Gepflegte Dokumente hinzufügen
+
+Ein initialisiertes Projekt kann ein Ein-Dokument-Projekt bleiben oder zu einem
+Multi-Dokument-Satz wachsen. Rufe `$add-document` für jedes zusätzliche
+gepflegte Dokument oder jeden sprachlich verknüpften Dokumentensatz ausdrücklich
+auf. Der Ablauf bestätigt dessen dokumentlokalen Vertrag in `DOCUMENTS.md`,
+weist Pfad- und ID-Kollisionen zurück und aktualisiert vereinbarte
+Quellgerüste oder Navigation, ohne die Projektinitialisierung erneut
+auszuführen. Rendering, Publikation und Git-Aktionen bleiben getrennt.
 
 ## Externe Dateien und Quellen
 
@@ -164,22 +174,22 @@ Nutzung, Prüfung, Übergabe, Veröffentlichung oder Auslieferung bestimmt ist.
 Wegwerfbare Erzeugungszwischenstände bleiben in `temp/`; gepflegte Quellen in
 `docs/`, `materials/versioned/` und `styles/` behalten ihre maßgeblichen Orte.
 
-## Render-Validierung und visuelle QA
+## Render-Validierung und visuelle Inspektion
 
 Die routinemäßige Render- und Output-Validierung darf Quarto ausführen und das
 erzeugte HTML technisch prüfen, ohne den Browser-Skill zu öffnen. Sie prüft je
 nach Relevanz Build-Erfolg, Warnungen, erforderliche Dateien, HTML-Struktur,
 Links, referenzierte Assets und offensichtlich nicht gerenderte Quellinhalte.
-Das zählt nicht als visuelle QA.
+Das zählt nicht als visuelle Inspektion.
 
-Visuelle QA bedeutet, dass der Agent gerendertes HTML tatsächlich mit dem
-Browser-Skill oder gerenderte PDF-/DOCX-Seitenbilder mit dem passenden visuellen
-Werkzeug inspiziert. Der Agent führt sie ausschließlich vor einem
-Milestone-Abschluss oder auf ausdrückliche Anforderung des Maintainers durch.
-Visuelle oder Layoutänderungen allein lösen keine visuelle QA durch den Agenten
-aus; der Maintainer übernimmt die visuelle Prüfung während der normalen Arbeit.
-Wenn das benötigte Werkzeug oder der Output nicht verfügbar ist, meldet der
-Agent, dass keine visuelle QA durchgeführt wurde.
+Rufe `$visual-inspection` ausdrücklich auf, wenn der Agent benannte aktuelle
+Renders in durch den Maintainer gewählten Formaten inspizieren soll. Der Skill
+öffnet gerendertes HTML mit dem Browser-Skill oder prüft ausgewählte PDF-/DOCX-
+Seiten als Seitenbilder. Ein Milestone, Render oder eine visuelle Änderung löst
+diesen Ablauf nicht aus. Fehlender Output wird weder gerendert noch ersetzt;
+der Bericht benennt geprüfte Seiten, Routen, Viewports, Befunde und Grenzen.
+Die visuelle Inspektion bestätigt weder Barrierefreiheit, technische
+Korrektheit, Offenlegungsfreigabe noch Publikationsreife.
 
 ## Empfohlene Workflows
 
@@ -200,7 +210,7 @@ Das Projekt unterstützt komplementäre Review-Kanäle:
 1. **Direktes Quellenreview:** Maintainer bearbeiten oder kommentieren Quarto- oder Markdown-Quellen direkt.
 2. **Maintainer-DOCX-Review:** Kommentare und Änderungsverfolgung werden in die gepflegte Quelle zurückübertragen, wenn ihre Intention eindeutig ist.
 3. **Externes DOCX-Review:** Nicht kuratiertes externes Feedback wird als nummerierte Punkte dargestellt, bis der Maintainer es akzeptiert, ablehnt, qualifiziert oder zurückstellt.
-4. **Annotiertes PDF-Review:** Layout-, Paginierungs-, Tabellen-, Abbildungs- und Druckprobleme werden auf ihre Quellstellen abgebildet; die geänderte Quelle wird gerendert und technisch validiert, während der Agent visuelle QA nur vor einem Milestone-Abschluss oder auf ausdrückliche Anforderung durchführt.
+4. **Annotiertes PDF-Review:** Layout-, Paginierungs-, Tabellen-, Abbildungs- und Druckprobleme werden auf ihre Quellstellen abgebildet; die geänderte Quelle wird gerendert und technisch validiert, während die visuelle Inspektion durch den Agenten ein separater, ausdrücklich aufgerufener Ablauf bleibt.
 5. **Website-Review:** Jede Review-Datei benennt die abgedeckte Seite, das Kapitel, Bundle oder den Snapshot; ein mehrdeutiger Export gilt nicht als Review der gesamten Website.
 
 Assistant-Zugriff, Git-Versionierung und Veröffentlichung von Review-Dateien sind getrennte Entscheidungen. [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md) beschreibt den vollständigen nachvollziehbaren Review-Zyklus.
@@ -231,6 +241,9 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 
 - **`README.md` und `README.de.md`** erklären Template, initiales Setup und laufende Nutzung auf Englisch und Deutsch.
 - **`PROJECT_CONTEXT.md`** hält Dokumentationszweck, Zielgruppe, Quellen- und Sensitivitätsmodell, aktuelle Arbeit, Roadmap, Review-Zustand und nächste Sitzung fest. Sie ist der primäre Wiedereinstiegspunkt und kein Ersatz für die Dokumentation selbst.
+- **`DOCUMENTS.md`** katalogisiert jedes gepflegte Dokument oder jeden
+  sprachlich verknüpften Satz, seine geprüfte Übernahme von Projekt-Defaults,
+  seinen Lebenszyklus und seine nächste Aktion.
 - **`CHANGELOG.md` und `VERSION`** dokumentieren abgeschlossene Template- oder Dokumentations-Milestones. Sie sollen einen geprüften Zustand abbilden und nicht Arbeit, die lediglich begonnen wurde.
 
 ### Zusammenarbeit, Setup und Prozess
@@ -240,8 +253,8 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`PROJECT_SETUP.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. `PROJECT_SETUP.md` bleibt als Initialisierungsprovenienz erhalten.
 - **`.agents/skills/`** stellt schlanke automatische Aufgaben-, Commit- und
   Umgebungs-Troubleshooting-Abläufe sowie ausdrückliche Initialisierungs-,
-  Review-, Synchronisierungs-, Konsistenz-, Dokumentrevisions- und
-  Retrospektivabläufe bereit.
+  Dokumenthinzufügungs-, visuellen Inspektions-, Review-, Synchronisierungs-,
+  Konsistenz-, Dokumentrevisions- und Retrospektivabläufe bereit.
 - **`TROUBLESHOOTING.md`** enthält portable verifizierte Umgebungsfehler; die
   ignorierte `TROUBLESHOOTING.local.md` enthält Hostfakten nach Aktivierung.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
@@ -252,7 +265,7 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`DOCUMENTATION.md` und `DOCUMENTATION_PROCESS.md`** definieren Dokumentrollen und den laufenden Weg von Setup über Entwurf, Review und QA bis zum Milestone-Abschluss.
 - **`DOCUMENTATION_TYPE_PROFILES.md`** passt Struktur, Tiefe, Ton, Beispiele und Prüfungen an Tutorials, Guides, Referenzen, Konzepte und andere Dokumentationstypen an.
 - **`AUDIENCE.md` und `STYLE_GUIDE.md`** machen Leserwissen, Aufgaben, Risiken, Terminologie und Schreiberwartungen explizit.
-- **`LINKS.md`, `SCREENSHOTS.md` und `VISUAL_QA.md`** regeln Navigation, externe Nachweise, visuelle Erfassung, Sensitivität, Lesbarkeit und Publikationsreife.
+- **`LINKS.md` und `SCREENSHOTS.md`** regeln Navigation, externe Nachweise, visuelle Erfassung, Sensitivität und visuelle Quellenregeln; `$visual-inspection` enthält seine Kriterien für gerenderte Oberflächen direkt.
 - **`FEEDBACK_WORKFLOW.md`** definiert quellenmaßgebliche DOCX-, PDF- und Website-Review-Zyklen sowie den Umgang mit Maintainer- und externem Feedback.
 - **`decisions/`** enthält DDR-, PDR- und ADR-Vorlagen sowie akzeptierte dauerhafte Entscheidungen in abgeleiteten Projekten.
 
@@ -282,10 +295,15 @@ In einem abgeleiteten Dokumentationsprojekt:
 
 - ersetze Platzhalter für Identität, Zielgruppe und Dokumentationsseiten durch konkrete Projektinhalte;
 - behalte `AGENTS.md` als automatischen Agenten-Einstiegspunkt und passe die Datei an;
-- vervollständige `DOCS_SETUP.md`, `AUDIENCE.md` und `PROJECT_CONTEXT.md`;
-- passe `_quarto.yml`, `docs/`, Stil-, Link-, Screenshot- und visuelle QA-Leitlinien an;
+- vervollständige `DOCS_SETUP.md`, `AUDIENCE.md`, `PROJECT_CONTEXT.md` und den
+  initialen Eintrag in `DOCUMENTS.md`;
+- passe `_quarto.yml`, `docs/`, Stil-, Link-, Screenshot- und Leitlinien zur visuellen Inspektion an;
 - behalte `PROJECT_SETUP.md` als Initialisierungsprovenienz;
 - behalte die anwendbaren Repository-Skills für spätere Abläufe;
+- rufe `$add-document` für jedes spätere gepflegte Dokument oder jeden
+  sprachlich verknüpften Dokumentensatz ausdrücklich auf;
+- rufe `$visual-inspection` nur für benannte aktuelle Renders und durch den
+  Maintainer gewählte Formate ausdrücklich auf;
 - pflege `DOCUMENTATION.md`, `REPOSITORY.md` und `FEEDBACK_WORKFLOW.md` als aktive Projektregeln;
 - halte erzeugte Outputs und zurückgegebene annotierte Review-Dateien
   standardmäßig lokal und versioniere sie erst nach bewusster Prüfung;
@@ -314,7 +332,7 @@ Für den Standard-Quarto-Workflow:
 1. Installiere die [Quarto CLI](https://quarto.org/docs/get-started/) und prüfe sie mit `quarto --version`.
 2. Öffne das Repository als aktiven lokalen Workspace und führe `quarto render` aus, um die HTML-Baseline zu validieren.
 3. Folge Quartos [Hinweisen zu TinyTeX und PDF-Engines](https://quarto.org/docs/output-formats/pdf-engine) nur, wenn direkter PDF-Output erforderlich ist.
-4. Installiere [LibreOffice](https://www.libreoffice.org/download/instructions/), wenn DOCX-Outputs für visuelle QA in PDF oder Seitenbilder gerendert werden müssen.
+4. Installiere [LibreOffice](https://www.libreoffice.org/download/instructions/), wenn ein ausdrücklich gewählter aktueller DOCX-Output für `$visual-inspection` in Seitenbilder umgewandelt werden muss.
 5. Verwende [R](https://cran.r-project.org/) und [RStudio](https://posit.co/downloads/) nur, wenn die Dokumentation R-Code, Datenanalysen, Plots oder R-basierte Quarto-Erweiterungen enthält; für gewöhnliche Markdown-Dokumentation sind sie nicht erforderlich.
 
 Halte erzeugte Websites, Previews, ungeprüfte Captures und Review-Dateien in den durch `.gitignore` definierten ignorierten Orten, sofern das Projekt nicht bewusst eine versionierte Datei oder einen versionierten Output freigibt.
@@ -323,7 +341,7 @@ Halte erzeugte Websites, Previews, ungeprüfte Captures und Review-Dateien in de
 
 Nutze Harmonisierung, um ein abgeleitetes Dokumentationsprojekt mit relevanten Template-Entwicklungen, aktuellen Zielgruppenbedürfnissen, gepflegten Quellen, Outputs und Roadmap abzugleichen. Nutze Retrospektiven separat, um Zusammenarbeit, Übergaben und Review-Praktiken zu bewerten.
 
-Behandle Feedback-Muster, Navigationsprobleme, Renderfehler, Visual-QA-Befunde und Publikationserfahrungen als Evidenz für mögliche Verbesserungen. Eine einzelne Projektbeobachtung ist nicht automatisch eine Template-Regel; prüfe Zielgruppe, Dokumentationstyp, Ausgabeformat und Wartungskosten, bevor Du sie verallgemeinerst.
+Behandle Feedback-Muster, Navigationsprobleme, Renderfehler, Befunde visueller Inspektionen und Publikationserfahrungen als Evidenz für mögliche Verbesserungen. Eine einzelne Projektbeobachtung ist nicht automatisch eine Template-Regel; prüfe Zielgruppe, Dokumentationstyp, Ausgabeformat und Wartungskosten, bevor Du sie verallgemeinerst.
 
 Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `agit-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
 

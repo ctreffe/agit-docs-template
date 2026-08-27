@@ -11,7 +11,7 @@
 >
 > The AGIT Documentation Template is the documentation-oriented specialization of the AGIT template family.
 >
-> The collaboration model documents documentation practices, AI-assisted documentation workflows, link and visual QA discipline and repository conventions for documentation projects.
+> The collaboration model documents documentation practices, AI-assisted documentation workflows, link and visual-inspection discipline and repository conventions for documentation projects.
 >
 > Its collaboration model is maintained in [COLLABORATION.md](COLLABORATION.md).
 
@@ -63,7 +63,7 @@ The public AGIT templates form a small templateverse: a family of related templa
 
 ## When to Use This Template
 
-Use this template when audience, structure, task guidance, links, screenshots, visual QA and publication format are central from the beginning. It is particularly useful when documentation must remain reviewable across languages, output formats or feedback cycles.
+Use this template when audience, structure, task guidance, links, screenshots, visual inspection and publication format are central from the beginning. It is particularly useful when documentation must remain reviewable across languages, output formats or feedback cycles.
 
 Use the generic Project Template when documentation is one part of a broader project. Use the Dev Template when implementation lifecycle is primary and documentation mainly accompanies software behavior.
 
@@ -84,7 +84,7 @@ The agent then:
 3. presents concise questions about purpose, scope, documentation type, audiences, languages, publication and QA;
 4. asks for source-sensitivity, screenshot, feedback and visual-review decisions before importing raw material;
 5. adapts `DOCS_SETUP.md`, `AUDIENCE.md`, the README files, `_quarto.yml`, `docs/` and navigation after the maintainer answers;
-6. records the roadmap, source model, review model and template provenance in `PROJECT_CONTEXT.md`;
+6. records the initial document contract in `DOCUMENTS.md` and the roadmap, source model, review model and template provenance in `PROJECT_CONTEXT.md`;
 7. renders and inspects the initial documentation baseline; and
 8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
 
@@ -96,6 +96,15 @@ independent local clone without a remote and then invokes `$start-project`.
 After successful initialization, the project's copy of the creation prompt and
 its template-only references are removed, while the initialization files remain
 as provenance.
+
+## Adding Maintained Documents
+
+An initialized project may remain a one-document project or grow into a
+multi-document set. Invoke `$add-document` explicitly for each additional
+maintained document or language-linked document set. The workflow confirms its
+document-local contract in `DOCUMENTS.md`, rejects path and ID collisions and
+updates agreed source skeletons or navigation without rerunning project
+initialization. Rendering, publication and Git actions remain separate.
 
 ## External Files and Sources
 
@@ -159,20 +168,21 @@ Disposable generation intermediates remain in `temp/`; maintained `docs/`,
 `materials/versioned/` and `styles/` sources keep their authoritative
 locations.
 
-## Render Validation and Visual QA
+## Render Validation and Visual Inspection
 
 Routine render and output validation may run Quarto and inspect the generated
 HTML technically without opening the Browser skill. It checks build success,
 warnings, required files, HTML structure, links, referenced assets and obvious
-unrendered source content as relevant. This does not count as visual QA.
+unrendered source content as relevant. This does not count as visual
+inspection.
 
-Visual QA means that the agent actually inspects rendered HTML with the Browser
-skill or rendered PDF/DOCX page images with the appropriate visual tool. The
-agent performs it only before milestone closure or when the maintainer
-explicitly requests it. Visual or layout changes alone do not trigger agent
-visual QA; the maintainer owns visual inspection during ordinary work. If the
-required tool or output is unavailable, the agent reports that visual QA was
-not performed.
+Invoke `$visual-inspection` explicitly when the agent should inspect named
+current renders in maintainer-selected formats. It opens rendered HTML with the
+Browser skill or inspects selected PDF/DOCX pages as page images. A milestone,
+render or visual change does not trigger this workflow. Missing output is not
+rendered or replaced, and the report names inspected pages, routes, viewports,
+findings and limitations. Visual inspection does not certify accessibility,
+technical correctness, disclosure approval or publication readiness.
 
 ## Recommended Workflows
 
@@ -193,7 +203,7 @@ The project supports complementary review channels:
 1. **Direct source review:** maintainers edit or comment directly in Quarto or Markdown source.
 2. **Maintainer DOCX review:** comments and Track Changes are transferred back to the maintained source when their intent is clear.
 3. **External DOCX review:** uncurated external feedback is presented as numbered issues until the maintainer accepts, rejects, qualifies or defers it.
-4. **Annotated PDF review:** layout, pagination, tables, figures and print issues are mapped back to their source locations; the changed source is rendered and technically validated, while agent visual QA follows the milestone-or-explicit-request rule.
+4. **Annotated PDF review:** layout, pagination, tables, figures and print issues are mapped back to their source locations; the changed source is rendered and technically validated, while agent visual inspection remains a separate, explicitly invoked workflow.
 5. **Website review:** every review file names the page, chapter, bundle or snapshot it covers; an ambiguous export is not treated as review of the whole site.
 
 Assistant access, Git versioning and publication of review files are separate decisions. See [FEEDBACK_WORKFLOW.md](FEEDBACK_WORKFLOW.md) for the complete traceable review cycle.
@@ -224,6 +234,8 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 
 - **`README.md` and `README.de.md`** explain the template, initial setup and ongoing use in English and German.
 - **`PROJECT_CONTEXT.md`** records documentation purpose, audience, source and sensitivity model, current work, roadmap, review state and next session. It is the primary re-entry point rather than a substitute for the documentation itself.
+- **`DOCUMENTS.md`** catalogs each maintained document or language-linked set,
+  its reviewed project-default inheritance, lifecycle and next action.
 - **`CHANGELOG.md` and `VERSION`** record completed template or documentation milestones. They should reflect a reviewed state rather than work that has merely begun.
 
 ### Collaboration, Setup and Process
@@ -233,8 +245,8 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`PROJECT_SETUP.md` and `DOCS_SETUP.md`** establish repository identity, documentation type, audience, languages, source model, Quarto system and QA expectations. `PROJECT_SETUP.md` remains as initialization provenance.
 - **`.agents/skills/`** provides lean automatic task lifecycle, commit and
   environment-troubleshooting workflows plus explicit initialization, neutral
-  review, synchronization, consistency, document revision and retrospective
-  workflows.
+  document addition, visual inspection, review, synchronization, consistency,
+  document revision and retrospective workflows.
 - **`TROUBLESHOOTING.md`** stores portable verified environment failures;
   ignored `TROUBLESHOOTING.local.md` stores host-specific facts after activation.
 - **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
@@ -245,7 +257,7 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`DOCUMENTATION.md` and `DOCUMENTATION_PROCESS.md`** define document roles and the ongoing path from setup through drafting, review, QA and milestone closure.
 - **`DOCUMENTATION_TYPE_PROFILES.md`** adapts structure, depth, tone, examples and checks to tutorials, guides, references, concepts and other documentation types.
 - **`AUDIENCE.md` and `STYLE_GUIDE.md`** make reader knowledge, tasks, risks, terminology and writing expectations explicit.
-- **`LINKS.md`, `SCREENSHOTS.md` and `VISUAL_QA.md`** govern navigation, external evidence, visual capture, sensitivity, readability and publication readiness.
+- **`LINKS.md` and `SCREENSHOTS.md`** govern navigation, external evidence, visual capture, sensitivity and source-level visual rules; `$visual-inspection` carries its rendered-surface criteria directly.
 - **`FEEDBACK_WORKFLOW.md`** defines source-authoritative DOCX, PDF and website review cycles and the handling of maintainer versus external feedback.
 - **`decisions/`** contains DDR, PDR and ADR templates and accepted durable decisions in derived projects.
 
@@ -273,10 +285,15 @@ In a derived documentation project:
 
 - replace placeholder identity, audience and documentation pages with concrete project content;
 - retain and adapt `AGENTS.md` as the automatic agent entry point;
-- complete `DOCS_SETUP.md`, `AUDIENCE.md` and `PROJECT_CONTEXT.md`;
-- adapt `_quarto.yml`, `docs/`, style, link, screenshot and visual-QA guidance;
+- complete `DOCS_SETUP.md`, `AUDIENCE.md`, `PROJECT_CONTEXT.md` and the initial
+  `DOCUMENTS.md` entry;
+- adapt `_quarto.yml`, `docs/`, style, link, screenshot and visual-inspection guidance;
 - retain `PROJECT_SETUP.md` as initialization provenance;
 - retain the applicable repository skills for later workflows;
+- invoke `$add-document` explicitly for each later maintained document or
+  language-linked document set;
+- invoke `$visual-inspection` explicitly only for named current renders and
+  maintainer-selected formats;
 - maintain `DOCUMENTATION.md`, `REPOSITORY.md` and `FEEDBACK_WORKFLOW.md` as active project rules;
 - keep generated outputs and returned annotated review files local by default
   and version them only after deliberate review;
@@ -305,7 +322,7 @@ For the standard Quarto workflow:
 1. Install the [Quarto CLI](https://quarto.org/docs/get-started/) and verify it with `quarto --version`.
 2. Open the repository as the active local workspace and run `quarto render` to validate the HTML baseline.
 3. Follow Quarto's [TinyTeX and PDF-engine guidance](https://quarto.org/docs/output-formats/pdf-engine) only when direct PDF output is required.
-4. Install [LibreOffice](https://www.libreoffice.org/download/instructions/) when DOCX outputs must be rendered to PDF or page images for visual QA.
+4. Install [LibreOffice](https://www.libreoffice.org/download/instructions/) when an explicitly selected current DOCX output must be converted to page images for `$visual-inspection`.
 5. Use [R](https://cran.r-project.org/) and [RStudio](https://posit.co/downloads/) only when the documentation includes R code, data analysis, plots or R-based Quarto extensions; they are not required for ordinary Markdown documentation.
 
 Keep generated sites, previews, unreviewed captures and review files in the ignored locations defined by `.gitignore` unless the project deliberately approves a versioned file or output.
@@ -314,7 +331,7 @@ Keep generated sites, previews, unreviewed captures and review files in the igno
 
 Use harmonization to reconcile a derived documentation project with relevant template developments, current audience needs, maintained sources, outputs and roadmap. Use retrospectives separately to evaluate collaboration, handoffs and review practices.
 
-Treat feedback patterns, navigation problems, rendering failures, visual-QA findings and publication lessons as evidence for possible improvement. A single project observation is not automatically a template rule; consider audience, documentation type, output format and maintenance cost before generalizing it.
+Treat feedback patterns, navigation problems, rendering failures, visual-inspection findings and publication lessons as evidence for possible improvement. A single project observation is not automatically a template rule; consider audience, documentation type, output format and maintenance cost before generalizing it.
 
 The maintainer coordinates cross-template evolution in a private governance repository named `agit-templateverse`. It records shared conventions, deliberate specializations and evidence from derived projects. The repository is intentionally not linked because template users do not need access to it.
 

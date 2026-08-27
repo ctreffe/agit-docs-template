@@ -19,6 +19,6 @@ automatic authority.
 Transfer only accepted revisions into maintained source, preserve traceability
 to the reviewed baseline and update durable decisions when the revision changes
 an established rule. Run the repository's applicable render and validation
-workflow, distinguishing technical rendering, content review, visual QA and
-publication approval. Report incorporated, deferred and rejected items plus
-checks and remaining limitations.
+workflow, distinguishing technical rendering, content review, separately
+invoked visual inspection and publication approval. Report incorporated,
+deferred and rejected items plus checks and remaining limitations.

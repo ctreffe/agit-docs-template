@@ -6,6 +6,10 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Add the explicit `$add-document` workflow and `DOCUMENTS.md` catalog for
+  independently scoped documents in initialized multi-document projects.
+- Add the explicit-only `$visual-inspection` workflow for selected current
+  HTML, PDF and DOCX renders with truthful coverage and limitation reporting.
 - Add the TVDR-0026 environment-troubleshooting skill and conditional portable
   plus ignored host-local known-issue records.
 - Add a source-template `IDEAS.md` backlog for sanitized reusable
@@ -30,8 +34,8 @@ All notable changes to this template will be documented in this file.
   project-owned state, and reinduce exact direct-prefix commit messages with
   meaningful bodies.
 - Assign targeted documentation checks to implementation and the complete
-  applicable repository gate to commit preparation while retaining milestone
-  visual-QA and domain-specific render requirements.
+  applicable repository gate to commit preparation while retaining explicit
+  visual-inspection and domain-specific render requirements.
 - Route retrospective findings explicitly to project, source-template or
   governance destinations with a Pending Idea Transfer fallback, and remove
   the template backlog during successful normal-project initialization.
@@ -53,9 +57,11 @@ All notable changes to this template will be documented in this file.
   annotated files directly below ignored `review/`.
 - Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its
   template-only references after successful initialization.
-- Separate routine technical render and HTML validation from true visual QA.
-  Require Browser- or page-image-based agent inspection only before milestone
-  closure or when explicitly requested by the maintainer.
+- Separate routine technical render and HTML validation from visual inspection.
+  Require explicit `$visual-inspection` invocation, named current renders and
+  maintainer-selected formats for Browser- or page-image-based inspection.
+- Retire the root `VISUAL_QA.md` checklist after moving its rendered-surface
+  criteria and evidence rules into the explicit-only skill.
 - Clarify that a generated file's documentation role, rather than its
   generation method, distinguishes retained materials from publication output.
 

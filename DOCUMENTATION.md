@@ -16,10 +16,13 @@ Template files describe how a documentation project should be initialized, maint
 - `COLLABORATION.md`: Versioned AI collaboration model.
 - `PROJECT_SETUP.md`: Initial repository setup workflow.
 - `$start-project`: Explicit one-time project initialization skill.
+- `$add-document`: Explicit workflow for adding one maintained document or
+  language-linked document set after initialization.
 - `.agents/skills/`: Scoped automatic lifecycle and explicit specialized
   documentation collaboration workflows.
 - `TASK_HANDOFF.md`: Compact versioned task checkpoint.
 - `DOCS_SETUP.md`: Documentation-specific setup checklist.
+- `DOCUMENTS.md`: Maintained document catalog and document-local contracts.
 - `PROJECT_CONTEXT.md`: Project memory template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing documentation workflow.
 - `FEEDBACK_WORKFLOW.md`: Direct-source, annotated DOCX and annotated PDF
@@ -30,7 +33,6 @@ Template files describe how a documentation project should be initialized, maint
 - `STYLE_GUIDE.md`: Writing and style guidance for technical documentation.
 - `SCREENSHOTS.md`: Screenshot and visual-file guidance.
 - `LINKS.md`: Internal and external link discipline.
-- `VISUAL_QA.md`: Visual documentation QA checklist.
 - `REPOSITORY.md`: Repository organization and lifecycle rules.
 - `decisions/`: Decision Records, including DDRs, PDRs and ADRs.
 
