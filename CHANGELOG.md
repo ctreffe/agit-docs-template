@@ -25,6 +25,9 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Make documentation-project initialization progressive: ask no more than six
+  coherent fundamentals, create only the first needed document contract and
+  defer later structure, media, feedback, render and publication choices.
 - Route recurring, setup, policy, permission and rendering-toolchain failures
   to signature-matched, authorized and verified documentation recovery.
 - Interrupt recurring tool or environment failures for durable authorized

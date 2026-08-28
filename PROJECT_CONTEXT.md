@@ -17,6 +17,11 @@ Keep `PROJECT_SETUP.md` as initialization provenance. It describes the
 project's methodological roots; this section records its
 lifecycle status and the baselines used over time.
 
+During initialization, fill only the fields needed for the six fundamental
+answers, the first useful document outcome and its current source boundary.
+Leave later document, structure, media, feedback, render and publication detail
+explicitly undecided until the corresponding workflow needs it.
+
 ## Project identity
 
 - Project name: TBD

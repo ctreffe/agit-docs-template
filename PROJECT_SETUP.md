@@ -7,7 +7,35 @@ initialization method. Record completion, source-template baseline and later
 harmonizations in `PROJECT_CONTEXT.md`; remove it
 only as a deliberate, documented maintainer exception.
 
+## Lean initialization contract
+
+`$start-project` begins with no more than six fundamental maintainer
+questions. Each numbered item is one coherent decision, not a container for a
+hidden questionnaire:
+
+1. What is the documentation project's identity and purpose?
+2. Who is the primary audience, and what should it be able to do?
+3. What is the first useful document outcome, and what minimum evidence will
+   show that it serves the audience?
+4. What is currently in scope, and what are the explicit non-goals?
+5. Which sources or materials may the assistant access now, and which
+   sensitivity boundary applies?
+6. Which delivery or operating constraint must be fixed before authoring
+   begins?
+
+Use repository evidence for answers already established. The last question
+includes only a constraint that is consequential now; do not bundle structure,
+screenshots, links, feedback, formats, rendering, storage and publication into
+one survey. Keep safe template defaults for nonessential choices or mark them
+explicitly undecided. Create only the initial document contract needed for the
+first outcome; clarify later documents and detailed production choices through
+their concrete workflows. Source access, transmission, publication and visual
+approval remain separate gates when triggered.
+
 ## Initialization checklist
+
+The checklist below guides implementation after the lean questionnaire. It is
+not an instruction to ask every item during the initial maintainer turn.
 
 1. Confirm repository identity.
    - Project name.
@@ -102,11 +130,12 @@ only as a deliberate, documented maintainer exception.
      milestone closure commit.
 
 12. Confirm initialization completion.
-   - Verify that identity, purpose, scope, audience, roadmap, source handling,
-     initial document contract, Quarto, feedback and publication model, QA
-     expectations, decision-record needs and retained template files are
-     documented consistently.
-   - Resolve required `TBD` placeholders before substantive drafting begins.
+   - Verify that the six fundamentals, first useful document contract, current
+     source boundary, safe defaults and retained template state are documented
+     consistently.
+   - Nonessential roadmap, Quarto, feedback, publication, QA and later-document
+     fields may remain explicitly undecided. Resolve a `TBD` only before the
+     concrete drafting, source, render or publication work it governs.
 
 13. Prepare initialization commit.
    - Review git status.
