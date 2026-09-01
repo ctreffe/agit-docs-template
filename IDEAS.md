@@ -119,7 +119,7 @@ otherwise it remains a `Pending Idea Transfer`.
 
 ### IDEA-0003: Explicit-only maintained-document rendering
 
-- **Status:** Captured
+- **Status:** Promoted
 - **Source:** Maintainer-directed retrospective from the derived
   `agit-admin-guides` project on 2026-09-01, reviewing the first document-review
   and example-file revision cycle from 2026-08-28 through 2026-09-01
@@ -154,9 +154,9 @@ otherwise it remains a `Pending Idea Transfer`.
   inspection without its own trigger or treat a rendering suggestion as
   authorization. Capture does not approve immediate changes to the skill or
   template routing.
-- **Next decision:** Decide the exact control words or invocation syntax for
-  rendering, the suggestion criteria and milestone interaction, then review the
-  affected routing and lifecycle files before implementation.
+- **Next decision:** None for the accepted rollout. TVDR-0028 makes rendering
+  explicit or evidence-driven, keeps visual inspection separately explicit and
+  reserves comprehensive artifact evidence for applicable milestone closure.
 - **References:** `.agents/skills/render-document/SKILL.md`, `AGENTS.md`,
   `COLLABORATION.md`, `DOCUMENTATION_PROCESS.md`, and the derived project
   retrospective recorded through `perform-retrospective`.

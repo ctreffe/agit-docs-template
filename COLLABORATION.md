@@ -38,10 +38,21 @@ visual-inspection guidance only after explicit invocation.
 Use `DOCUMENTS.md` for document-local contracts. Invoke `$add-document`
 explicitly when an initialized project gains a maintained document; it must not
 reopen project initialization or silently replace project-wide decisions.
-For annotated review, invoke `revise-document`; routine established rendering
-may route through `render-document`. A compact versioned `TASK_HANDOFF.md`
+For annotated review, invoke `revise-document`; invoke `render-document`
+explicitly for a requested artifact or when necessary evidence is accepted as
+part of the task. A compact versioned `TASK_HANDOFF.md`
 preserves accepted decisions, exact sources, generated evidence, checks and the
 next action across context or device changes.
+
+## Validation Stages
+
+A bounded edit needs only enough source, meaning and local-structure review to
+be acceptable. An ordinary commit needs targeted evidence for a good,
+reviewable document state. A milestone owns comprehensive applicable links,
+bilingual alignment, rendering, disclosure and release evidence. Do not render
+every format or run whitespace scans merely because maintained text changed;
+render when the artifact is requested, necessary to assess the change or part
+of milestone closure. Visual inspection remains separately explicit.
 
 ## Completion
 

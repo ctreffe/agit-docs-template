@@ -27,14 +27,18 @@ Resident contract.
 - Read `COLLABORATION.md` for initialization, full review, authority conflicts
   or collaboration-model changes. Load setup, documentation-process, audience,
   style, links, screenshots, Quarto and feedback guidance as needed.
-- Task entry, handoff, ordinary commits, Decision Records and established
-  rendering route automatically. Invoke initialization, document addition,
+- Task entry, handoff, ordinary commits and Decision Records route
+  automatically. Rendering routes only when an artifact is requested or
+  supplies necessary evidence. Invoke initialization, document addition,
   visual inspection, review, sync, consistency, retrospective, revision, local
   creation and `commit-milestone` explicitly.
 
 ## Validation
 
-Review diffs and run `git diff --check`; add link, bilingual, render and
-disclosure checks. Only explicit `$visual-inspection` performs agent inspection
-of selected current renders. Report limits; a successful render alone does not
-establish correctness or publication readiness.
+Scale evidence by stage: a bounded source change needs the smallest useful
+review, an ordinary commit needs targeted evidence for a good reviewable state,
+and a milestone owns comprehensive link, bilingual, render and disclosure
+checks. Whitespace and all-format rendering are not defaults before the
+milestone unless affected or required by a stated risk. Only explicit
+`$visual-inspection` inspects selected current renders. Report limits; rendering
+alone establishes neither correctness nor publication readiness.

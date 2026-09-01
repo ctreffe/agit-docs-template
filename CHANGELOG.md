@@ -25,6 +25,10 @@ All notable changes to this template will be documented in this file.
 
 ### Changed
 
+- Adopt TVDR-0028's proportional lifecycle, make maintained-document rendering
+  explicit, and reserve comprehensive link, format and disclosure evidence for
+  applicable milestones.
+
 - Make documentation-project initialization progressive: ask no more than six
   coherent fundamentals, create only the first needed document contract and
   defer later structure, media, feedback, render and publication choices.
