@@ -116,3 +116,47 @@ otherwise it remains a `Pending Idea Transfer`.
   before changing its scope fields, criteria or format methods.
 - **References:** `$visual-inspection`, `$render-document`, `AGENTS.md`,
   `COLLABORATION.md` and `DOCUMENTATION_PROCESS.md`.
+
+### IDEA-0003: Explicit-only maintained-document rendering
+
+- **Status:** Captured
+- **Source:** Maintainer-directed retrospective from the derived
+  `agit-admin-guides` project on 2026-09-01, reviewing the first document-review
+  and example-file revision cycle from 2026-08-28 through 2026-09-01
+- **Opportunity:** Stop automatically routing every maintained QMD change
+  through `render-document`. Keep the skill available, and allow the assistant
+  to recommend rendering when it would provide useful evidence, but invoke it
+  only after an explicit maintainer request. Ensure that `AGENTS.md`,
+  `COLLABORATION.md`, `DOCUMENTATION_PROCESS.md`, `revise-document`,
+  `commit-changes` and `commit-milestone` do not reintroduce an implicit nested
+  render path.
+- **Recurrence:** Documentation work often includes several small wording or
+  metadata revisions before a maintainer wants a new review artifact. The
+  current automatic established-rendering route can regenerate every configured
+  format after each QMD edit even when source-level checks are sufficient.
+- **Reusable elements:** Change skill routing from automatic to explicit;
+  retain the current narrow-render, output-location and technical-inspection
+  contract after invocation; add a concise suggestion rule based on changed
+  structure, executable content, cross-references, layout-sensitive content or
+  a requested review artifact; and record rendering as pending or not requested
+  without implying failure. Decide how a separately explicit milestone request
+  interacts with required render evidence instead of silently treating
+  milestone invocation as render authorization.
+- **Benefit:** Gives the maintainer direct control over artifact generation,
+  reduces repeated Quarto/LaTeX execution and output carried in context, and
+  supports batching several source edits into one deliberate review render.
+- **Risk:** Syntax, reference or layout defects may remain undiscovered longer,
+  and a maintainer may expect a current PDF when only the QMD changed. Explicit
+  status reporting and clear render suggestions are needed to prevent stale
+  artifacts from being mistaken for current output.
+- **Boundaries:** Do not weaken source-level checks that are indispensable for
+  the change, claim an old render represents current sources, perform visual
+  inspection without its own trigger or treat a rendering suggestion as
+  authorization. Capture does not approve immediate changes to the skill or
+  template routing.
+- **Next decision:** Decide the exact control words or invocation syntax for
+  rendering, the suggestion criteria and milestone interaction, then review the
+  affected routing and lifecycle files before implementation.
+- **References:** `.agents/skills/render-document/SKILL.md`, `AGENTS.md`,
+  `COLLABORATION.md`, `DOCUMENTATION_PROCESS.md`, and the derived project
+  retrospective recorded through `perform-retrospective`.
