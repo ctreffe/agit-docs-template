@@ -76,26 +76,36 @@ The simplest instruction to the agent is:
 > `$start-project`
 
 There is no initialization prompt to open or copy into the conversation.
+Before the normal questionnaire, the agent offers one concise choice between
+the normal lean path and the explicit `$grill-me` path for detailed
+documentation planning. The choice grants no source-access, rendering or
+publication authority.
 
 The agent then:
 
 1. reads the collaboration, documentation, setup, repository and decision rules;
 2. inspects the baseline without altering Git history;
-3. presents concise questions about purpose, scope, documentation type, audiences, languages, publication and QA;
-4. asks for source-sensitivity, screenshot, feedback and visual-review decisions before importing raw material;
-5. adapts `DOCS_SETUP.md`, `AUDIENCE.md`, the README files, `_quarto.yml`, `docs/` and navigation after the maintainer answers;
-6. records the initial document contract in `DOCUMENTS.md` and the roadmap, source model, review model and template provenance in `PROJECT_CONTEXT.md`;
-7. renders and inspects the initial documentation baseline; and
-8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
+3. follows the selected path and, on the lean path, asks no more than six
+   unanswered fundamentals covering documentation purpose, audience and use,
+   the first useful document outcome and its evidence, current scope and
+   non-goals, source access and sensitivity, and only constraints needed now;
+4. preserves source, screenshot, feedback, rendering and publication gates
+   while allowing nonessential decisions to remain explicitly deferred;
+5. adapts only the setup, audience, README, Quarto, source and navigation files needed for the first useful outcome;
+6. records its initial document contract in `DOCUMENTS.md` and the current source boundary and template provenance in `PROJECT_CONTEXT.md`;
+7. renders or visually inspects only when the requested artifact or necessary evidence requires it; and
+8. hands back the initialized state with proportionate checks, unresolved decisions and suggested commit metadata.
 
 `PROJECT_SETUP.md` and `DOCS_SETUP.md` remain agent checklists and initialization provenance. `$start-project` is the single executable entry point that activates them.
 
 For a project that should remain local and have no remote, invoke
 `$create-local-project` explicitly in this checked-out template. It creates an
 independent local clone without a remote and then invokes `$start-project`.
-After successful initialization, the project's copy of the creation prompt and
-its template-only references are removed, while the initialization files remain
-as provenance.
+After successful initialization, inherited template history in `CHANGELOG.md`
+and `TASK_HANDOFF.md` is replaced with project-owned state. The template-only
+`IDEAS.md`, the project's copy of `$create-local-project` and their references
+are removed unless a project-local idea backlog is deliberately established.
+The initialization files remain as provenance.
 
 ## Adding Maintained Documents
 
@@ -216,6 +226,10 @@ Staging and unstaging are index operations. They do not require a control word, 
 
 Protected actions include commits, amendments, tags, pushes, pulls, merges, rebases, resets, branch changes, stash manipulation and other Git history operations. An assistant may perform a specific protected action only when the instruction for that action contains `explicit` or `explicitly` in English, or the German word family `explizit`. File-edit approval does not authorize Git history changes, and approval for one protected action does not authorize another.
 
+When this rule requires authorization, the assistant proposes one minimum-scope,
+copy-ready instruction naming the exact action, repository and material
+consequence. The proposal itself is not authorization.
+
 Regular documentation commits normally use `docs:` or another fitting Conventional Commit prefix. Milestone commits omit the prefix, include the completed version and close documentation already drafted, reviewed and corrected in regular steps.
 
 ## Decision Records
@@ -246,11 +260,16 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`.agents/skills/`** provides lean automatic task lifecycle, commit and
   environment-troubleshooting workflows plus explicit initialization, neutral
   document addition, visual inspection, review, synchronization, consistency,
-  document revision and retrospective workflows.
+  document revision and retrospective workflows. The `$grill-me` path and its
+  `grilling` primitive are explicit-only and never replace normal lean
+  initialization.
 - **`TROUBLESHOOTING.md`** stores portable verified environment failures;
   ignored `TROUBLESHOOTING.local.md` stores host-specific facts after activation.
 - **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
   sessions and computers.
+- **`IDEAS.md`** is a source-template backlog for reusable documentation
+  candidates and is removed during normal project initialization unless a
+  project-local backlog is deliberately retained.
 
 ### Documentation Rules and Decisions
 
@@ -304,7 +323,9 @@ Record the initial template version and commit, last harmonization baseline, lif
 ## How to Use This Template
 
 1. Create a repository from the template and invoke `$start-project`.
-2. Answer the numbered questions the agent presents; it reads and applies `PROJECT_SETUP.md`, `DOCS_SETUP.md` and the remaining setup guidance automatically.
+2. Choose the normal lean path or explicitly opt into `$grill-me`; on the lean
+   path, answer no more than six unanswered documentation fundamentals while
+   the agent applies the retained setup guidance automatically.
 3. Review the initialized documentation state, render checks and proposed first commit.
 4. Select the documentation type profile and confirm audience, language and publication requirements with the agent.
 5. Establish the source inventory and sensitivity boundaries before opening screenshots, logs, exports, tickets or operational data.
@@ -329,7 +350,7 @@ Keep generated sites, previews, unreviewed captures and review files in the igno
 
 ## Continuous Improvement
 
-Use harmonization to reconcile a derived documentation project with relevant template developments, current audience needs, maintained sources, outputs and roadmap. Use retrospectives separately to evaluate collaboration, handoffs and review practices.
+Use `$sync-template` to compare a derived documentation project with its verified source-template baseline and adopt selected developments. Use `$check-consistency` separately for contradictions among audience needs, maintained sources, outputs and roadmap, and `$perform-retrospective` for collaboration, handoffs and review practices.
 
 Treat feedback patterns, navigation problems, rendering failures, visual-inspection findings and publication lessons as evidence for possible improvement. A single project observation is not automatically a template rule; consider audience, documentation type, output format and maintenance cost before generalizing it.
 

@@ -76,17 +76,26 @@ Die einfachste Anweisung an den Agenten lautet:
 > `$start-project`
 
 Es muss kein Initialisierungs-Prompt geöffnet oder in die Unterhaltung kopiert werden.
+Vor dem normalen Frageblock bietet der Agent eine knappe Wahl zwischen dem
+üblichen schlanken Weg und dem expliziten `$grill-me`-Weg für detaillierte
+Dokumentationsplanung an. Die Wahl erteilt keine Quellenzugriffs-, Render- oder
+Publikationsbefugnis.
 
 Der Agent:
 
 1. liest die Kollaborations-, Dokumentations-, Setup-, Repository- und Entscheidungsregeln;
 2. prüft die Baseline, ohne die Git-Historie zu verändern;
-3. legt kompakte Fragen zu Zweck, Umfang, Dokumentationstyp, Zielgruppen, Sprachen, Publikation und QA vor;
-4. fragt Entscheidungen zu Quellensensitivität, Screenshots, Feedback und visueller Prüfung ab, bevor Rohmaterial importiert wird;
-5. passt nach den Antworten `DOCS_SETUP.md`, `AUDIENCE.md`, README-Dateien, `_quarto.yml`, `docs/` und Navigation an;
-6. dokumentiert den initialen Dokumentvertrag in `DOCUMENTS.md` sowie Roadmap, Quellenmodell, Review-Modell und Template-Provenienz in `PROJECT_CONTEXT.md`;
-7. rendert und prüft die initiale Dokumentations-Baseline; und
-8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
+3. folgt dem gewählten Weg und stellt auf dem schlanken Weg höchstens sechs
+   unbeantwortete Grundfragen zu Dokumentationszweck, Zielgruppe und Nutzung,
+   erstem nützlichem Dokumentergebnis und dessen Nachweis, aktuellem Umfang und
+   Nicht-Zielen, Quellenzugriff und Sensitivität sowie nur jetzt nötigen
+   Bedingungen;
+4. wahrt Quellen-, Screenshot-, Feedback-, Render- und Publikationsgrenzen und
+   lässt nicht wesentliche Entscheidungen ausdrücklich offen;
+5. passt nur die Setup-, Zielgruppen-, README-, Quarto-, Quellen- und Navigationsdateien an, die für das erste nützliche Ergebnis nötig sind;
+6. hält dessen ersten Dokumentvertrag in `DOCUMENTS.md` sowie die aktuelle Quellengrenze und Template-Provenienz in `PROJECT_CONTEXT.md` fest;
+7. rendert oder inspiziert visuell nur, wenn das angeforderte Artefakt oder ein notwendiger Nachweis dies erfordert; und
+8. übergibt den initialisierten Stand mit angemessenen Prüfungen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
 `PROJECT_SETUP.md` und `DOCS_SETUP.md` bleiben Checklisten des Agenten und dokumentieren die Methode der Initialisierung. `$start-project` ist der einzige ausführbare Einstiegspunkt, der sie aktiviert.
 
@@ -94,9 +103,12 @@ Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
 ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
 erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft anschließend
 `$start-project` auf.
-Nach erfolgreicher Initialisierung werden die Projektkopie des Erstellungs-
-Prompts und ihre reinen Template-Verweise entfernt; die Initialisierungsdateien
-bleiben dagegen als Provenienz erhalten.
+Nach erfolgreicher Initialisierung wird die geerbte Template-Historie in
+`CHANGELOG.md` und `TASK_HANDOFF.md` durch projektspezifischen Zustand ersetzt.
+Das reine Template-`IDEAS.md`, die Projektkopie von `$create-local-project` und
+ihre Verweise werden entfernt, sofern nicht bewusst ein projekteigener
+Ideenbestand eingerichtet wird. Die Initialisierungsdateien bleiben als
+Provenienz erhalten.
 
 ## Gepflegte Dokumente hinzufügen
 
@@ -223,6 +235,11 @@ Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, d
 
 Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; die Freigabe einer geschützten Aktion autorisiert keine andere.
 
+Wenn diese Regel eine Autorisierung verlangt, schlägt der Assistant eine
+minimal abgegrenzte, kopierfertige Anweisung vor, die genaue Aktion,
+Repository und wesentliche Konsequenz benennt. Der Vorschlag selbst ist keine
+Autorisierung.
+
 Reguläre Dokumentations-Commits verwenden normalerweise `docs:` oder ein anderes passendes Conventional-Commit-Präfix. Milestone-Commits verzichten auf das Präfix, enthalten die abgeschlossene Version und schließen Dokumentation ab, die bereits in regulären Schritten entworfen, geprüft und korrigiert wurde.
 
 ## Decision Records
@@ -254,11 +271,16 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`.agents/skills/`** stellt schlanke automatische Aufgaben-, Commit- und
   Umgebungs-Troubleshooting-Abläufe sowie ausdrückliche Initialisierungs-,
   Dokumenthinzufügungs-, visuellen Inspektions-, Review-, Synchronisierungs-,
-  Konsistenz-, Dokumentrevisions- und Retrospektivabläufe bereit.
+  Konsistenz-, Dokumentrevisions- und Retrospektivabläufe bereit. Der
+  `$grill-me`-Weg und sein `grilling`-Baustein sind ausschließlich explizit
+  nutzbar und ersetzen niemals die normale schlanke Initialisierung.
 - **`TROUBLESHOOTING.md`** enthält portable verifizierte Umgebungsfehler; die
   ignorierte `TROUBLESHOOTING.local.md` enthält Hostfakten nach Aktivierung.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg.
+- **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare
+  Dokumentationskandidaten und wird bei normaler Projektinitialisierung
+  entfernt, sofern nicht bewusst ein projekteigener Ideenbestand erhalten bleibt.
 
 ### Dokumentationsregeln und Entscheidungen
 
@@ -314,7 +336,10 @@ Halte initiale Template-Version und -Commit, letzte Harmonisierungs-Baseline, Le
 ## Verwendung dieses Templates
 
 1. Erzeuge ein Repository aus dem Template und rufe `$start-project` auf.
-2. Beantworte die nummerierten Fragen des Agenten; er liest und verarbeitet `PROJECT_SETUP.md`, `DOCS_SETUP.md` und die übrigen Setup-Leitlinien automatisch.
+2. Wähle den normalen schlanken Weg oder ausdrücklich `$grill-me`; beantworte
+   auf dem schlanken Weg höchstens sechs unbeantwortete Dokumentations-
+   Grundfragen, während der Agent die erhaltenen Setup-Leitlinien automatisch
+   anwendet.
 3. Prüfe den initialisierten Dokumentationsstand, die Render-Prüfungen und den vorgeschlagenen ersten Commit.
 4. Wähle das Dokumentationstyp-Profil und bestätige mit dem Agenten Zielgruppen-, Sprach- und Publikationsanforderungen.
 5. Lege Quelleninventar und Sensitivitätsgrenzen fest, bevor Screenshots, Logs, Exporte, Tickets oder Betriebsdaten geöffnet werden.
@@ -339,7 +364,7 @@ Halte erzeugte Websites, Previews, ungeprüfte Captures und Review-Dateien in de
 
 ## Kontinuierliche Verbesserung
 
-Nutze Harmonisierung, um ein abgeleitetes Dokumentationsprojekt mit relevanten Template-Entwicklungen, aktuellen Zielgruppenbedürfnissen, gepflegten Quellen, Outputs und Roadmap abzugleichen. Nutze Retrospektiven separat, um Zusammenarbeit, Übergaben und Review-Praktiken zu bewerten.
+Nutze `$sync-template`, um ein abgeleitetes Dokumentationsprojekt mit seiner verifizierten Source-Template-Baseline zu vergleichen und ausgewählte Entwicklungen zu übernehmen. Verwende `$check-consistency` getrennt für Widersprüche zwischen Zielgruppenbedürfnissen, gepflegten Quellen, Outputs und Roadmap und `$perform-retrospective` für Zusammenarbeit, Übergaben und Review-Praktiken.
 
 Behandle Feedback-Muster, Navigationsprobleme, Renderfehler, Befunde visueller Inspektionen und Publikationserfahrungen als Evidenz für mögliche Verbesserungen. Eine einzelne Projektbeobachtung ist nicht automatisch eine Template-Regel; prüfe Zielgruppe, Dokumentationstyp, Ausgabeformat und Wartungskosten, bevor Du sie verallgemeinerst.
 
