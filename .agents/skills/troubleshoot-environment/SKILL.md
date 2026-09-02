@@ -19,7 +19,10 @@ Restore a verified working path without broadening the suspended task.
 4. Preserve maintained-source, generated-output, review, publication and visual
    QA boundaries. Ask before privilege, installation, credentials, sensitive
    access, external transmission, global configuration, security relaxation,
-   destructive recovery or another protected action.
+   destructive recovery or another protected action. When a repository control
+   word is needed, propose one minimal copy-ready instruction naming the exact
+   recovery action, repository and publication, disclosure or other material
+   consequence; the proposal is not authorization.
 5. Apply only the authorized recovery, then rerun the originally failing
    operation through its normal render or validation path. Recheck any access,
    security or trust assumption changed by the recovery.

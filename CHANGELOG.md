@@ -6,6 +6,10 @@ All notable changes to this template will be documented in this file.
 
 ### Added
 
+- Add the pinned MIT-licensed `grill-me` and `grilling` skills to the
+  template and new derived projects, with explicit-only invocation and an
+  opt-in detailed path before the normal six-question initialization.
+
 - Add the explicit `$add-document` workflow and `DOCUMENTS.md` catalog for
   independently scoped documents in initialized multi-document projects.
 - Add the explicit-only `$visual-inspection` workflow for selected current
@@ -24,6 +28,9 @@ All notable changes to this template will be documented in this file.
   input and materials that must remain available across devices.
 
 ### Changed
+
+- Adopt TVDR-0030 so control-word requests include minimal copy-ready wording
+  while keeping repository access, disclosure and publication independent.
 
 - Adopt TVDR-0028's proportional lifecycle, make maintained-document rendering
   explicit, and reserve comprehensive link, format and disclosure evidence for

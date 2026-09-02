@@ -30,6 +30,12 @@ documentation and keep publication approval separate from repository access or
 versioning. Record durable documentation or workflow decisions with the local
 Decision Record convention.
 
+When an applicable repository rule requires a control word, accompany the
+request with one minimal copy-ready suggested instruction naming the exact
+action, repository or destination and any publication, disclosure or other
+material consequence. Only matching user-originated wording grants authority;
+keep independent actions separate and never request standing authority.
+
 ## Context and Handoff
 
 Use one task for one coherent documentation objective. Load only the relevant
