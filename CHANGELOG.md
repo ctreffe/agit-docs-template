@@ -4,6 +4,8 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.6.0] - 2026-09-02
+
 ### Added
 
 - Add the pinned MIT-licensed `grill-me` and `grilling` skills to the
