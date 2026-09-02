@@ -160,3 +160,43 @@ otherwise it remains a `Pending Idea Transfer`.
 - **References:** `.agents/skills/render-document/SKILL.md`, `AGENTS.md`,
   `COLLABORATION.md`, `DOCUMENTATION_PROCESS.md`, and the derived project
   retrospective recorded through `perform-retrospective`.
+
+### IDEA-0004: Optional grilling path for add-document
+
+- **Status:** Captured
+- **Source:** Maintainer-directed idea from the derived `agit-admin-guides`
+  project on 2026-09-02, reviewing the current `$add-document` contract and the
+  optional grilling path adopted for project initialization
+- **Opportunity:** When `$add-document` is explicitly invoked, offer one concise
+  choice between the normal lean document-setup path and a detailed
+  `$grill-me` interview. Keep the lean path as the default while allowing the
+  maintainer to request deeper exploration for a complex document.
+- **Recurrence:** Additional documents vary substantially in novelty, audience,
+  source constraints, language relationships, outputs and review needs. A
+  compact setup is sufficient for many additions, while unfamiliar or
+  consequential documents may benefit from systematically exploring dependent
+  decisions before catalog or source changes begin.
+- **Reusable elements:** Reuse the explicit opt-in routing established by
+  `$start-project`, the repository-local `$grill-me` and `grilling` skills, and
+  the existing `$add-document` document-local decision contract. Preserve the
+  current collision, authority, catalog, source and validation safeguards after
+  either route reaches shared understanding.
+- **Benefit:** Keeps routine document additions efficient while giving
+  maintainers a consistent way to stress-test complex scope, audience,
+  language, source, navigation and review decisions before implementation.
+- **Risk:** An additional routing question could add friction to simple
+  additions, and grilling could be mistaken for permission to inspect sources
+  or create files. A long interview could also duplicate established project
+  defaults instead of focusing on genuinely document-local decisions.
+- **Boundaries:** The lean path remains the normal default. Invoke grilling only
+  after the maintainer selects it; allow a return to the lean path; do not act
+  on interview results before shared understanding is confirmed; and never
+  treat route selection as source-access, rendering, versioning, publication or
+  protected-action authority. `$add-document` must retain all existing
+  non-goals and must not reinitialize the project.
+- **Next decision:** Decide whether the project-initialization routing pattern
+  can be adapted unchanged or needs a document-specific stopping rule and
+  frontier focused only on choices not already inherited from project defaults.
+- **References:** `.agents/skills/add-document/SKILL.md`,
+  `.agents/skills/start-project/SKILL.md`, `.agents/skills/grill-me/SKILL.md`,
+  `.agents/skills/grilling/SKILL.md`, `PROJECT_SETUP.md` and `DOCUMENTS.md`.
