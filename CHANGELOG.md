@@ -4,6 +4,12 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Make local runtime setup demand-driven, reproducible per clone and explicit
+  about interpreter selection; preserve existing environment managers.
+
+- Add maintainer-invoked `optimize-codex` for bounded Codex configuration and
+  existing runtime checks, preserving local scope and separate action authority.
+
 ## [v0.6.0] - 2026-09-02
 
 ### Added

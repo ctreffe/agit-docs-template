@@ -73,3 +73,12 @@ Documentation is ready for review when maintained sources reflect verified
 technical evidence, audience and structure are coherent, links and affected
 formats are checked, disclosure risks are reported and generated artifacts are
 clearly distinguished from sources. A successful render alone is insufficient.
+
+## Explicit Codex Optimization
+
+Only explicit maintainer invocation starts `$optimize-codex`. Its bounded
+scope covers Codex settings, needed writable paths and required local runtime
+setup. Invocation preserves all action-specific authority boundaries.
+The template and new derived projects use a domain-adapted local variant.
+Cross-repository and shared user-wide configuration work belongs to Governance.
+Existing derived projects adopt it only through deliberate template sync.
