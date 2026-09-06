@@ -63,22 +63,17 @@ of milestone closure. Visual inspection remains separately explicit.
 ## Completion
 
 On a recurring equivalent tool failure or immediate setup, policy, permission
-or rendering-toolchain failure, pause and use `troubleshoot-environment`. Load
-known issues only after activation, require signature and applicability
-matching, and verify the original documentation operation before resuming.
-Troubleshooting grants no source access, installation, external write,
-publication or disclosure authority.
+or rendering-toolchain failure, pause and use `troubleshoot-environment`.
+Describe only the problem before the maintainer chooses an undocumented quick
+exit or focused resolution; explicit invocation for a concrete problem enters
+resolution directly. Only resolution loads or writes incident records and it
+verifies repair at the exact documentation checkpoint or a pre-agreed
+standalone acceptance test. Request elevated authority proactively when it
+enables an effective durable repair, state its scope and consequence, and leave
+the security judgment to the maintainer. Troubleshooting grants no source
+access, installation, external write, publication or disclosure authority.
 
 Documentation is ready for review when maintained sources reflect verified
 technical evidence, audience and structure are coherent, links and affected
 formats are checked, disclosure risks are reported and generated artifacts are
 clearly distinguished from sources. A successful render alone is insufficient.
-
-## Explicit Codex Optimization
-
-Only explicit maintainer invocation starts `$optimize-codex`. Its bounded
-scope covers Codex settings, needed writable paths and required local runtime
-setup. Invocation preserves all action-specific authority boundaries.
-The template and new derived projects use a domain-adapted local variant.
-Cross-repository and shared user-wide configuration work belongs to Governance.
-Existing derived projects adopt it only through deliberate template sync.

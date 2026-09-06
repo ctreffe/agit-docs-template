@@ -274,8 +274,9 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
   Konsistenz-, Dokumentrevisions- und Retrospektivabläufe bereit. Der
   `$grill-me`-Weg und sein `grilling`-Baustein sind ausschließlich explizit
   nutzbar und ersetzen niemals die normale schlanke Initialisierung.
-- **`TROUBLESHOOTING.md`** enthält portable verifizierte Umgebungsfehler; die
-  ignorierte `TROUBLESHOOTING.local.md` enthält Hostfakten nach Aktivierung.
+- **`TROUBLESHOOTING.md`** enthält portable Probleme und verifizierte Lösungen
+  der fokussierten Route; die ignorierte `TROUBLESHOOTING.local.md` enthält
+  Hostfakten. Ein schneller Ausstieg lädt oder dokumentiert beides nicht.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg.
 - **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare

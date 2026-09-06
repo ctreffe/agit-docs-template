@@ -263,8 +263,9 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
   document revision and retrospective workflows. The `$grill-me` path and its
   `grilling` primitive are explicit-only and never replace normal lean
   initialization.
-- **`TROUBLESHOOTING.md`** stores portable verified environment failures;
-  ignored `TROUBLESHOOTING.local.md` stores host-specific facts after activation.
+- **`TROUBLESHOOTING.md`** stores portable focused-resolution problems and
+  verified repairs; ignored `TROUBLESHOOTING.local.md` stores host-specific
+  facts. A quick exit loads or records neither.
 - **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
   sessions and computers.
 - **`IDEAS.md`** is a source-template backlog for reusable documentation
