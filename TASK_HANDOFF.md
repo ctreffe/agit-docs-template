@@ -1,27 +1,31 @@
 # Task Handoff
 
 - **Status:** Completed; no substantive task work remains.
-- **Outcome:** AGIT Documentation Template now uses commit-stable completed
-  handoffs. Durable task facts are separated from transient working-tree and
-  staging observations, and continuation reconciles against live Git state.
-- **Decisions:** The shared TVDR-0035 contract updates `handoff-task`,
-  `start-task` and `commit-changes` without changing source, rendering, review,
-  disclosure or publication boundaries. Existing derived projects adopt the
-  contract only through deliberate template synchronization.
-- **Change scope:** The three production lifecycle skills, `CHANGELOG.md` and
-  this task handoff. No maintained documents or generated artifacts changed.
-- **Checks:** Governance's family production-skill validator passed. Skill
-  Creator validation passed for all three changed skill packages here.
+- **Outcome:** AGIT Documentation Template now carries the TVDR-0036
+  context-safe patching contract in task entry and its portable KI-0004
+  recovery record.
+- **Decisions:** Coordinated source patches use freshly read exact targets,
+  small stable semantic anchors and separated independent or uncertain hunks
+  without changing rendering, disclosure, publication or Git authority.
+  Dynamically assembled patches preserve line-level operation markers.
+- **Change scope:** `start-task`, `TROUBLESHOOTING.md`, `CHANGELOG.md` and
+  this handoff. Maintained documents, renders and existing derived projects
+  remain unchanged.
+- **Checks:** The shared natural acceptance patch updated this and the other six
+  `start-task` files on its first attempt; its focused diff was reviewed.
+  A later dynamically assembled seven-file handoff patch with explicit line
+  markers also succeeded on its first attempt.
+  Skill Creator validation passed for the changed skill, and Governance's
+  focused family contract check passed after handoff replacement.
 - **Deferred evidence:** No render, visual inspection, broad suite, complete
-  family gate, milestone or release check ran; the focused contract and
-  package checks covered this bounded rollout.
-- **Preserved unrelated state:** The repository was clean and aligned with
-  `origin/main` at task entry. Inputs, materials, outputs, review files,
-  derived projects, remotes and publication state were not changed.
-- **Substantive open points:** Observe later completed and paused handoffs;
-  existing derived projects remain unaffected until deliberate synchronization.
-- **Continuation:** None for this task; select the next repository objective
-  from current durable state.
+  Templateverse gate, milestone or release check ran; this is a bounded
+  collaboration-contract rollout.
+- **Preserved unrelated state:** Inputs, materials, maintained documents,
+  outputs, review files, existing derived projects, history and remotes were
+  not changed.
+- **Substantive open points:** None for this rollout.
+- **Continuation:** None; existing derived projects may adopt the contract only
+  through a later deliberate template synchronization.
 - **Versioning boundary:** This handoff authorizes no commit or push. Determine
   current Git state live before any separately authorized versioning or
   publication action.

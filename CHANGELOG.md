@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Harmonize KI-0004 with the Templateverse family contract. Bounded source work
+  now prereads exact patch targets, uses stable semantic anchors, separates
+  uncertain hunks and retains a portable recovery record without changing
+  rendering, disclosure, publication or Git authority.
+
 - Make completed task handoffs commit-stable: record durable task facts
   without claiming that the enclosing changes remain uncommitted or making
   versioning the next task, and reconcile continuation against live Git state.
