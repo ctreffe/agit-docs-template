@@ -4,6 +4,16 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Add portable KI-0001 for exact current-user Git ownership trust under the
+  Windows sandbox, without granting source or filesystem access or changing
+  rendering, disclosure, publication or Git authority.
+
+- Harmonize KI-0005 with the Templateverse first-attempt Git metadata contract.
+  Already authorized staging and commits now request narrow sandbox escalation
+  before their first write instead of probing the expected `.git/index.lock`
+  denial, without changing source, rendering, disclosure, publication or Git
+  authority.
+
 - Harmonize KI-0004 with the Templateverse family contract. Bounded source work
   now prereads exact patch targets, uses stable semantic anchors, separates
   uncertain hunks and retains a portable recovery record without changing
