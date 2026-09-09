@@ -4,6 +4,20 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Implement IDEA-0020 under TVDR-0041. Normal sandboxed execution remains
+  preferred when equally effective; already authorized in-scope actions request
+  the narrowest sufficient platform escalation when technically required,
+  without changing source, rendering, disclosure, publication or Git authority.
+
+- Implement IDEA-0019 under TVDR-0040 with an ignored per-device retrospective
+  repository mapping and verified
+  source-template and Governance resolution while preserving source, review,
+  disclosure and publication boundaries.
+
+- Add demand-driven first-use readiness for Skill Creator validation through
+  pinned PyYAML, an explicit-interpreter wrapper and portable KI-0002 without
+  requiring a documentation rendering environment.
+
 - Add portable KI-0001 for exact current-user Git ownership trust under the
   Windows sandbox, without granting source or filesystem access or changing
   rendering, disclosure, publication or Git authority.

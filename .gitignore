@@ -10,10 +10,12 @@ Desktop.ini
 *.swo
 
 # Local environments and caches
+.venv/
 .env
 .env.*
 *.local
 TROUBLESHOOTING.local.md
+RETROSPECTIVE_PATHS.local.md
 .cache/
 .tmp/
 tmp/
