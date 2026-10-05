@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Adopt AI Documentation Template and `ai-template-docs` in current identity,
+  public links, documentation guidance, mapping examples and skill references
+  under TVDR-0042/0043. Preserve historical provenance, MIT licensing, source
+  access and publication authority.
+
 - Implement IDEA-0020 under TVDR-0041. Normal sandboxed execution remains
   preferred when equally effective; already authorized in-scope actions request
   the narrowest sufficient platform escalation when technically required,

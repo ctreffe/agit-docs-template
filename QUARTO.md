@@ -1,6 +1,6 @@
 # Quarto Documentation Format
 
-AGIT documentation projects use Quarto Markdown (`.qmd`) as the preferred internal documentation format unless a project-specific reason argues against it.
+documentation projects use Quarto Markdown (`.qmd`) as the preferred internal documentation format unless a project-specific reason argues against it.
 
 Quarto is useful for technical documentation because it combines readable Markdown sources with structured metadata, cross-references, executable code support when needed, and multiple output formats such as HTML, PDF, DOCX, RevealJS slides, websites, and books.
 

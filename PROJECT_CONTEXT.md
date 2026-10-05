@@ -5,7 +5,7 @@ This file is a template. In a derived documentation project, replace the placeho
 ## Template lineage and initialization
 
 - Repository role: derived project
-- Source template: AGIT Documentation Template
+- Source template: AI Documentation Template
 - Initial template baseline: `<template version and commit hash>`
 - Initialization status: `<not started | in progress | completed>`
 - Initialization date: `<YYYY-MM-DD | not yet completed>`

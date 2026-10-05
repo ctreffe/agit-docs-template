@@ -28,7 +28,7 @@ If multiple profiles apply, define the dominant profile and any secondary profil
 
 ## Bilingual documentation
 
-Documentation projects may be maintained bilingually. For AGIT documentation projects, German and English should be treated as first-class documentation languages when the maintainer requires bilingual output.
+Documentation projects may be maintained bilingually. For documentation projects, German and English should be treated as first-class documentation languages when the maintainer requires bilingual output.
 
 A bilingual project should define:
 

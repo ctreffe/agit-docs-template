@@ -1,15 +1,15 @@
-# AGIT Documentation Template
+# AI Documentation Template
 
 [![Status](https://img.shields.io/badge/status-stable-green)](VERSION)
-[![Version](https://img.shields.io/github/v/tag/ctreffe/agit-docs-template?label=version)](CHANGELOG.md)
-[![License](https://img.shields.io/github/license/ctreffe/agit-docs-template)](LICENSE)
+[![Version](https://img.shields.io/github/v/tag/ctreffe/ai-template-docs?label=version)](CHANGELOG.md)
+[![License](https://img.shields.io/github/license/ctreffe/ai-template-docs)](LICENSE)
 
 > [!NOTE]
 > **AI Collaboration**
 >
-> This repository maintains the AGIT Documentation Template.
+> This repository maintains the AI Documentation Template.
 >
-> The AGIT Documentation Template is the documentation-oriented specialization of the AGIT template family.
+> The AI Documentation Template is the documentation-oriented specialization of the AI template family.
 >
 > The collaboration model documents documentation practices, AI-assisted documentation workflows, link and visual-inspection discipline and repository conventions for documentation projects.
 >
@@ -25,7 +25,7 @@
 
 - [Overview](#overview)
 - [Core Principle](#core-principle)
-- [AGIT Templateverse](#agit-templateverse)
+- [AI Templateverse](#ai-templateverse)
 - [When to Use This Template](#when-to-use-this-template)
 - [Project Initialization](#project-initialization)
 - [External Files and Sources](#external-files-and-sources)
@@ -43,7 +43,7 @@
 
 ## Overview
 
-The AGIT Documentation Template is a starting point for technical documentation projects that require explicit context, clear ownership, reproducible collaboration, documented decisions and reviewable publication milestones. It supports user guides, administrator guides, tutorials, operating procedures, migration and troubleshooting guides, technical concepts, architecture documentation and mixed documentation sites.
+The AI Documentation Template is a starting point for technical documentation projects that require explicit context, clear ownership, reproducible collaboration, documented decisions and reviewable publication milestones. It supports user guides, administrator guides, tutorials, operating procedures, migration and troubleshooting guides, technical concepts, architecture documentation and mixed documentation sites.
 
 Quarto Markdown is the preferred maintained source format. The baseline renders a bilingual HTML website and can be adapted for DOCX or PDF review outputs when a project needs them. Links, screenshots, diagrams and generated outputs are treated as documentation files with provenance, sensitivity review and quality assurance.
 
@@ -53,13 +53,13 @@ The maintainer owns documentation purpose, scope, structure, technical correctne
 
 Maintained repository sources are authoritative. Rendered websites, DOCX files, PDFs and annotated returns are outputs or review files until accepted feedback has been transferred back to the source and validated there.
 
-## AGIT Templateverse
+## AI Templateverse
 
-The public AGIT templates form a small templateverse: a family of related templates that share a repository-first, maintainer-led Human-AI collaboration model while specializing it for different project types.
+The public AI templates form a small templateverse: a family of related templates that share a repository-first, maintainer-led Human-AI collaboration model while specializing it for different project types.
 
-- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) is the generic starting point for structured project work, research, planning, concept work, process design and mixed projects.
-- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) is for development-oriented projects where code, scripts, automation, validation, architecture or release workflows are central.
-- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) is for technical documentation projects such as user guides, admin guides, operating procedures, tutorials, migration guides and documentation sites.
+- [AI Project Template](https://github.com/ctreffe/ai-template-project) is the generic starting point for structured project work, research, planning, concept work, process design and mixed projects.
+- [AI Dev Template](https://github.com/ctreffe/ai-template-dev) is for development-oriented projects where code, scripts, automation, validation, architecture or release workflows are central.
+- [AI Documentation Template](https://github.com/ctreffe/ai-template-docs) is for technical documentation projects such as user guides, admin guides, operating procedures, tutorials, migration guides and documentation sites.
 
 ## When to Use This Template
 
@@ -355,7 +355,7 @@ Use `$sync-template` to compare a derived documentation project with its verifie
 
 Treat feedback patterns, navigation problems, rendering failures, visual-inspection findings and publication lessons as evidence for possible improvement. A single project observation is not automatically a template rule; consider audience, documentation type, output format and maintenance cost before generalizing it.
 
-The maintainer coordinates cross-template evolution in a private governance repository named `agit-templateverse`. It records shared conventions, deliberate specializations and evidence from derived projects. The repository is intentionally not linked because template users do not need access to it.
+The maintainer coordinates cross-template evolution in a private governance repository named `ai-templateverse`. It records shared conventions, deliberate specializations and evidence from derived projects. The repository is intentionally not linked because template users do not need access to it.
 
 Governance coordination does not create hidden documentation requirements. Every change that affects this template must be represented here through maintained guidance, Documentation Decision Records where appropriate, the changelog and release history. Reusable improvements should be integrated across affected source, feedback, rendering and QA guidance, while publication decisions remain with the maintainer.
 

@@ -1,15 +1,15 @@
-# AGIT Documentation Template
+# AI Documentation Template
 
 [![Status](https://img.shields.io/badge/status-stable-green)](VERSION)
-[![Version](https://img.shields.io/github/v/tag/ctreffe/agit-docs-template?label=version)](CHANGELOG.md)
-[![License](https://img.shields.io/github/license/ctreffe/agit-docs-template)](LICENSE)
+[![Version](https://img.shields.io/github/v/tag/ctreffe/ai-template-docs?label=version)](CHANGELOG.md)
+[![License](https://img.shields.io/github/license/ctreffe/ai-template-docs)](LICENSE)
 
 > [!NOTE]
 > **KI-Zusammenarbeit**
 >
-> Dieses Repository pflegt das AGIT Documentation Template.
+> Dieses Repository pflegt das AI Documentation Template.
 >
-> Das AGIT Documentation Template ist die dokumentationsorientierte Spezialisierung der AGIT-Template-Familie.
+> Das AI Documentation Template ist die dokumentationsorientierte Spezialisierung der AI-Template-Familie.
 >
 > Das Kollaborationsmodell dokumentiert Dokumentationspraktiken, KI-gestützte Dokumentationsworkflows, Link- und visuelle Inspektionsdisziplin sowie Repository-Konventionen für Dokumentationsprojekte.
 >
@@ -25,7 +25,7 @@
 
 - [Überblick](#überblick)
 - [Kernprinzip](#kernprinzip)
-- [AGIT Templateverse](#agit-templateverse)
+- [AI Templateverse](#ai-templateverse)
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
 - [Externe Dateien und Quellen](#externe-dateien-und-quellen)
@@ -43,7 +43,7 @@
 
 ## Überblick
 
-Das AGIT Documentation Template ist ein Ausgangspunkt für technische Dokumentationsprojekte, die expliziten Kontext, klare Zuständigkeiten, reproduzierbare Zusammenarbeit, dokumentierte Entscheidungen und prüfbare Publikations-Milestones benötigen. Es unterstützt Benutzer- und Administrationshandbücher, Tutorials, Betriebsanweisungen, Migrations- und Fehlerbehebungsleitfäden, technische Konzepte, Architekturdokumentation und gemischte Dokumentationswebsites.
+Das AI Documentation Template ist ein Ausgangspunkt für technische Dokumentationsprojekte, die expliziten Kontext, klare Zuständigkeiten, reproduzierbare Zusammenarbeit, dokumentierte Entscheidungen und prüfbare Publikations-Milestones benötigen. Es unterstützt Benutzer- und Administrationshandbücher, Tutorials, Betriebsanweisungen, Migrations- und Fehlerbehebungsleitfäden, technische Konzepte, Architekturdokumentation und gemischte Dokumentationswebsites.
 
 Quarto Markdown ist das bevorzugte gepflegte Quellformat. Die Baseline rendert eine bilinguale HTML-Website und kann für DOCX- oder PDF-Review-Outputs angepasst werden. Links, Screenshots, Diagramme und erzeugte Outputs werden als Dokumentationsdateien mit Provenienz, Sensitivitätsprüfung und Qualitätssicherung behandelt.
 
@@ -53,13 +53,13 @@ Der Maintainer verantwortet Zweck, Umfang, Struktur, technische Korrektheit, Zie
 
 Gepflegte Repository-Quellen sind maßgeblich. Gerenderte Websites, DOCX-Dateien, PDFs und annotierte Rückläufe sind Outputs oder Review-Dateien, bis akzeptiertes Feedback in die Quelle zurückübertragen und dort validiert wurde.
 
-## AGIT Templateverse
+## AI Templateverse
 
-Die öffentlichen AGIT-Templates bilden ein kleines Templateverse: eine Familie verwandter Templates, die ein Repository-zentriertes, vom Maintainer geführtes Modell der Mensch-KI-Zusammenarbeit teilen und es für unterschiedliche Projekttypen spezialisieren.
+Die öffentlichen AI-Templates bilden ein kleines Templateverse: eine Familie verwandter Templates, die ein Repository-zentriertes, vom Maintainer geführtes Modell der Mensch-KI-Zusammenarbeit teilen und es für unterschiedliche Projekttypen spezialisieren.
 
-- Das [AGIT Project Template](https://github.com/ctreffe/agit-project-template) ist der generische Ausgangspunkt für strukturierte Projektarbeit, Forschung, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
-- Das [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
-- Das [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) ist für technische Dokumentationsprojekte wie Benutzer- und Administrationshandbücher, Betriebsanweisungen, Tutorials, Migrationsleitfäden und Dokumentationswebsites gedacht.
+- Das [AI Project Template](https://github.com/ctreffe/ai-template-project) ist der generische Ausgangspunkt für strukturierte Projektarbeit, Forschung, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
+- Das [AI Dev Template](https://github.com/ctreffe/ai-template-dev) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
+- Das [AI Documentation Template](https://github.com/ctreffe/ai-template-docs) ist für technische Dokumentationsprojekte wie Benutzer- und Administrationshandbücher, Betriebsanweisungen, Tutorials, Migrationsleitfäden und Dokumentationswebsites gedacht.
 
 ## Wann dieses Template geeignet ist
 
@@ -369,7 +369,7 @@ Nutze `$sync-template`, um ein abgeleitetes Dokumentationsprojekt mit seiner ver
 
 Behandle Feedback-Muster, Navigationsprobleme, Renderfehler, Befunde visueller Inspektionen und Publikationserfahrungen als Evidenz für mögliche Verbesserungen. Eine einzelne Projektbeobachtung ist nicht automatisch eine Template-Regel; prüfe Zielgruppe, Dokumentationstyp, Ausgabeformat und Wartungskosten, bevor Du sie verallgemeinerst.
 
-Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `agit-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
+Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `ai-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
 
 Die Governance-Koordination erzeugt keine verborgenen Dokumentationsanforderungen. Jede Änderung, die dieses Template betrifft, muss hier durch gepflegte Leitlinien, gegebenenfalls Documentation Decision Records, den Changelog und die Release-Historie abgebildet werden. Wiederverwendbare Verbesserungen sollen in betroffene Quellen-, Feedback-, Render- und QA-Leitlinien integriert werden; Publikationsentscheidungen verbleiben beim Maintainer.
 
