@@ -4,6 +4,10 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Adopt TVDR-0044: advisory task-fit reasoning, bounded authorized delegation,
+  concise reporting and explicit same-objective context reuse. Preserve domain
+  and access gates, fresh patch spans and the configured reasoning baseline.
+
 - Adopt AI Documentation Template and `ai-template-docs` in current identity,
   public links, documentation guidance, mapping examples and skill references
   under TVDR-0042/0043. Preserve historical provenance, MIT licensing, source

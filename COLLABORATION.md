@@ -50,6 +50,26 @@ part of the task. A compact versioned `TASK_HANDOFF.md`
 preserves accepted decisions, exact sources, generated evidence, checks and the
 next action across context or device changes.
 
+## Task Effort and Communication
+
+Keep the maintainer's configured reasoning baseline for ordinary work. Recommend
+higher effort when unresolved competing constraints, difficult diagnosis or
+consequential design or methodological uncertainty would benefit from deeper
+analysis; name the decision it would help resolve. A large task alone is not a
+reason to escalate. Lower effort may suit well specified routine edits. State
+whether the current interface can change the setting; never imply a switch that
+was not made.
+
+When the user or applicable instructions authorize delegation, use a bounded
+subtask with relevant authorized inputs, explicit model/effort where supported,
+a compact result and no further delegation unless authorized. The primary
+assesses the result and retains responsibility. Prefer one focused reviewer
+over a standing orchestration loop. Include child usage in cost comparisons;
+otherwise state that total usage is unobservable.
+
+Keep progress updates useful and completion reports concise: outcome, obtained
+evidence and material limits, without replaying routine logs.
+
 ## Validation Stages
 
 A bounded edit needs only enough source, meaning and local-structure review to
