@@ -1,4 +1,4 @@
-# AGIT Documentation Template Idea Backlog
+# AI Documentation Template Idea Backlog
 
 This is the lightweight intake for reusable improvements to this source
 template. It is separate from every derived-project roadmap. Capturing an idea
