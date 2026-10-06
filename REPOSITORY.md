@@ -33,6 +33,18 @@ documentation and read-only Git evidence.
 - `output/`: Ignored generated outputs separated by format.
 - `review/`: Ignored returned annotated review files.
 
+## Project introductions and inherited workflow guides
+
+New project initialization follows the four-file contract in `PROJECT_SETUP.md`:
+`README.md` and `README.de.md` introduce the project; `TEMPLATE_README.md` and
+`TEMPLATE_README.de.md` retain adapted workflow and skill guidance. Both language
+pairs are required and link to one another by role and language. Project README
+badge policy applies to the project pair; retained guides omit inherited badges.
+Keep guides aligned with actual retained files and skills and local accepted
+rules. Selected upstream README updates map to the guides through `sync-template`
+without replacing the project introductions. Source maintenance checkouts retain
+their own README pair; the extra files exist only after project initialization.
+
 ## README badge policy
 
 Use a compact badge block directly below the README title and before the AI
@@ -49,7 +61,7 @@ Derived documentation projects adapt the badges to their own documented
 status, completed version, actual license and available workflows. They must
 not retain the Documentation Template version as their project version or show
 automation that does not exist. English and German badge blocks remain
-identical when both READMEs are maintained.
+identical for the required project README pair; retained guides omit inherited badges.
 
 ## External files, maintained documentation and outputs
 
