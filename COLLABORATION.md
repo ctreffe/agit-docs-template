@@ -30,6 +30,13 @@ documentation and keep publication approval separate from repository access or
 versioning. Record durable documentation or workflow decisions with the local
 Decision Record convention.
 
+Within `commit-changes` or `commit-milestone`, repository-specific explicit
+commit authorization includes the commit and its normal push to the verified
+existing upstream unless the maintainer excludes push. Skill invocation alone
+grants no Git authority. Force-push, other refs, remote changes, tags and release
+publication remain outside this bundle; other protected actions still need
+separate authority. This changes neither content-access nor publication rules.
+
 When an applicable repository rule requires a control word, accompany the
 request with one minimal copy-ready suggested instruction naming the exact
 action, repository or destination and any publication, disclosure or other
@@ -82,16 +89,14 @@ of milestone closure. Visual inspection remains separately explicit.
 
 ## Completion
 
-On a recurring equivalent tool failure or immediate setup, policy, permission
-or rendering-toolchain failure, pause and use `troubleshoot-environment`.
-Describe only the problem before the maintainer chooses an undocumented quick
-exit or focused resolution; explicit invocation for a concrete problem enters
-resolution directly. Only resolution loads or writes incident records and it
-verifies repair at the exact documentation checkpoint or a pre-agreed
-standalone acceptance test. Request elevated authority proactively when it
-enables an effective durable repair, state its scope and consequence, and leave
-the security judgment to the maintainer. Troubleshooting grants no source
-access, installation, external write, publication or disclosure authority.
+For a clear access, authorization or setup failure, or a recurring execution
+mistake, use `reuse-fixes` to consult this repository's confirmed experience
+before repeating the failed approach. Apply an authorized correction, verify
+it at the original checkpoint and retain concise prevention. Ask only for
+missing authority or a material decision; there is no mandatory route-choice
+menu. Keep experience repository-local and host facts in the ignored local
+record. Do not collect or transfer lessons between repositories. All existing
+access, security, installation, Git and publication boundaries remain in force.
 
 Documentation is ready for review when maintained sources reflect verified
 technical evidence, audience and structure are coherent, links and affected

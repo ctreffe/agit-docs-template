@@ -28,6 +28,7 @@
 - [AI Templateverse](#ai-templateverse)
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
+- [Skills für die Zusammenarbeit](#skills-für-die-zusammenarbeit)
 - [Externe Dateien und Quellen](#externe-dateien-und-quellen)
 - [Temporäre Arbeitsdateien](#temporäre-arbeitsdateien)
 - [Projektmaterialien](#projektmaterialien)
@@ -119,6 +120,71 @@ auf. Der Ablauf bestätigt dessen dokumentlokalen Vertrag in `DOCUMENTS.md`,
 weist Pfad- und ID-Kollisionen zurück und aktualisiert vereinbarte
 Quellgerüste oder Navigation, ohne die Projektinitialisierung erneut
 auszuführen. Rendering, Publikation und Git-Aktionen bleiben getrennt.
+
+## Skills für die Zusammenarbeit
+
+Skills sind abgegrenzte Arbeitsabläufe in [`.agents/skills/`](.agents/skills/).
+Sie führen den Agenten durch eine bestimmte Aufgabe und laden dafür die
+passenden Repository-Leitlinien. Rufe einen Skill im Chat mit `$skill-name`
+auf, zum Beispiel `$review-project`. Die verlinkten Skill-Dateien beschreiben
+den vollständigen Ablauf.
+
+- **Agent oder explizit:** Der Agent darf den Skill bei einer passenden
+  Aufgabe selbst auswählen; du kannst ihn auch direkt aufrufen.
+- **Explizit:** Der Skill braucht einen bewussten Aufruf oder eine
+  ausdrückliche Auswahl durch den Maintainer. Ein Vorschlag des Agenten
+  aktiviert ihn noch nicht.
+- **Aufgabenabhängig oder explizit:** Rendering darf aus einem Renderauftrag
+  oder notwendiger Validierung folgen; freie implizite Skill-Auswahl ist
+  ausgeschlossen. Ein direkter Aufruf bleibt möglich.
+
+Die Auswahl eines Skills erteilt keine zusätzliche Freigabe für geschützte
+Git-Aktionen, Installation, externe Übertragung oder Veröffentlichung. Die
+lokalen Zugriffs- und Fachregeln gelten für jeden Ablauf.
+
+In `commit-changes` und `commit-milestone` umfasst eine explizite
+Commit-Freigabe für dieses Repository standardmäßig den normalen Push zu
+seinem verifizierten bestehenden Upstream. Mit „nur Commit“ oder „kein Push“
+schließt du den Push aus. Andere Git-Aktionen, Tags und Release-Publikation
+brauchen weiterhin eine eigene Freigabe.
+
+`reuse-fixes` liest und ergänzt ausschließlich das Fehlerwissen dieses
+Repositorys. Der Skill sammelt keine Erfahrungen über Repositories hinweg
+und führt kein globales Fehlergedächtnis.
+Aktive Lösungen stehen mit 4–8 Zeilen pro Fall in `TROUBLESHOOTING.md`.
+[Ausführliche Belege](TROUBLESHOOTING_DETAILS.md) bleiben getrennt erhalten;
+lies bei Bedarf nur den passenden Detailabschnitt.
+
+| Skill | Aufruf | Zweck |
+| --- | --- | --- |
+| [`start-task`](.agents/skills/start-task/SKILL.md) | Agent oder explizit | Rekonstruiert nur den Kontext für eine neue abgegrenzte Aufgabe. |
+| [`handoff-task`](.agents/skills/handoff-task/SKILL.md) | Agent oder explizit | Sichert Ergebnis, Evidenz und nächsten Schritt kompakt in `TASK_HANDOFF.md`. |
+| [`commit-changes`](.agents/skills/commit-changes/SKILL.md) | Agent oder explizit | Erstellt einen regulären abgegrenzten Commit und führt den normalen Upstream-Push mit expliziter Commit-Freigabe aus, sofern der Push nicht ausgeschlossen wurde. |
+| [`record-decision`](.agents/skills/record-decision/SKILL.md) | Agent oder explizit | Dokumentiert eine dauerhafte Entscheidung im passenden Record-Typ; Entscheidungen des Quelltemplates werden an Governance geroutet. |
+| [`reuse-fixes`](.agents/skills/reuse-fixes/SKILL.md) | Agent oder explizit | Verwendet bestätigte Lösungen dieses Repositorys wieder, hält knappe Vorbeugung fest und fragt nur bei fehlender Freigabe oder blockierenden Entscheidungen nach. |
+| [`start-project`](.agents/skills/start-project/SKILL.md) | Explizit | Initialisiert ein neues, noch nicht eingerichtetes abgeleitetes Projekt anhand der erhaltenen Setup-Leitlinien. |
+| [`review-project`](.agents/skills/review-project/SKILL.md) | Explizit | Erstellt eine umfassende neutrale Bestandsaufnahme des Projektzustands und der Evidenzlücken. |
+| [`sync-template`](.agents/skills/sync-template/SKILL.md) | Explizit | Vergleicht ein abgeleitetes Projekt mit seinem verifizierten Quelltemplate und übernimmt ausgewählte Änderungen unter Erhalt der Projektanpassungen. |
+| [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explizit | Diagnostiziert interne Widersprüche zwischen Intention, Roadmap, Entscheidungen, Inhalten und Dokumentation und entwickelt abgegrenzte Optionen. |
+| [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explizit | Wertet Zusammenarbeitsevidenz aus und trennt Projektbefunde von wiederverwendbaren Template- oder Familienkandidaten. |
+| [`create-local-project`](.agents/skills/create-local-project/SKILL.md) | Explizit | Erzeugt ein lokales abgeleitetes Repository aus diesem Quelltemplate und übergibt es an die Initialisierung; wird nach erfolgreichem Projektsetup entfernt. |
+| [`add-document`](.agents/skills/add-document/SKILL.md) | Explizit | Ergänzt ein gepflegtes Dokument oder verknüpfte Sprachfassungen einschließlich Katalogmetadaten und Navigation. |
+| [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
+| [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
+| [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explizit | Prüft benannte aktuelle HTML-, PDF- oder DOCX-Renderings visuell und berichtet genauen Prüfumfang und Grenzen. |
+| [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Milestone mit Metadaten, umfassenden anwendbaren Prüfungen, Commit und normalem Upstream-Push ab, sofern der Push nicht ausgeschlossen wurde. |
+
+### Optionale Planungsskills
+
+`grill-me` und `grilling` sind übernommene MIT-lizenzierte Skills von Matt
+Pocock. Sie ergänzen die eigenen Repository-Skills und werden ausschließlich
+nach ausdrücklicher Auswahl verwendet. Der normale schlanke
+Initialisierungsweg bleibt verfügbar.
+
+| Skill | Aufruf | Zweck |
+| --- | --- | --- |
+| [`grill-me`](.agents/skills/grill-me/SKILL.md) | Explizit | Startet das optionale intensive Planungsinterview und leitet an `grilling` weiter. |
+| [`grilling`](.agents/skills/grilling/SKILL.md) | Explizit | Prüft einen Plan, eine Entscheidung oder Idee in ausführlichen Interviewrunden; nur nach ausdrücklicher Auswahl. |
 
 ## Externe Dateien und Quellen
 
@@ -233,7 +299,7 @@ Der Maintainer kontrolliert die Git-Historie. Assistants dürfen Status, Diffs u
 
 Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, dürfen aber nur nach einer konkreten Maintainer-Anweisung oder Autorisierung des zugehörigen Commits erfolgen. Bestehende Staging-Auswahlen und nicht zusammenhängende Änderungen müssen erhalten bleiben.
 
-Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; die Freigabe einer geschützten Aktion autorisiert keine andere.
+Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; andere geschützte Aktionen brauchen weiterhin eine eigene Freigabe, mit dem oben beschriebenen Commit-und-Push-Ablauf als gezielter Ausnahme.
 
 Wenn diese Regel eine Autorisierung verlangt, schlägt der Assistant eine
 minimal abgegrenzte, kopierfertige Anweisung vor, die genaue Aktion,
@@ -268,15 +334,12 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`AGENTS.md`** ist der kompakte residente Sicherheits- und Routingvertrag für KI-Agenten.
 - **`COLLABORATION.md`** definiert providerneutrale Dokumentationsautorität, Evidenz, Feedback und Publikationsgrenzen.
 - **`PROJECT_SETUP.md` und `DOCS_SETUP.md`** legen Repository-Identität, Dokumentationstyp, Zielgruppe, Sprachen, Quellenmodell, Quarto-System und QA-Erwartungen fest. `PROJECT_SETUP.md` bleibt als Initialisierungsprovenienz erhalten.
-- **`.agents/skills/`** stellt schlanke automatische Aufgaben-, Commit- und
-  Umgebungs-Troubleshooting-Abläufe sowie ausdrückliche Initialisierungs-,
-  Dokumenthinzufügungs-, visuellen Inspektions-, Review-, Synchronisierungs-,
-  Konsistenz-, Dokumentrevisions- und Retrospektivabläufe bereit. Der
-  `$grill-me`-Weg und sein `grilling`-Baustein sind ausschließlich explizit
-  nutzbar und ersetzen niemals die normale schlanke Initialisierung.
-- **`TROUBLESHOOTING.md`** enthält portable Probleme und verifizierte Lösungen
-  der fokussierten Route; die ignorierte `TROUBLESHOOTING.local.md` enthält
-  Hostfakten. Ein schneller Ausstieg lädt oder dokumentiert beides nicht.
+- **`.agents/skills/`** enthält die im Abschnitt
+  [Skills für die Zusammenarbeit](#skills-für-die-zusammenarbeit) beschriebenen
+  Arbeitsabläufe und ihre Aufrufregeln.
+- **`TROUBLESHOOTING.md`** hält bestätigte Korrekturen und knappe Vorbeugung
+  für `reuse-fixes` in diesem Repository fest. Hostfakten bleiben ignoriert in
+  `TROUBLESHOOTING.local.md`. Andere Repositories werden nicht einbezogen.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg.
 - **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare
