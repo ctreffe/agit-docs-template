@@ -4,6 +4,10 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Require current inherited skill inventories without retired-name aliases
+  during synchronization; remove start-project from completed derived
+  projects while retaining setup provenance and current domain safeguards.
+
 - Adopt TVDR-0053: milestone commit authority includes one matching annotated
   version tag and its exact upstream push unless excluded. Preserve ordinary
   commit rules, explicit-only invocation, exact tag/ref scope, no replacement
