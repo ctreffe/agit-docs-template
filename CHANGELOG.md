@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Adopt TVDR-0053: milestone commit authority includes one matching annotated
+  version tag and its exact upstream push unless excluded. Preserve ordinary
+  commit rules, explicit-only invocation, exact tag/ref scope, no replacement
+  and independent release/publication/domain boundaries.
+
 ## [0.7.0] - 2026-10-07
 
 - Under Governance TVDR-0052, remove only the unsupported

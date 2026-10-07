@@ -164,11 +164,13 @@ Die Auswahl eines Skills erteilt keine zusätzliche Freigabe für geschützte
 Git-Aktionen, Installation, externe Übertragung oder Veröffentlichung. Die
 lokalen Zugriffs- und Fachregeln gelten für jeden Ablauf.
 
-In `commit-changes` und `commit-milestone` umfasst eine explizite
-Commit-Freigabe für dieses Repository standardmäßig den normalen Push zu
-seinem verifizierten bestehenden Upstream. Mit „nur Commit“ oder „kein Push“
-schließt du den Push aus. Andere Git-Aktionen, Tags und Release-Publikation
-brauchen weiterhin eine eigene Freigabe.
+In `commit-changes` umfasst eine explizite Commit-Freigabe den normalen Push zum
+verifizierten bestehenden Upstream dieses Repositorys. In `commit-milestone`
+umfasst eine explizite Meilenstein-Commit-Freigabe zusätzlich einen passenden
+annotierten Versionstag und dessen gezielten Upstream-Push. „Nur Commit“ schließt
+Tags und Pushes aus; „kein Push“ behält Commit/Tag lokal; „kein Tag“ schließt Tags
+aus; „kein Tag-Push“ behält den Tag lokal. Andere Git-Aktionen, Tag-Verschiebung/
+Ersetzung und Release-Publikation brauchen weiterhin eine eigene Freigabe.
 
 `reuse-fixes` liest und ergänzt ausschließlich das Fehlerwissen dieses
 Repositorys. Der Skill sammelt keine Erfahrungen über Repositories hinweg
@@ -194,7 +196,7 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explizit | Prüft benannte aktuelle HTML-, PDF- oder DOCX-Renderings visuell und berichtet genauen Prüfumfang und Grenzen. |
-| [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Milestone mit Metadaten, umfassenden anwendbaren Prüfungen, Commit und normalem Upstream-Push ab, sofern der Push nicht ausgeschlossen wurde. |
+| [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Meilenstein mit Metadaten, umfassenden Prüfungen, Commit, annotiertem Versionstag und gezielten Upstream-Pushes ab, sofern nicht ausgeschlossen. |
 
 ### Optionale Planungsskills
 
@@ -321,7 +323,7 @@ Der Maintainer kontrolliert die Git-Historie. Assistants dürfen Status, Diffs u
 
 Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, dürfen aber nur nach einer konkreten Maintainer-Anweisung oder Autorisierung des zugehörigen Commits erfolgen. Bestehende Staging-Auswahlen und nicht zusammenhängende Änderungen müssen erhalten bleiben.
 
-Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; andere geschützte Aktionen brauchen weiterhin eine eigene Freigabe, mit dem oben beschriebenen Commit-und-Push-Ablauf als gezielter Ausnahme.
+Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; andere geschützte Aktionen brauchen weiterhin eine eigene Freigabe, mit den oben beschriebenen Commit-Abläufen als gezielten Ausnahmen.
 
 Wenn diese Regel eine Autorisierung verlangt, schlägt der Assistant eine
 minimal abgegrenzte, kopierfertige Anweisung vor, die genaue Aktion,
