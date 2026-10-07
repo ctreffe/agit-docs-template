@@ -132,6 +132,11 @@ document-local contract in `DOCUMENTS.md`, rejects path and ID collisions and
 updates agreed source skeletons or navigation without rerunning project
 initialization. Rendering, publication and Git actions remain separate.
 
+Choose normal lean setup or explicitly opt into a `grill-me` interview for the
+new document. The interview explores only unanswered document-local decisions
+and deliberate departures from reviewed project defaults. You may return to
+the lean path; changes wait for confirmed shared understanding.
+
 ## Collaboration Skills
 
 Skills are scoped workflows in [`.agents/skills/`](.agents/skills/). They guide

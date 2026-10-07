@@ -4,6 +4,18 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-07
+
+- Under Governance TVDR-0052, remove only the unsupported
+  `disable-model-invocation` frontmatter field from `grill-me` and declare
+  the compatibility adaptation. Preserve the pinned router/interview, MIT
+  notices and existing explicit-only invocation policy.
+
+- Implement IDEA-0004 under TVDR-0049: offer lean setup or an explicit
+  document-local grilling interview in add-document. Reuse reviewed project
+  defaults, allow return to lean setup and confirm shared understanding before
+  edits, preserving source, render, Git and publication boundaries.
+
 - Separate project introductions from retained template workflow guides during
   initialization: require both README language pairs, adapt removed-file/skill
   references, identity, badges and license wording, and map selected upstream

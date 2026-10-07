@@ -10,6 +10,10 @@ for each later document or language-linked document set. A catalog entry does
 not by itself authorize access to source material, Git versioning, rendering or
 publication.
 
+The workflow offers lean setup or an explicitly selected `grill-me` interview.
+Either path confirms only unresolved document-local choices and identifies
+reviewed inherited defaults; route selection does not authorize catalog edits.
+
 ## Lifecycle
 
 Use the maintainer-approved project lifecycle, normally `planned`, `draft`,

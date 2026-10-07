@@ -12,6 +12,10 @@ initial document contract in `DOCUMENTS.md`. In an initialized project, invoke
 language-linked document set. Document-local choices may refine reviewed
 project defaults but must not silently contradict them.
 
+`$add-document` offers lean setup or optional explicit `grill-me` planning.
+The interview focuses on unanswered document-local choices, preserves reviewed
+project defaults and requires confirmation of shared understanding before edits.
+
 Setup is complete only when repository identity, maintainer-owned purpose,
 scope, audience, initial roadmap, source and versioning rules, publication
 model, QA expectations, decision-record needs and retained template files are

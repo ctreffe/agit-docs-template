@@ -137,6 +137,12 @@ weist Pfad- und ID-Kollisionen zurück und aktualisiert vereinbarte
 Quellgerüste oder Navigation, ohne die Projektinitialisierung erneut
 auszuführen. Rendering, Publikation und Git-Aktionen bleiben getrennt.
 
+Wähle den normalen schlanken Weg oder ausdrücklich ein `grill-me`-Interview
+für das neue Dokument. Das Interview behandelt nur unbeantwortete Entscheidungen
+zum Dokument und bewusste Abweichungen von geprüften Projektvorgaben. Du kannst
+zum schlanken Weg zurückkehren; Änderungen warten auf ein bestätigtes gemeinsames
+Verständnis.
+
 ## Skills für die Zusammenarbeit
 
 Skills sind abgegrenzte Arbeitsabläufe in [`.agents/skills/`](.agents/skills/).

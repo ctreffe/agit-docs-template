@@ -163,7 +163,7 @@ otherwise it remains a `Pending Idea Transfer`.
 
 ### IDEA-0004: Optional grilling path for add-document
 
-- **Status:** Captured
+- **Status:** Promoted
 - **Source:** Maintainer-directed idea from the derived `agit-admin-guides`
   project on 2026-09-02, reviewing the current `$add-document` contract and the
   optional grilling path adopted for project initialization
@@ -194,9 +194,11 @@ otherwise it remains a `Pending Idea Transfer`.
   treat route selection as source-access, rendering, versioning, publication or
   protected-action authority. `$add-document` must retain all existing
   non-goals and must not reinitialize the project.
-- **Next decision:** Decide whether the project-initialization routing pattern
-  can be adapted unchanged or needs a document-specific stopping rule and
-  frontier focused only on choices not already inherited from project defaults.
+- **Next decision:** None for the accepted implementation. TVDR-0049 adopts
+  an optional document-local interview in `$add-document`, preserving reviewed
+  project defaults and confirmation before edits. Observe derived-project use
+  before changing its scope or stopping rule.
 - **References:** `.agents/skills/add-document/SKILL.md`,
   `.agents/skills/start-project/SKILL.md`, `.agents/skills/grill-me/SKILL.md`,
-  `.agents/skills/grilling/SKILL.md`, `PROJECT_SETUP.md` and `DOCUMENTS.md`.
+  `.agents/skills/grilling/SKILL.md`, `PROJECT_SETUP.md` and `DOCUMENTS.md`;
+  Governance TVDR-0049 records the accepted document-local opt-in contract.
