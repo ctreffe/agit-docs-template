@@ -4,6 +4,10 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Add explicit-only manage-external-storage with domain guidance, a read-only
+  selected-file helper and synthetic checks under Governance TVDR-0056.
+  Ordinary task entry, initialization and handoff add no storage checks.
+
 - Require current inherited skill inventories without retired-name aliases
   during synchronization; remove start-project from completed derived
   projects while retaining setup provenance and current domain safeguards.
